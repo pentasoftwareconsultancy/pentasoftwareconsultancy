@@ -1,9 +1,9 @@
 /* Card Container */
-.Card {
+/* .Card {
   justify-content: center;
   align-items: center;
   display: flex;
-}
+} */
 
 .Section {
   width: 100%;
@@ -69,13 +69,13 @@
   border-radius: 1rem;
   float: right;
   padding: 20px;
-  margin-top: -310px;
+  margin-top: -320px;
   margin-right: 180px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .box5 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -113,4 +113,7 @@ textarea {
 
 .button:hover {
   background-color: rgb(50, 50, 190);
+}
+.map{
+  margin-top: 40px;
 }

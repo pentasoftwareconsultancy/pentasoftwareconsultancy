@@ -9,13 +9,15 @@
     background-color: gainsboro;
     height: 250px;
     width:340px;
-   
+    margin-top: -175px;
+    
 }
 
 .Box1 {
     background-color: rgb(170, 170, 170);
     height: 250px;
     width: 100%;
+    margin-top: -175px;
     
    
 }

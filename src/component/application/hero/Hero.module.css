@@ -1,0 +1,19 @@
+.Hero {
+    position: relative; /* Enables positioning of child elements relative to this container */
+    width: 100%;        /* Full width of the parent container */
+  }
+  
+  .image img {
+    margin-top: 30px;
+    height: 500px;
+    width: 1280px;
+    /* object-fit: cover;   */
+  }
+
+  .Name{
+    font-weight: bold;
+    font-size: 35px;        
+    margin-top: -400px;
+    color: white;
+    margin-left: 35px;
+}

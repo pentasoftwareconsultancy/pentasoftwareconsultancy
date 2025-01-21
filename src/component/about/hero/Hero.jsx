@@ -7,13 +7,13 @@ function Hero() {
     <div className={styles.Hero}>
       <div className={styles.Section1}>
       <div className={styles.image}>
-      <img src="https://img.lovepik.com/photo/50076/8963.jpg_wh860.jpg"/>
+      <img src="https://i.pinimg.com/736x/e2/a9/a7/e2a9a7de4b728e985cfd7b430325aebf.jpg"/>
       </div>
       <div className={styles.box}>
      
     </div>
       <div className={styles.line}>
-        CREATE<br/>SOFTWARE <br/>SOLUTION
+        CREATE  SOFTWARE SOLUTION..!!
       </div>
       <div className={styles.sent}>
         At your price Business<br/>traval solution
