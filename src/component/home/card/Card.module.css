@@ -1,0 +1,216 @@
+/* Hero section */
+.Hero {
+    background-color: black; /* Black background for the hero section */
+    height: 75vh; /* Height of the Hero section */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Card container */
+.Card {
+    margin-top: 180px;
+}
+
+/* Video container */
+.video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 90%;
+    margin-left: 260px;
+    border-radius: 2rem;
+    z-index: -5;
+}
+
+/* Top container with flex */
+.topContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+/* Box */
+.box {
+    background-color: white; /* Optional: add a background color to make the border stand out */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 50px;
+    font-size: 10px;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 380px; /* Box width */
+    height: 240px; /* Box height */
+    padding: 10px;
+}
+
+/* Word */
+.Word {
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Line */
+.Line {
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Button styling */
+.Button {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 140px;
+    border-radius: 2rem;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer;
+}
+
+/* Hover effect for button */
+.Button:hover {
+    background-color: black; /* Changes to a vibrant color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+}
+
+/* Container2: Three columns */
+.Container2 {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+/* Container3 */
+.Container3 {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+/* Logo styling */
+.logo {
+    color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Hero section adjustments */
+    .Hero {
+        height: 50vh; /* Reduce the height for mobile */
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px;
+    }
+
+    /* Video container adjustments */
+    .video {
+        width: 90%; /* Make the video container take up more width */
+        margin-left: 0; /* Remove left margin */
+        height: auto; /* Adjust height automatically */
+    }
+
+    /* Box adjustments */
+    .box {
+        width: 90%; /* Make boxes take up more width on mobile */
+        height: auto; /* Allow boxes to adjust height */
+        margin-top: 20px; /* Reduce margin between boxes */
+        padding: 20px; /* Add padding to avoid content being too cramped */
+    }
+
+    /* Button adjustments */
+    .Button {
+        width: 100%; /* Make button take full width */
+        margin-left: 0; /* Center button on mobile */
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-top: 15px; /* Reduce top margin */
+    }
+
+    /* Top container adjustments */
+    .topContainer {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 20px; /* Reduce the gap between items */
+    }
+
+    /* Container2 and Container3 adjustments */
+    .Container2, .Container3 {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center content */
+        gap: 15px; /* Reduce the gap */
+    }
+
+    /* Word adjustments */
+    .Word {
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+
+    /* Line adjustments */
+    .Line {
+        font-size: 20px; /* Adjust font size for mobile */
+        margin-top: 15px; /* Adjust margin */
+    }
+
+    /* Logo adjustments */
+    .logo {
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .Hero {
+        height: 40vh; /* Reduce hero section height further */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .video {
+        width: 100%; /* Ensure video container takes full width */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .box {
+        width: 100%; /* Make boxes take full width */
+        height: auto; /* Adjust height automatically */
+        margin-top: 10px; /* Further reduce margin */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .Button {
+        width: 100%; /* Button takes full width */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .topContainer {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap */
+    }
+
+    .Container2, .Container3 {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .Word {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .Line {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .logo {
+        font-size: 16px; /* Adjust font size */
+    }
+}

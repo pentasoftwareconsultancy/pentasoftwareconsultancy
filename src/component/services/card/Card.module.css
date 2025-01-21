@@ -1,0 +1,112 @@
+.Card {
+    background-color: whitesmoke;
+    margin-top: 100px;
+}
+
+.word {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 70px;
+    gap: 2rem;
+
+    
+}
+.Box1, .Box2, .Box3, .Box4{
+    height: 220px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
+    border-top-left-radius: 60px;
+    border-bottom-Right-radius: 60px;
+}
+
+.Logo1,.Logo2,.Logo3,.Logo4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    color: navy;
+}
+
+.Name1, .Name2, .Name3, .Name4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Line1, .Line2, .Line3, .Line4 {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.Section2{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top:-10px;
+    gap: 2rem;
+    
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 80px;
+    gap: 2rem;
+    
+}
+
+.box1, .box2, .box3, .box4 {
+    height: 220px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
+    border-top-left-radius: 60px;
+    border-bottom-Right-radius: 60px;
+    
+}
+
+.logo1, .logo2, .logo3, .logo4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    color: navy;
+}
+
+.name1, .name2, .name3, .name4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line1, .line2, .line3, .line4 {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}

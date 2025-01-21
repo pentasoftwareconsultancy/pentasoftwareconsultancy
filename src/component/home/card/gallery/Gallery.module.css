@@ -1,0 +1,232 @@
+/* Gallery Section */
+.Gallery {
+   height: 500px;
+   padding: 40px;
+   background-color: #f8f9fa;
+   margin-top: 20px;
+}
+
+/* Text Styles */
+.how {
+   color: skyblue;
+   font-size: 15px;
+   margin-left: 70px;
+}
+
+.how2 {
+   font-weight: bold;
+   font-size: 35px;
+   margin-top: 10px;
+   margin-left: 70px;
+}
+
+/* Container for Items */
+.Con {
+   display: flex;
+   gap: 2%;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+   margin-left: 40px;
+}
+
+/* Button Styles */
+.Button {
+   margin-top: -15px;
+   background-color: blue;
+   height: 50px;
+   width: 180px;
+   color: white;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   float: right;
+   margin-right: 100px;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Button:hover {
+   background-color: skyblue;
+   transform: scale(1.05);
+   cursor: pointer;
+}
+
+/* Box Styling */
+.Box,
+.Box2,
+.Box3,
+.Box4 {
+   height: 250px;
+   width: 200px;
+   background-color: white;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   margin-top: 30px;
+   border-radius: 1rem;
+}
+
+/* Logo Styling */
+.logo,
+.logo2,
+.logo3,
+.logo4 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.logo { color: plum; }
+.logo4 { color: skyblue; }
+.logo2 { color: blue; }
+.logo3 { color: rgb(243, 190, 94); }
+
+/* Word Styling */
+.Word, .Word2, .Word3, .Word4 {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+}
+
+/* Line Styling */
+.line,
+.line2,
+.line3,
+.line4 {
+   margin-top: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.sent, .sent2, .sent3, .sent4 {
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+   /* Gallery */
+   .Gallery {
+       height: auto;
+       padding: 20px;
+   }
+
+   /* Text Adjustments */
+   .how,
+   .how2 {
+       font-size: 14px; /* Smaller text for mobile */
+       margin-left: 20px; /* Reduce the left margin */
+   }
+
+   .how2 {
+       font-size: 25px; /* Adjust size for mobile */
+   }
+
+   /* Container Flex Adjustments */
+   .Con {
+       flex-direction: column; /* Stack the boxes vertically on mobile */
+       margin-left: 0; /* Center content */
+       align-items: center;
+   }
+
+   /* Button Adjustments */
+   .Button {
+       width: 100%; /* Button takes full width on mobile */
+       margin-right: 0;
+       margin-top: 15px; /* Adjust top margin */
+   }
+
+   /* Box Adjustments */
+   .Box,
+   .Box2,
+   .Box3,
+   .Box4 {
+       width: 90%; /* Box width reduced for mobile */
+       height: auto; /* Allow height to adjust dynamically */
+       margin-top: 20px; /* Reduce top margin */
+   }
+
+   /* Logo Adjustments */
+   .logo,
+   .logo2,
+   .logo3,
+   .logo4 {
+       font-size: 16px; /* Adjust logo font sizes for mobile */
+   }
+
+   /* Word Adjustments */
+   .Word, .Word2, .Word3, .Word4 {
+       font-size: 14px; /* Adjust font size for mobile */
+   }
+
+   /* Line Styling Adjustments */
+   .line,
+   .line2,
+   .line3,
+   .line4 {
+       margin-top: 20px; /* Reduce margin between lines */
+   }
+
+   /* Sent Text Adjustments */
+   .sent, .sent2, .sent3, .sent4 {
+       margin-top: 20px; /* Reduce top margin */
+   }
+}
+
+/* Additional Mobile Adjustments for Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+   .how,
+   .how2 {
+       font-size: 12px; /* Smaller font size for very small screens */
+       margin-left: 10px; /* Further reduce the left margin */
+   }
+
+   .how2 {
+       font-size: 20px; /* Adjust font size for smaller screens */
+   }
+
+   .Con {
+       flex-direction: column; /* Stack content vertically */
+       align-items: center; /* Center items */
+   }
+
+   .Button {
+       width: 100%; /* Full width button */
+       font-size: 14px; /* Adjust button font size */
+       padding: 12px; /* Adjust padding for smaller screens */
+   }
+
+   .Box,
+   .Box2,
+   .Box3,
+   .Box4 {
+       width: 100%; /* Full width boxes */
+       margin-top: 15px; /* Reduce top margin */
+   }
+
+   .logo,
+   .logo2,
+   .logo3,
+   .logo4 {
+       font-size: 14px; /* Smaller logos for very small screens */
+   }
+
+   .Word, .Word2, .Word3, .Word4 {
+       font-size: 12px; /* Reduce font size */
+   }
+
+   .line,
+   .line2,
+   .line3,
+   .line4 {
+       margin-top: 15px; /* Reduce space between lines */
+   }
+
+   .sent, .sent2, .sent3, .sent4 {
+       margin-top: 15px; /* Reduce space between sentences */
+   }
+}

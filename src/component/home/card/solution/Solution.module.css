@@ -1,0 +1,214 @@
+/* Base Styles */
+.Solution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+}
+
+.Web {
+  font-size: 15px;
+  margin-top: 8px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.Line {
+  font-size: 28px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.Sentence {
+  font-size: 15px;
+  color: black;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.No {
+  display: flex;
+}
+
+.Count {
+  margin-bottom: 20px;
+  flex-direction: column;  /* Ensure counter and text are stacked vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.Counter {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.CounterText {
+  font-size: 16px;
+  color: black;
+  margin-top: 10px; /* Add space between the counter number and the text */
+}
+
+.Counter1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.CounterText1 {
+  font-size: 16px;
+  color: black;
+  margin-top: 10px; /* Add space between the counter number and the text */
+}
+
+.Button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 180px;
+}
+
+.Button:hover {
+  background-color: #0056b3;
+}
+
+.Section2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 350px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .Container {
+      flex-direction: column; /* Stack the container vertically */
+      align-items: center;
+      gap: 20px; /* Reduce the gap between sections */
+  }
+
+  .Section {
+      text-align: center;
+      margin-bottom: 30px; /* Add some space below each section */
+  }
+
+  .Section2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; /* Ensure the section takes full width */
+  }
+
+  .Button {
+      width: 100%; /* Button takes up full width on mobile */
+      margin-top: 15px; /* Add space above the button */
+  }
+
+  .Web {
+      font-size: 14px; /* Slightly smaller text size */
+  }
+
+  .Line {
+      font-size: 24px; /* Adjust heading size for mobile */
+  }
+
+  .Sentence {
+      font-size: 14px; /* Adjust text size for mobile */
+      margin-bottom: 20px; /* Reduce space below sentences */
+  }
+
+  .Counter {
+      font-size: 30px; /* Adjust counter size */
+  }
+
+  .CounterText {
+      font-size: 14px; /* Adjust counter text size */
+  }
+
+  .Counter1 {
+      font-size: 30px; /* Adjust counter size */
+  }
+
+  .CounterText1 {
+      font-size: 14px; /* Adjust counter text size */
+  }
+
+  .image img {
+      height: auto; /* Ensure image is responsive */
+      max-width: 100%; /* Limit image width */
+  }
+}
+
+@media (max-width: 480px) {
+  .Web {
+      font-size: 12px; /* Smaller font size for very small screens */
+  }
+
+  .Line {
+      font-size: 20px; /* Smaller heading for very small screens */
+  }
+
+  .Sentence {
+      font-size: 12px; /* Smaller sentence text */
+  }
+
+  .Counter {
+      font-size: 28px; /* Adjust counter size */
+  }
+
+  .CounterText {
+      font-size: 12px; /* Adjust counter text size */
+  }
+
+  .Counter1 {
+      font-size: 28px; /* Adjust counter size */
+  }
+
+  .CounterText1 {
+      font-size: 12px; /* Adjust counter text size */
+  }
+
+  .Button {
+      padding: 12px 20px; /* Adjust padding to fit smaller screens */
+      font-size: 14px; /* Adjust font size of button */
+  }
+}

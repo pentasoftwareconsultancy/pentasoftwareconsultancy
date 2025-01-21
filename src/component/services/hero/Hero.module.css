@@ -1,0 +1,179 @@
+/* Default Styles for Desktop and larger screens */
+.Hero {
+    margin-top: -20px;
+}
+
+.image {
+    position: relative; 
+    margin-top: 50px;
+    margin: 20px 0;
+    height: auto; 
+}
+
+.image img {
+    width: 100%;          
+    height: 540px;        
+    border-radius: 8px;   
+    display: block;       
+    margin: 0 auto;     
+}
+
+.Line {
+    font-weight: bold;
+    font-size: 20px;        
+    margin-top: -490px;
+    color: white;
+    margin-left: 35px;
+}
+
+.Line1 {
+    font-size: 35px;  
+    font-weight: bold;     
+    margin-top: 40px;
+    color: white;
+    margin-left: 30px;
+}
+
+.Line3 {
+    margin-left: 30px;
+    margin-top: 50px;
+    color: white;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 180px;
+    gap: 2rem;
+}
+
+.box1, .box2, .box3, .box4 {
+    height: 250px;
+    width: 250px;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
+    border-radius: 5px;     
+}
+
+.Name1, .Name2, .Name3, .Name4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.No1, .No2, .No3, .No4 {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo1, .logo2, .logo3, .logo4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: navy;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .Hero {
+        margin-top: 20px;
+    }
+
+    .image {
+        margin-top: 40px;
+    }
+
+    .image img {
+        height: auto;  /* Adjust height for mobile */
+    }
+
+    .Line {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .Line1 {
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
+    .Line3 {
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    .box {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        gap: 1rem;
+        margin-top: 80px;
+    }
+
+    .box1, .box2, .box3, .box4 {
+        width: 90%; /* Make boxes take up more width on small screens */
+        height: 200px;
+        margin-bottom: 20px; /* Space between boxes */
+    }
+
+    .Name1, .Name2, .Name3, .Name4 {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+
+    .No1, .No2, .No3, .No4 {
+        font-size: 12px; /* Adjust number font size */
+    }
+
+    .logo1, .logo2, .logo3, .logo4 {
+        font-size: 18px; /* Reduce logo size for small screens */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .Line {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .Line1 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .Line3 {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .box {
+        margin-top: 40px;
+        flex-direction: column; /* Stack boxes vertically on very small screens */
+    }
+
+    .box1, .box2, .box3, .box4 {
+        width: 100%; /* Take full width on very small screens */
+        height: 180px;
+        margin-bottom: 20px; /* Space between boxes */
+    }
+
+    .Name1, .Name2, .Name3, .Name4 {
+        font-size: 18px; /* Smaller font for very small screens */
+    }
+
+    .No1, .No2, .No3, .No4 {
+        font-size: 10px; /* Further reduce font size */
+    }
+
+    .logo1, .logo2, .logo3, .logo4 {
+        font-size: 16px; /* Smaller logo size */
+    }
+}

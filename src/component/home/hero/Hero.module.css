@@ -1,0 +1,74 @@
+.Hero {
+    background-color: black;
+    height: 85vh;
+    position: relative;
+    margin-top: -20px;
+  
+}
+
+.Line {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 45px;
+    margin-top:10px;
+}
+
+.sentence {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 22px;
+    margin-top: 40px;
+}
+.React{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Button {
+    color: white;
+    margin-top: 80px;
+    background-color: transparent;
+    height: 50px;
+    width: 120px;
+    border: 2px solid white;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    color:white;
+    border-color:white;
+}
+.Button1{
+    color: white;
+    margin-top: 80px;
+    background-color: transparent;
+    height: 50px;
+    width: 120px;
+    border: 2px solid white;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 100px;
+    cursor: pointer;
+    border-color:white;
+}
+.video video{
+    padding: 0 50px;
+    height: 30%;
+    width:60%;
+    border-radius: 2rem;
+    margin-left: 240px;
+    margin-top: 20px;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+}

@@ -1,0 +1,235 @@
+
+.Birth {
+    margin-left: 30px;
+}
+.Box {
+    display: flex;
+    margin-top: 15px;
+    background-color: whitesmoke;
+    margin-left: 50px;
+}
+.Sec img {
+    height: 300px;
+    width: 500px;
+    margin-left: 20px;
+}
+.Name {
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 60px;
+}
+.Line {
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.Box1 {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.Name1 {
+    font-weight: bold;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+.Line1 {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.Sec4 img {
+    height: 300px;
+    width: 500px;
+    margin-left: 100px;
+}
+.Box3 {
+    display: flex;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    margin-left: 50px;
+}
+.Sec5 img {
+    height: 300px;
+    width: 500px;
+    margin-left: 10px;
+}
+.Name3 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 75px;
+}
+.Line3 {
+    margin-left: 75px;
+    margin-top: 20px;
+}
+.Box4 {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.Name4 {
+    font-weight: bold;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+.Line4 {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.Sec8 img {
+    height: 300px;
+    width: 500px;
+    margin-left: 110px;
+}
+.Box5 {
+    display: flex;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    margin-left: 50px;
+}
+.Sec9 img {
+    height: 300px;
+    width: 500px;
+    margin-left: 10px;
+}
+.Name5 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 75px;
+}
+.Line5 {
+    margin-left: 75px;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .Box, .Box1, .Box3, .Box4, .Box5 {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .Name, .Name1, .Name3, .Name4, .Name5 {
+        font-size: 28px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .Line, .Line1, .Line3, .Line4, .Line5 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Name, .Name1, .Name3, .Name4, .Name5 {
+        font-size: 24px;
+    }
+    .Box, .Box1, .Box3, .Box4, .Box5 {
+        padding: 0 10px;
+    }
+}
+
+.Box6{
+    
+    margin-top: 20px;
+    background-color: whitesmoke;
+    
+}
+.Name6{
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Line6{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.section{
+    margin-left:-35px;
+    gap:1%;
+}
+.section1 {
+    gap:2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  
+}
+.box1, .box2, .box3, .box4{
+
+    border: 1px solid gray;
+    height: 80px;
+    border-radius: 2rem;
+    width: 250px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4%;
+}
+
+.box5, .box6, .box7, .box8{
+    
+    border: 1px solid gray;
+    height: 80px;
+    border-radius: 2rem;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4%;
+    margin-top: 20px;
+}
+.section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+  
+}
+.logo1{
+    color: rgb(203, 203, 23);
+}  
+.logo3, .logo4{
+    
+    color: rgb(80, 189, 232);
+
+}
+.logo2{
+    color:skyblue;
+}
+.logo5, .logo7, .logo8{
+    
+    color: rgb(80, 189, 232);
+
+}
+.logo6{
+    color: orange;
+}
+.No1, .No2, .No3, .No4{
+    gap:1%;
+}

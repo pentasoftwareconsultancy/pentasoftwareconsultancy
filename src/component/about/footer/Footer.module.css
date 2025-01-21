@@ -1,0 +1,80 @@
+.Footer {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    height: auto; 
+    padding: 30px 0; /* Padding to add space inside the footer */
+  }
+  
+  .Section {
+    display: flex;
+    gap: 10%;
+    align-items: flex-start; /* Align content at the top */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Styling for Section2 */
+  .Section2 {
+    width: 100%; /* Ensures it takes the full width */
+    text-align: center; /* Center text and content inside */
+    margin-top: 30px;
+  }
+  .Line{
+    margin-top: 10px;
+  }
+  .Name3{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  .box1{
+    margin-top: 30px;
+    display: flex;
+    gap:4%;
+  }
+  .box2, .box3{
+    display: flex;
+    gap:4%;
+    margin-top: 10px;
+  }
+  .line {
+    width: 100%; /* Full width of Section2 */
+    height: 1px; /* Line thickness */
+    background-color:white;
+    margin: 30px 0; /* Adds space above and below the line */
+  }
+  
+  .Name {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  .No{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20%;
+  }
+  
+  .Logo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: rgb(103, 212, 234);
+    transition: color 0.3s ease;
+
+  }
+  
+  .Logo:hover {
+    color: #58aef4; 
+  }
+  
+  
+  .Copy {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+  }
+  

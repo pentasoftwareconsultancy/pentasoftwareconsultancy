@@ -1,0 +1,97 @@
+/* Image Styling */
+.image img {
+  width: 1264px;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Name Styling */
+.Name {
+  position: absolute;
+  top: 30%;
+  margin-left: 150px;
+  float: left;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+/* Sentence Styling */
+.sentence {
+  position: absolute;
+  top: 40%;
+  margin-left: 310px;
+  float: left;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+/* Line Styling */
+.Line {
+  position: absolute;
+  top: 50%;
+  margin-left: 340px;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 10;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Adjust image height proportionally */
+  }
+
+  /* Adjust the Name position */
+  .Name {
+    top: 25%;
+    margin-left: 10%;
+    font-size: 28px; /* Reduce font size for mobile */
+    text-align: center;
+    margin-top: 10px; /* Adjust position */
+  }
+
+  /* Adjust the Sentence position */
+  .sentence {
+    top: 35%;
+    margin-left: 10%;
+    font-size: 28px; /* Reduce font size for mobile */
+    text-align: center;
+  }
+
+  /* Adjust the Line position */
+  .Line {
+    top: 45%;
+    margin-left: 10%;
+    font-size: 16px; /* Reduce font size for mobile */
+    text-align: center;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 480px) */
+@media (max-width: 480px) {
+  .Name {
+    font-size: 24px; /* Further reduce font size */
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .sentence {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  .Line {
+    font-size: 14px; /* Further reduce font size */
+  }
+}

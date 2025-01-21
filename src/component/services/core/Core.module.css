@@ -1,0 +1,96 @@
+.Core {
+  text-align: center;
+  padding: 20px;
+}
+
+.Word {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.Section {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.Section div {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Start below the view */
+  animation: slide-up 2s ease-in-out forwards;
+  
+}
+
+.Section div:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.Section div:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.Section div:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.Section div:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.Section div:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.Section div:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Name1, .Name2, .Name3, .Name4, .Name5, .Name6 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Line1, .Line2, .Line3, .Line4, .Line5, .Line6 {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.Name1,
+.Name2,
+.Name3,
+.Name4,
+.Name5,
+.Name6 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Line1,
+.Line2,
+.Line3,
+.Line4,
+.Line5,
+.Title6 {
+  font-size: 16px;
+  line-height: 1.6;
+}
