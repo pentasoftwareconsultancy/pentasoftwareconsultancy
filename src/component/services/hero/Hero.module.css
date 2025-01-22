@@ -1,4 +1,4 @@
-/* Default Styles for Desktop and larger screens */
+/* Default Styles for Desktop and Larger Screens */
 .Hero {
     margin-top: -20px;
 }
@@ -55,7 +55,9 @@
     width: 250px;
     background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
-    border-radius: 5px;     
+    border-radius: 5px; 
+    border-top-left-radius: 50px;    
+    border-bottom-right-radius: 50px;
 }
 
 .Name1, .Name2, .Name3, .Name4 {
@@ -83,7 +85,7 @@
     color: navy;
 }
 
-/* Mobile Responsive Styles */
+/* Responsive Styles for Tablet Screens (max-width: 768px) */
 @media (max-width: 768px) {
     .Hero {
         margin-top: 20px;
@@ -94,7 +96,7 @@
     }
 
     .image img {
-        height: auto;  /* Adjust height for mobile */
+        height: auto;  /* Adjust height for tablet */
     }
 
     .Line {
@@ -113,31 +115,31 @@
     }
 
     .box {
-        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        flex-direction: column; /* Stack boxes vertically */
         gap: 1rem;
         margin-top: 80px;
     }
 
     .box1, .box2, .box3, .box4 {
-        width: 90%; /* Make boxes take up more width on small screens */
+        width: 90%; /* Wider boxes on tablet */
         height: 200px;
         margin-bottom: 20px; /* Space between boxes */
     }
 
     .Name1, .Name2, .Name3, .Name4 {
-        font-size: 20px; /* Reduce font size for smaller screens */
+        font-size: 20px; /* Reduce text size */
     }
 
     .No1, .No2, .No3, .No4 {
-        font-size: 12px; /* Adjust number font size */
+        font-size: 12px; /* Adjust text size */
     }
 
     .logo1, .logo2, .logo3, .logo4 {
-        font-size: 18px; /* Reduce logo size for small screens */
+        font-size: 18px; /* Smaller logo */
     }
 }
 
-/* Further adjustments for very small screens */
+/* Responsive Styles for Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
     .Line {
         font-size: 16px;
@@ -157,24 +159,25 @@
 
     .box {
         margin-top: 40px;
-        flex-direction: column; /* Stack boxes vertically on very small screens */
+        flex-direction: column; /* Stack boxes vertically */
     }
 
     .box1, .box2, .box3, .box4 {
-        width: 100%; /* Take full width on very small screens */
+        width: 100%; /* Full width on mobile */
         height: 180px;
         margin-bottom: 20px; /* Space between boxes */
     }
 
     .Name1, .Name2, .Name3, .Name4 {
-        font-size: 18px; /* Smaller font for very small screens */
+        font-size: 18px; /* Smaller font size */
     }
 
     .No1, .No2, .No3, .No4 {
-        font-size: 10px; /* Further reduce font size */
+        font-size: 10px; /* Smaller text */
     }
 
     .logo1, .logo2, .logo3, .logo4 {
-        font-size: 16px; /* Smaller logo size */
+        font-size: 16px; /* Smaller logo */
     }
 }
+

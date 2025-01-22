@@ -1,6 +1,6 @@
 .Hero {
-    position: relative; /* Enables positioning of child elements relative to this container */
-    width: 100%;        /* Full width of the parent container */
+    position: relative; 
+    width: 100%;        
   }
   
   .image img {

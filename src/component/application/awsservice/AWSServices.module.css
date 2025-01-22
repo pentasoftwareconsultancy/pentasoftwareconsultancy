@@ -1,0 +1,222 @@
+/* General container for the Saleforce component */
+.Saleforce {
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Main Box Styling */
+  .box {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Image and Content Overlay Styling */
+  /* .image {
+    width: 1263px;
+    height: 400px;
+  } */
+  
+  .image img {
+    width: 1263px;
+    height: 450px;
+  }
+  
+  .Name {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+  }
+  
+  .sent {
+    position: absolute; /* Ensure it's positioned relative to the parent container */
+    top: 20%; /* Position it at the vertical center */
+    left: 30%; /* Position it at the horizontal center */
+    transform: translate(-50%, -50%); /* Adjust the positioning to be truly centered */
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    z-index: 10; /* Ensure it stays on top of other content */
+  }
+  
+  
+  /* Section1 Layout */
+  .Section1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+  }
+  
+  .image1 img {
+    width: 380px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .data {
+    margin-top: 0;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    max-width: 60%;
+  }
+  .Data, .Data2{
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .Data1, .Data3{
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  /* Cloud Section Styling */
+  .cloud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Grid Layout for Box Section */
+  .Section2 {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .Box1, .Box2, .Box3, .Box4, .Box5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    height: 220px;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .Title1, .Title2, .Title3, .Title4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .dis1, .dis2, .dis3, .dis4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    margin-top: 20px;
+  }
+  
+  /* .Title6 {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    margin-top: 30px;
+  } */
+  
+  /* Map Section */
+  .No {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .map {
+    margin-top: 30px;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .Section1 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .image1 img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .data {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  
+    .Box {
+      grid-template-columns: 1fr; /* Stack boxes on smaller screens */
+      gap: 1rem;
+    }
+  
+    .Box1, .Box2, .Box3, .Box4, .Box5{
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .Title1, .Title2, .Title3, .Title4 {
+      font-size: 14px;
+    }
+  
+    .dis1, .dis2, .dis3, .dis4 {
+      font-size: 12px;
+    }
+  
+    .map iframe {
+      height: 250px; /* Adjust map height for small screens */
+    }
+  }
+  

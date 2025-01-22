@@ -1,4 +1,4 @@
-const SaleforceData = [
+const DataScienceData = [
   {
     title: "Key Features of Service Cloud",
     description: "In this section, we will discuss the key features of Service Cloud. These features help in accomplishing the business goals mentioned above. The features are described below −"
@@ -18,4 +18,4 @@ const SaleforceData = [
   
 ];
 
-export default SaleforceData;
+export default DataScienceData;

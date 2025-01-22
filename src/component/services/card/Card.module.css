@@ -1,91 +1,39 @@
 .Card {
     background-color: whitesmoke;
-    margin-top: 100px;
+    margin-top: 5%; /* Changed to a percentage for responsiveness */
 }
 
 .word {
-    margin-top: 50px;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2rem; /* Responsive font size */
 }
 
-.Box {
+.Box, .box {
     display: flex;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
     justify-content: center;
     align-items: center;
     color: black;
-    margin-top: 70px;
+    margin-top: 2rem;
     gap: 2rem;
-
-    
-}
-.Box1, .Box2, .Box3, .Box4{
-    height: 220px;
-    width: 250px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
-    border-top-left-radius: 60px;
-    border-bottom-Right-radius: 60px;
 }
 
-.Logo1,.Logo2,.Logo3,.Logo4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -20px;
-    color: navy;
-}
-
-.Name1, .Name2, .Name3, .Name4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Line1, .Line2, .Line3, .Line4 {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-.Section2{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    margin-top:-10px;
-    gap: 2rem;
-    
-}
-
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    margin-top: 80px;
-    gap: 2rem;
-    
-}
-
+.Box1, .Box2, .Box3, .Box4, 
 .box1, .box2, .box3, .box4 {
     height: 220px;
-    width: 250px;
+    width: 100%; /* Defaults to 100% width */
+    max-width: 250px; /* Restricts max width */
     background-color: white;
     box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
     border-top-left-radius: 60px;
-    border-bottom-Right-radius: 60px;
-    
+    border-bottom-right-radius: 60px;
 }
 
+.Logo1, .Logo2, .Logo3, .Logo4,
 .logo1, .logo2, .logo3, .logo4 {
     display: flex;
     align-items: center;
@@ -94,19 +42,58 @@
     color: navy;
 }
 
+.Name1, .Name2, .Name3, .Name4, 
 .name1, .name2, .name3, .name4 {
-    font-size: 24px;
+    font-size: 1.5rem; /* Responsive font size */
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.Line1, .Line2, .Line3, .Line4, 
 .line1, .line2, .line3, .line4 {
-    font-size: 14px;
+    font-size: 0.875rem; /* Responsive font size */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 1rem;
+}
+
+/* Add Media Queries for Responsiveness */
+@media (max-width: 768px) { /* Tablets */
+    .Box1, .Box2, .Box3, .Box4,
+    .box1, .box2, .box3, .box4 {
+        max-width: 200px; /* Adjust box size */
+        height: 180px; /* Adjust height */
+    }
+
+    .Name1, .Name2, .Name3, .Name4, 
+    .name1, .name2, .name3, .name4 {
+        font-size: 1.25rem; /* Smaller font */
+    }
+
+    .Line1, .Line2, .Line3, .Line4, 
+    .line1, .line2, .line3, .line4 {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) { /* Smartphones */
+    .Box1, .Box2, .Box3, .Box4,
+    .box1, .box2, .box3, .box4 {
+        max-width: 150px; /* Smaller boxes */
+        height: 150px;
+    }
+
+    .Name1, .Name2, .Name3, .Name4, 
+    .name1, .name2, .name3, .name4 {
+        font-size: 1rem;
+    }
+
+    .Line1, .Line2, .Line3, .Line4, 
+    .line1, .line2, .line3, .line4 {
+        font-size: 0.625rem;
+    }
 }

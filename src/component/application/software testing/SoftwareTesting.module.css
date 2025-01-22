@@ -9,24 +9,10 @@
   padding: 20px;
 }
 
-/* Main Box Styling */
-.box {
-  
-  width: 100%;
-  text-align: center;
-  
-}
-
-.image {
-  margin-top: -20px;
-  
-}
-
 .image img {
   width: 1263px;
   height: 400px;
-  margin-left: -20px;
- 
+   
 }
 
 .Line {
