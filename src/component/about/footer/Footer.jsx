@@ -51,7 +51,7 @@ function Footer() {
            <div className={styles.No}>
            
            <div className={styles.Logo}><BsLinkedin  size={20} />
-            <FaFacebookSquare size={20}/><IoLogoYoutube size={20} /><FaTwitterSquare size={20}/>
+            <FaFacebookSquare size={20}/><IoLogoYoutube size={20} />
             <FaInstagramSquare size={20}/></div></div>
         </div>
         <div className={styles.Copy}>Copyright © 2024 - All rights reserved</div>

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import styles from './Navbar.module.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import pentalogo1 from "../../assets/pentalogo1.png";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -13,19 +15,45 @@ function Navbar() {
     setIsDropdownOpen(false);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className={styles.Navbar}>
-      <div className={styles.logo}>MyLogo</div>
-      <div className={styles.container}>
-        <ul>
+      {/* Logo Section */}
+      <div className={styles.logo}>
+        <Link to="/">
+          <img src={pentalogo1} alt="Logo" className={styles.logoImage} />
+        </Link>
+      </div>
+
+      {/* Hamburger Menu for Mobile */}
+      <button className={styles.hamburger} onClick={toggleMenu}>
+        ☰
+      </button>
+
+      {/* Navbar Links Section */}
+      <div
+        className={`${styles.container} ${
+          menuOpen ? styles.showMenu : styles.hideMenu
+        }`}
+      >
+        <ul className={styles.navLinks}>
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              HOME
+            </Link>
           </li>
           <li>
-            <Link to="/about">ABOUTUS</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
+              ABOUTUS
+            </Link>
           </li>
           <li>
-            <Link to="/services">SERVICES</Link>
+            <Link to="/services" onClick={() => setMenuOpen(false)}>
+              SERVICES
+            </Link>
           </li>
           <li
             className={styles.dropdown}
@@ -81,7 +109,9 @@ function Navbar() {
             )}
           </li>
           <li>
-            <Link to="/contactus">CONTACTUS</Link>
+            <Link to="/contactus" onClick={() => setMenuOpen(false)}>
+              CONTACTUS
+            </Link>
           </li>
         </ul>
       </div>

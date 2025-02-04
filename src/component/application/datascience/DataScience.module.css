@@ -28,11 +28,12 @@
   
   .sent {
     position: absolute;
-    top: 15%; /* Adjust to place it below the .Name */
+    top: 19%; /* Adjust to place it below the .Name */
     left: 50%; /* Align it to the right of .Name */
     transform: translate(-50%, -50%); /* Proper centering */
     font-size: 18px;
     color: white;
+    /* text-align: justify; */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     z-index: 10;
   }
@@ -72,7 +73,7 @@
     font-weight: bold;
     font-size: 30px;
     margin-top: 20px;
-    margin-left: 90px;
+    margin-left: 86px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,10 +81,10 @@
   .Data1{
     font-size: 16px;
     margin-top: 50px;
-    margin-left: 80px;
+    margin-left: 86px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: justify;
   }
   /* Cloud Section Styling */
   .cloud {
@@ -110,20 +111,46 @@
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 2rem;
     margin-top: 2rem;
+    margin-left: 100px;
+    width: 80%;
+    /* height: 80px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   
   }
   
-  .Box1, .Box2, .Box3, .Box4, .Box5 {
+  .Box1, .Box2, .Box3{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 5px solid rgb(85, 175, 244);
+    border-left: 3px solid rgb(85, 175, 244);
     background-color: white;
     box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    height: 220px;
-    width: 100%;
-    max-width: 250px;
+    height: 280px;
+    width: 80%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add hover effect */
+  }
+  .Box1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box2:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box3:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
   }
   
   .Title1, .Title2, .Title3, .Title4 {
@@ -131,63 +158,111 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    /* margin-top: 10px; */
   }
   
   .dis1, .dis2, .dis3, .dis4 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: justify;
+    padding: 20px;
     font-size: 12px;
     margin-top: 10px;
 
   }
   @media (max-width: 768px) {
-    .Box {
-      display: grid; /* Use a grid layout for better responsiveness */
-      grid-template-columns: 1fr; /* Single-column layout for mobile */
-      gap: 1.5rem; /* Reduce the gap between the boxes */
-      margin-top: 1.5rem;
+    /* Adjust container for mobile */
+    .Section1 {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
   
-    .Box1, .Box2, .Box3, .Box4, .Box5 {
-      width: 100%; /* Allow boxes to take the full width */
-      max-width: 100%; /* Remove the maximum width constraint */
-      height: auto; /* Let the height adjust based on content */
-      padding: 20px; /* Add padding for better spacing */
+    .image1 img {
+      width: 100%;
+      height: auto;
+      max-width: 350px;
+    }
+  
+    .Box {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .Box1, .Box2, .Box3 {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      padding: 20px;
     }
   
     .Title1, .Title2, .Title3, .Title4 {
-      font-size: 14px; /* Reduce font size for titles */
-      text-align: center; /* Center-align text */
-      margin-bottom: 5px; /* Add spacing below the title */
+      font-size: 14px;
+      text-align: center;
     }
   
     .dis1, .dis2, .dis3, .dis4 {
-      font-size: 12px; /* Reduce font size for descriptions */
-      text-align: center; /* Center-align text */
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    .Name {
+      font-size: 22px;
+      margin-top: -90px;
+    }
+  
+    .sent {
+      font-size: 14px;
+      margin-top: -145px;
+    }
+  
+    .cloud {
+      font-size: 16px;
+    }
+  
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .map iframe {
+      width: 100%;
+      height: 250px;
+    }
+  
+    .map {
+      margin-top: 20px;
+    }
+  
+    .No {
+      font-size: 24px;
+    }
+    .data {
+      max-width: 100%;  /* Make it take full width on mobile */
+      margin-left: 10px; /* Reduce margin */
+      margin-right: 10px; /* Reduce margin */
+      align-items: center;  /* Center align on small screens */
+    }
+  
+    /* Adjust .Data text size and margin */
+    .Data {
+      font-size: 24px;  /* Smaller font-size for mobile */
+      margin-left: 0;  /* Remove margin-left */
+      margin-top: 15px;  /* Reduced margin for mobile */
+    }
+  
+    /* Adjust .Data1 text size and margin */
+    .Data1 {
+      font-size: 14px;  /* Smaller text for mobile */
+      margin-left: 0;  /* Remove margin-left */
+      margin-top: 25px;  /* Reduced margin for mobile */
+      text-align: left;  /* Align text to the left for better readability */
     }
   }
   
-  
-  /* Map Section */
-  .No {
-    margin-top: 50px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  
-  .map {
-    margin-top: 30px;
-  }
-  
-  .map iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-  }
-  
- 

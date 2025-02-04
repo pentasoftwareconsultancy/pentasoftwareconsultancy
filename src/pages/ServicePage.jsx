@@ -15,7 +15,7 @@ function ServicePage() {
       <Team/>
       <Core/>
       <Footer/>
-    </div>
+      </div>
   )
 }
 

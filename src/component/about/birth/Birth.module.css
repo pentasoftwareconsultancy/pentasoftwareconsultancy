@@ -1,17 +1,23 @@
-
+body{
+    background-color: white;
+}
 .Birth {
+    justify-content: center;
+    align-items: center;
     margin-left: 30px;
+    background-color: white;
 }
 .Box {
     display: flex;
     margin-top: 15px;
-    background-color: whitesmoke;
+    background-color: white;
     margin-left: 50px;
 }
 .Sec img {
     height: 300px;
     width: 500px;
     margin-left: 20px;
+    border-radius: 2rem;
 }
 .Name {
     font-weight: bold;
@@ -42,17 +48,20 @@
     height: 300px;
     width: 500px;
     margin-left: 100px;
+    border-radius: 2rem;
 }
 .Box3 {
     display: flex;
     margin-top: 50px;
-    background-color: whitesmoke;
+    background-color: white;
     margin-left: 50px;
 }
 .Sec5 img {
     height: 300px;
     width: 500px;
     margin-left: 10px;
+    border-radius: 2rem;
+
 }
 .Name3 {
     font-weight: bold;
@@ -83,17 +92,19 @@
     height: 300px;
     width: 500px;
     margin-left: 110px;
+    border-radius: 2rem;
 }
 .Box5 {
     display: flex;
     margin-top: 50px;
-    background-color: whitesmoke;
+    background-color: white;
     margin-left: 50px;
 }
 .Sec9 img {
     height: 300px;
     width: 500px;
     margin-left: 10px;
+    border-radius: 2rem;
 }
 .Name5 {
     font-weight: bold;
@@ -105,7 +116,7 @@
     margin-top: 20px;
 }
 
-/* Mobile Responsive Styles */
+
 @media (max-width: 768px) {
     .Box, .Box1, .Box3, .Box4, .Box5 {
         flex-direction: column;
@@ -116,6 +127,7 @@
     .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
         width: 100%;
         height: auto;
+       
         margin-left: 0;
     }
 
@@ -147,7 +159,7 @@
 .Box6{
     
     margin-top: 20px;
-    background-color: whitesmoke;
+    background-color: white;
     
 }
 .Name6{

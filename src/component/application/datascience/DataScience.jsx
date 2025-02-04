@@ -47,7 +47,7 @@ function DataScience() {
           </div>
         </div>
 
-        <div className={styles.Section3}>
+        {/* <div className={styles.Section3}>
           <div className={styles.No}>For More Information To Contact US</div>
           <div className={styles.No1}>
             <div className={styles.No2}>
@@ -65,7 +65,7 @@ function DataScience() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       
     </div>

@@ -53,13 +53,15 @@
 
 .No {
   display: flex;
+  gap: 20px; /* Optional: Add space between Count elements if needed */
 }
 
 .Count {
-  margin-bottom: 20px;
-  flex-direction: column;  /* Ensure counter and text are stacked vertically */
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Flex container for horizontal alignment */
+  flex-direction: row; /* Ensure Counter and CounterText are in a single row */
+  align-items: center; /* Center align content vertically */
+  justify-content: center; /* Center align content horizontally (optional) */
+  gap: 10px; /* Add spacing between Counter and CounterText */
 }
 
 .Counter {
@@ -71,23 +73,28 @@
 }
 
 .CounterText {
+  margin-top: 250px;
+  font-weight: bold;
   font-size: 16px;
   color: black;
-  margin-top: 10px; /* Add space between the counter number and the text */
+  margin-top: 65px;
+  margin-left: -130px; 
 }
 
 .Counter1 {
   font-size: 40px;
   font-weight: bold;
   color: black;
-  margin-bottom: 10px;
+  margin-top:-1px;
   transition: transform 0.3s ease;
 }
 
 .CounterText1 {
   font-size: 16px;
-  color: black;
-  margin-top: 10px; /* Add space between the counter number and the text */
+  color: rgb(10, 10, 10);
+  margin-top:65px;
+  margin-left:-100px;
+  font-weight: bold;
 }
 
 .Button {
@@ -97,6 +104,7 @@
   font-size: 16px;
   font-weight: bold;
   border-radius: 4px;
+  margin-top: 10px;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease;

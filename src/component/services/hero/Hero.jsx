@@ -11,9 +11,9 @@ function Hero() {
     <div className={styles.Hero}>
       <div className={styles.image}>
         <img src="https://promwad.com/sites/default/files/web-development_0.jpg"/>
-        <div className={styles.Line}>We are Devcons Solution</div>
+        <div className={styles.Line}></div>
         <div className={styles.Line1}>
-             Devcons Software Solution.!!
+        Penta is a global leader in IT services..!!
         </div>
         <div className={styles.Line3}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>

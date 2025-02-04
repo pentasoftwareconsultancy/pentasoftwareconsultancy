@@ -7,13 +7,11 @@ import styles from "./Card.module.css"
 function Card() {
   return (
     <div className={styles.Card}>
-        <div className={styles.Section}>
-        <div className={styles.Box}>
-          
-        </div>
+        
+       
         <div className={styles.Box1}>
         <div className={styles.Line}>Penta Software Consultancy Services </div>
-            <div className={styles.sent}>
+        <div className={styles.sent}>
         Penta Software Consultancy Services(I) Pvt Ltd (PSCS) is a Global leader in IT services,<br/>
         Digital and business solutions that partners with its clients to simplify,<br/>
         strengthen and transform their businesses. We ensure the highest levels of<br/>
@@ -23,7 +21,7 @@ function Card() {
         Services Brands. Our continued industry-leading growth is a testament<br/>
         to the certainty our clients experience every day.</div>
         </div>
-    </div>    
+      
     </div>
   )
 }

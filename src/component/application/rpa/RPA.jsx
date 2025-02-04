@@ -8,20 +8,23 @@ function RPA() {
     <div className={styles.RPA}> 
       <div className={styles.box}>
         <div className={styles.image}>
-          <img src="https://i.pinimg.com/736x/5b/e9/05/5be905bcc992b4a1efbfc89a9e3e09a7.jpg" />
+          <img src="https://i.pinimg.com/736x/f8/29/fc/f829fcf1b453ba0905af3131281043c4.jpg" />
         </div>
-        <div className={styles.Name}>Salesforce - Service Cloud</div>
-        <div className={styles.sent}>This part of Salesforce platform is focused on providing support and help to the customers.</div>
+        <div className={styles.Name}>With RPA, software users create software robots, or “bots”, that can learn, mimic, and then execute rules-based business processes.</div>
+        <div className={styles.sent}>Robotic Process Automation (RPA) is software technology that’s easy for anyone to use to automate digital tasks.</div>
 
         <div className={styles.Section}>
           <div className={styles.Section1}>
             <div className={styles.image1}>
-              <img src="https://i.pinimg.com/736x/92/2e/84/922e84be28abe65515a16dd7c12f3d71.jpg" />
+              <img src="https://i.pinimg.com/736x/ac/0d/b5/ac0db576e93585f04a1a8c7e5f3939e0.jpg" />
             </div>
             <div className={styles.data}>
-              This part of Salesforce platform is focused on providing support and help to the customers. This helps in retaining the customers, increasing their satisfaction and loyalty.
-              Its uniqueness lies in providing faster service compared to traditional methods, giving individual attention to each customer needs and taking a proactive approach to customer issues.
-              That ultimately enhances the customer’s experience hence loyalty which in turn creates a good impact on sales.
+            <div className={styles.data1}>What can RPA do for me</div>
+            <div className={styles.data2}>
+             With RPA, software users create software robots, or “bots”, that can learn, mimic, and then execute rules-based business processes. RPA 
+             automation enables users to create bots by observing human digital actions. Show your bots what to do, then let them do the work. Robotic Process Automation software bots can interact with any application or system the same way people do—except that RPA bots can operate around the clock, nonstop, much faster and with 100% reliability and precision.
+             <br/><br/>Discover and document processes to accelerate automation all in a single intelligent automation platform
+            </div>
             </div>
           </div>
 
@@ -40,7 +43,7 @@ function RPA() {
           </div>
         </div>
 
-        <div className={styles.Section3}>
+        {/* <div className={styles.Section3}>
           <div className={styles.No}>For More Information To Contact US</div>
           <div className={styles.No1}>
             <div className={styles.No2}>
@@ -58,7 +61,7 @@ function RPA() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

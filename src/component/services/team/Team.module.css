@@ -22,9 +22,9 @@
     font-size: 1rem; /* Responsive font size */
     margin-top: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Center align text */
+    margin-left: 2px;
+    /* /* justify-content: center; */
+   
 }
 
 .image1 img, .image2 img, .image3 img {
@@ -33,45 +33,23 @@
     max-height: 32.5vh; /* Limit max height */
     border-radius: 10px;
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) { /* Tablets */
-    .Word1, .Word2, .Word3 {
-        font-size: 1.25rem; /* Reduce font size for better fit */
-    }
-
-    .line1, .line2, .line3 {
-        font-size: 0.875rem; /* Smaller font size */
-    }
-
-    .image1 img {
-        max-height: 25vh; /* Reduce image height */
-    }
-
-    .image2 img, .image3 img {
-        max-height: 12vw; /* Adjust size for tablets */
-    }
-}
-
-@media (max-width: 480px) { /* Smartphones */
+@media (max-width: 768px) {
     .section {
-        flex-direction: column; /* Stack items vertically */
-        gap: 1.5rem; /* Reduce gap for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+        gap: 1.5rem;
+        padding: 0 3%;
     }
 
     .Word1, .Word2, .Word3 {
-        font-size: 1rem; /* Smaller font size */
+        font-size: 1.2rem;
     }
 
     .line1, .line2, .line3 {
-        font-size: 0.75rem; /* Further reduced font size */
+        font-size: 0.85rem;
     }
 
-    .image1 img {
-        max-height: 20vh; /* Adjust image height for smaller screens */
-    }
-
-    .image2 img, .image3 img {
-        max-height: 10vw; /* Smaller image size for smartphones */
+    .image1 img, .image2 img, .image3 img {
+        max-height: 28vh; /* Slightly reduce image height */
     }
 }
+

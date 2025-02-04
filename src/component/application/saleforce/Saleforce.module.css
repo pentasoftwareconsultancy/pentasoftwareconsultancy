@@ -1,5 +1,3 @@
-/* General container for the Saleforce component */
-
   
   /* Main Box Styling */
   .box {
@@ -13,29 +11,49 @@
       height: 440px;
     
   }
+  /* Default styles for larger screens */
+.Name {
+  position: absolute;
+  top: 10%; /* Position it near the top of the image */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Ensure proper centering */
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.sent {
+  position: absolute;
+  top: 17%; /* Adjust to place it below the .Name */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Ensure proper centering */
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+@media only screen and (max-width: 768px) {
+
   
+  .image img {
+    width: 100%; /* Make the image responsive and fill the container */
+    height: 300px; /* Maintain aspect ratio */
+  }
+
+ 
   .Name {
-    position: absolute;
-    top: 10%; /* Position it near the top of the image */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Ensure proper centering */
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+    font-size: 28px; /* Reduce font size */
+   margin-top: -90px;
   }
-  
+
   .sent {
-    position: absolute;
-    top: 15%; /* Adjust to place it below the .Name */
-    left: 50%; /* Align it to the right of .Name */
-    transform: translate(-50%, -50%); /* Proper centering */
-    font-size: 18px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+    font-size: 14px; /* Reduce font size */
+    margin-top: -165px;
   }
+}
+
   
   
   /* Section1 Layout */
@@ -58,8 +76,7 @@
     border-radius: 10px;
   }
   
-  .data,
-  .Data1 {
+  .data{
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -68,6 +85,26 @@
     color:black;
     max-width: 60%;  
     margin-left: 20px;
+  }
+  .data1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 180px;
+    justify-content: center; 
+    align-items:center; 
+    font-weight: bold;
+    font-size: 30px;
+    color:black;
+  }
+
+  .data2{
+    display: flex;
+    margin-top:40px;
+    margin-left: 130px;
+    justify-content: center; 
+    align-items:center; 
+    font-size: 15px;
+    color:black;
   }
   /* Cloud Section Styling */
   .cloud {
@@ -88,90 +125,139 @@
   }
   
   .Box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 2rem;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns layout on large screens */
+    gap: 1.5rem; /* Space between boxes */
+    margin: 2rem auto;
+    max-width: 1200px; 
+    
   }
   
-  .Box1, .Box2, .Box3, .Box4, .Box5 {
+  .Box1, .Box2,.Box3,.Box4, .Box5,.Box6,.Box7,.Box8{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
+    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5); /* Subtle shadow for depth */
+    border-top: 6px solid rgb(187, 123, 240);
+    border-bottom: 6px solid rgb(202, 107, 246);
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    height: 220px;
-    width: 100%;
-    max-width: 250px;
+    padding: 20px;
+    height: 250px; 
+    width: 90%;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add hover effect */
   }
   
-  .Title1, .Title2, .Title3, .Title4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .Box1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box2:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box3:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box4:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box5:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box6:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box7:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  .Box8:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.3); /* Darker shadow on hover */
+  }
+  
+  .Title1, .Title2, .Title3, .Title4, .Title5, .Title.Title7, .Title8 {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #333; 
   }
   
-  .dis1, .dis2, .dis3, .dis4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
+  .dis1, .dis2, .dis3, .dis4, .dis5, .dis6, .dis6, .dis7, .dis8{
+    font-size: 14px;
+    text-align: center;
+    color: #666; /* Lighter text color for descriptions */
     margin-top: 10px;
-
+    text-align: justify;
+    padding: 10px;
   }
-  @media (max-width: 768px) {
+  
+  @media only screen and (max-width: 768px) {
+    /* Adjust image size */
+    .image img {
+      margin-top: 50px;
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Section1 Layout Adjustments */
+    .Section1 {
+      flex-direction: column;
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .image1 img {
+      width: 100%;
+      height: 250px;
+      margin-top: -20px;
+    }
+  
+    .data {
+      max-width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .data1 {
+      margin-left: 0;
+      font-size: 24px;
+    }
+  
+    .data2 {
+      margin-left: 0;
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    /* Box Section (Adjust to 2 columns on medium screens) */
     .Box {
-      display: grid; /* Use a grid layout for better responsiveness */
-      grid-template-columns: 1fr; /* Single-column layout for mobile */
-      gap: 1.5rem; /* Reduce the gap between the boxes */
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
     }
   
-    .Box1, .Box2, .Box3, .Box4, .Box5 {
-      width: 100%; /* Allow boxes to take the full width */
-      max-width: 100%; /* Remove the maximum width constraint */
-      height: auto; /* Let the height adjust based on content */
-      padding: 20px; /* Add padding for better spacing */
+    /* Adjust box size and layout */
+    .Box1, .Box2, .Box3, .Box4, .Box5, .Box6, .Box7, .Box8 {
+      height: auto;
+      width: 100%;
+      padding: 15px;
     }
   
-    .Title1, .Title2, .Title3, .Title4 {
-      font-size: 14px; /* Reduce font size for titles */
-      text-align: center; /* Center-align text */
-      margin-bottom: 5px; /* Add spacing below the title */
+    .Title1, .Title2, .Title3, .Title4, .Title5, .Title6, .Title7, .Title8 {
+      font-size: 14px;
     }
   
-    .dis1, .dis2, .dis3, .dis4 {
-      font-size: 12px; /* Reduce font size for descriptions */
-      text-align: center; /* Center-align text */
+    .dis1, .dis2, .dis3, .dis4, .dis5, .dis6, .dis7, .dis8 {
+      font-size: 12px;
     }
   }
   
-  
-  /* Map Section */
-  .No {
-    margin-top: 50px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  
-  .map {
-    margin-top: 30px;
-  }
-  
-  .map iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-  }
-  
+
  

@@ -3,49 +3,52 @@ import styles from './Saleforce.module.css';
 import SaleforceData from './saleforceservice/SaleforceData';
 
 function Saleforce() {
-  
+
   return (
-    <div className={styles.Saleforce}> 
+    <div className={styles.Saleforce}>
       <div className={styles.box}>
         <div className={styles.image}>
           <img src="https://i.pinimg.com/736x/5b/e9/05/5be905bcc992b4a1efbfc89a9e3e09a7.jpg" />
         </div>
         <div className={styles.Name}>Salesforce - Service Cloud</div>
         <div className={styles.sent}>This part of Salesforce platform is focused on providing support and help to the customers.</div>
-
-        <div className={styles.Section}>
-          <div className={styles.Section1}>
-            <div className={styles.image1}>
-              <img src="https://i.pinimg.com/736x/92/2e/84/922e84be28abe65515a16dd7c12f3d71.jpg" />
-            </div>
-          
-           
-              <div className={styles.data}>This part of Salesforce platform is focused on providing support and help to the customers.<br/>
-               This helps in retaining the customers, increasing their satisfaction and loyalty.<br/>
-                Its uniqueness lies in providing faster service compared to traditional methods,<br/>
-                 giving individual attention to each customer needs and taking a proactive approach <br/>
-                 to customer issues. That ultimately enhances the customer’s experience hence<br/>
-                 loyalty which in turn creates a good impact on sales.
-                
-            </div>
+      
+      <div className={styles.Section}>
+        <div className={styles.Section1}>
+          <div className={styles.image1}>
+            <img src="https://i.pinimg.com/736x/92/2e/84/922e84be28abe65515a16dd7c12f3d71.jpg" />
           </div>
 
-          <div className={styles.Section2}>
-            <div className={styles.cloud}>
-              Following are the key business Goals achieved by using the Service Cloud
-            </div>
-            <div className={styles.Box}>
-              {SaleforceData.map((feature, index) => (
-                <div key={index} className={styles[`Box${index + 1}`]}>
-                  <div className={styles[`Title${index + 1}`]}>{feature.title}</div>
-                  <div className={styles[`dis${index + 1}`]}>{feature.description}</div>
-                </div>
-              ))}
+
+          <div className={styles.data}>
+            <div className={styles.data1}>Salesforce - Service Cloud </div>
+            <div className={styles.data2}>
+              This part of Salesforce platform is focused on providing support and help to the customers.<br />
+              This helps in retaining the customers, increasing their satisfaction and loyalty.<br />
+              Its uniqueness lies in providing faster service compared to traditional methods,<br />
+              giving individual attention to each customer needs and taking a proactive approach <br />
+              to customer issues. That ultimately enhances the customer’s experience hence<br />
+              loyalty which in turn creates a good impact on sales.
             </div>
           </div>
         </div>
 
-        <div className={styles.Section3}>
+        <div className={styles.Section2}>
+          <div className={styles.cloud}>
+            Following are the key business Goals achieved by using the Service Cloud
+          </div>
+          <div className={styles.Box}>
+            {SaleforceData.map((feature, index) => (
+              <div key={index} className={styles[`Box${index + 1}`]}>
+                <div className={styles[`Title${index + 1}`]}>{feature.title}</div>
+                <div className={styles[`dis${index + 1}`]}>{feature.description}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* <div className={styles.Section3}>
           <div className={styles.No}>For More Information To Contact US</div>
           <div className={styles.No1}>
             <div className={styles.No2}>
@@ -62,9 +65,9 @@ function Saleforce() {
                 ></iframe>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> */}
+
+</div>
     </div>
   );
 }

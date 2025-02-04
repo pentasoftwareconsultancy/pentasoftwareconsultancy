@@ -18,7 +18,7 @@ function Card() {
         <div className={styles.box}>
           <div className={styles.logo}><FaWindows size={50} />
           </div>
-          <div className={styles.Word}>Software Testing (Manual & Automation)</div>
+          <div className={styles.Word}>Software Testing </div>
           <div className={styles.Line}>
             Automation testing is a process of changing <br /> any manual test case into the test scripts by using<br /> automation testing tools, and<br /> scripting or programming language is called automation
           </div>
@@ -81,7 +81,7 @@ function Card() {
 
       <div className={styles.Container3}>
         <div className={styles.box}>
-          <div className={styles.logo}><RiJavaFill size={50}/>
+          <div className={styles.logo}><RiJavaFill size={55}/>
           </div>
           <div className={styles.Word}>Java Technlogy
           </div>

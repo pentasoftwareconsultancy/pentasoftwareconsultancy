@@ -1,74 +1,151 @@
 .Hero {
-    background-color: black;
-    height: 85vh;
     position: relative;
-    margin-top: -20px;
+    height: 100vh;
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden;  */
+  }
   
-}
-
-.Line {
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #e195c1, #4e04c5); /* Faint pink gradient */
+    z-index: 0;
+    pointer-events: none; /* Allow interaction with foreground elements */
+  }
+  
+  .Line, .sentence, .React, .video {
+    position: relative;
+    z-index: 1; /* Ensure these elements stay above the background */
+  }
+  
+  .Line {
     color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     font-size: 45px;
-    margin-top:10px;
-}
-
-.sentence {
+    margin-top: 185px;
+    text-align: center;
+    /* padding: 10px; */
+  }
+  
+  .sentence {
     color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     font-size: 22px;
     margin-top: 40px;
-}
-.React{
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .React {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.Button {
-    color: white;
-    margin-top: 80px;
-    background-color: transparent;
-    height: 50px;
-    width: 120px;
-    border: 2px solid white;
-    border-radius: 2rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 60px;
-    cursor: pointer;
-}
-
-.Button:hover {
-    color:white;
-    border-color:white;
-}
-.Button1{
-    color: white;
-    margin-top: 80px;
-    background-color: transparent;
-    height: 50px;
-    width: 120px;
-    border: 2px solid white;
-    border-radius: 2rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 100px;
-    cursor: pointer;
-    border-color:white;
-}
-.video video{
-    padding: 0 50px;
-    height: 30%;
-    width:60%;
-    border-radius: 2rem;
-    margin-left: 240px;
     margin-top: 20px;
-    border-bottom-left-radius: 20%;
-    border-top-right-radius: 20%;
-}
+  }
+  
+  .Button{
+    color: white;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    display: flex;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+  }
+  .Button1 {
+    color: white;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    display: flex;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Button:hover, .Button1:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+  }
+  .video video{
+  padding: 0 20px;
+  width: 60%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 235px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin-top:60px;
+  z-index: 1;
+  }
+  
+  /* Bubble animation */
+  @keyframes bubbleAnimation {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px) scale(0.5);
+    }
+  }
+  @media (max-width: 768px) {
+    .Hero {
+      margin-top: 0; /* Adjust margin for smaller screens */
+    }
+  
+    .Line {
+      font-size: 32px; /* Smaller font size for headlines */
+      margin-top: 120px;
+    }
+  
+    .sentence {
+      font-size: 18px; /* Smaller font size for sentences */
+      margin-top: 20px;
+      line-height: 1.4;
+      padding: 0 15px; /* Adjust padding for better readability */
+    }
+  
+    .React {
+      flex-direction: column; /* Stack buttons vertically */
+      margin-top: 10px;
+    }
+  
+    .Button,
+    .Button1 {
+      height: 45px;
+      width: 140px;
+      font-size: 12px;
+      margin: 5px 0; /* Add spacing between buttons */
+    }
+  
+    .video video {
+      width: 90%; /* Make the video take up most of the screen width */
+      margin-left: 0; /* Center align on smaller screens */
+      margin-top: 30px; /* Reduce top margin */
+      border-top-left-radius: 50px; /* Adjust for smaller screens */
+      border-bottom-right-radius: 50px;
+    }
+  }

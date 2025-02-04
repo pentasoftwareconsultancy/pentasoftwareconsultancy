@@ -1,26 +1,26 @@
-.Section {
+.Card{
     display: flex;
     margin-top: 150px;
     width: 100%;  /* Ensure the section spans the full width */
     justify-content: flex-start; /* Align children horizontally */
 }
 
-.Box {
-    background-color: gainsboro;
-    height: 250px;
-    width:340px;
-    margin-top: -175px;
-    
-}
 
 .Box1 {
-    background-color: rgb(170, 170, 170);
+    background-color: rgba(245, 245, 180, 0.9);
     height: 250px;
-    width: 100%;
-    margin-top: -175px;
-    
-   
+    width: 100%; 
+    border-radius: 2rem;
+    margin-top: -165px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: 0.3s ease-in-out;
 }
+.Box1:hover {
+  background-color: rgb(239, 194, 127); /* Changes to a darker shade */
+  transition: 0.3s ease-in-out;
+}
+
+
 
 .Line{
     display: flex;
@@ -36,3 +36,53 @@
     align-items: center;
     margin-top: 25px;
 }
+
+@media (min-width: 768px) {
+  .Card {
+      flex-direction: row; /* Side by side on larger screens */
+      justify-content: flex-start;
+      padding: 0 5%;
+  }
+
+  .Box1 {
+      width: 100%;
+      margin-top: -165px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Card {
+      flex-direction: column; 
+      align-items: center;
+  }
+
+  .Box1 {
+      width: 100%;
+      max-width: 400px;
+      margin-top: -80px;
+  }
+
+  .Line {
+      font-size: 1.3rem;
+  }
+
+  .sent {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Box1 {
+      height: auto; /* Adjust height for small screens */
+      padding: 15px;
+  }
+
+  .Line {
+      font-size: 1.1rem;
+  }
+
+  .sent {
+      font-size: 0.9rem;
+  }
+}
+

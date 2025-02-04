@@ -9,8 +9,8 @@
 .Name {
   position: absolute;
   top: 30%;
-  margin-left: 150px;
-  float: left;
+  
+  margin-left: 640px;
   transform: translate(-50%, -50%);
   font-size: 36px;
   font-weight: bold;
@@ -23,8 +23,10 @@
 .sentence {
   position: absolute;
   top: 40%;
-  margin-left: 310px;
-  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 680px;
   transform: translate(-50%, -50%);
   font-size: 36px;
   font-weight: bold;
@@ -37,12 +39,15 @@
 .Line {
   position: absolute;
   top: 50%;
-  margin-left: 340px;
+  margin-left: 650px;
   transform: translate(-50%, -50%);
   font-size: 18px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   z-index: 10;
 }
 
@@ -53,45 +58,29 @@
     height: auto; /* Adjust image height proportionally */
   }
 
-  /* Adjust the Name position */
+  
   .Name {
-    top: 25%;
-    margin-left: 10%;
+    top: 20%;
+    margin-left: 50%;
     font-size: 28px; /* Reduce font size for mobile */
     text-align: center;
     margin-top: 10px; /* Adjust position */
   }
 
-  /* Adjust the Sentence position */
-  .sentence {
-    top: 35%;
+  
+  /* .sentence {
+    top: -10%;
     margin-left: 10%;
-    font-size: 28px; /* Reduce font size for mobile */
+    font-size: 28px; 
     text-align: center;
-  }
+  } */
 
-  /* Adjust the Line position */
+
   .Line {
-    top: 45%;
-    margin-left: 10%;
+    top: 35%;
+    margin-left: 50%;
     font-size: 16px; /* Reduce font size for mobile */
     text-align: center;
   }
 }
 
-/* Extra small devices (portrait phones, less than 480px) */
-@media (max-width: 480px) {
-  .Name {
-    font-size: 24px; /* Further reduce font size */
-    margin-left: 0;
-    margin-top: 5px;
-  }
-
-  .sentence {
-    font-size: 24px; /* Further reduce font size */
-  }
-
-  .Line {
-    font-size: 14px; /* Further reduce font size */
-  }
-}

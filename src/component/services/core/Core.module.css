@@ -11,7 +11,7 @@
 }
 
 .Section {
-  margin-top: 50px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
@@ -82,6 +82,8 @@
 .Line6 {
   font-size: 16px;
   line-height: 1.6;
+  margin-top: -35px;
+  text-align: justify; 
 }
 
 /* Mobile Responsive Styles */
@@ -121,39 +123,3 @@
   }
 }
 
-@media (max-width: 480px) { /* Mobile screens */
-  .Word {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  .Section {
-    grid-template-columns: 1fr; /* Single column layout */
-    margin-left: 10px;
-    margin-right: 10px;
-    gap: 8px;
-  }
-
-  .Section div {
-    padding: 10px; /* Further reduce padding */
-  }
-
-  .Name1,
-  .Name2,
-  .Name3,
-  .Name4,
-  .Name5,
-  .Name6 {
-    font-size: 16px; /* Smaller font size for names */
-  }
-
-  .Line1,
-  .Line2,
-  .Line3,
-  .Line4,
-  .Line5,
-  .Line6 {
-    font-size: 12px; /* Smaller text for lines */
-    line-height: 1.2; /* Adjust line height for mobile */
-  }
-}

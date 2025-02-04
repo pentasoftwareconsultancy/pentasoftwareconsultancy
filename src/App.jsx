@@ -16,11 +16,19 @@ import RPA from './component/application/rpa/RPA';
 import RPAData from './component/application/rpa/rpa/RPAData';
 import AWWSService from './component/application/awsservice/AWSService';
 import AWSServiceData from './component/application/awsservice/awsservice/AWSServiceData';
+import AppsDevelopment from './component/application/appsdevelopment/AppsDevelopment';
+import AppsDevelopmentData from './component/application/appsdevelopment/appsdevelopment/AppsDevelopmentData';
+import JavaTechnology from './component/application/javatechnology/JavaTechnolody';
+import JavaTechonologyData from './component/application/javatechnology/javatechnology/JavaTechonologyData';
+import SAPSupport from './component/application/sapsupport/SAPSupport';
+import SPASupportData from './component/application/sapsupport/sapsupport/SAPSupportData';
+import ScrollTop from './component/scrolltop/Scrolltop';
 
 function App() {
   return (
     <div>
       <Navbar />
+      <ScrollTop/>
       <Routes>
 
         <Route path="/" element={<HomePage />} />
@@ -52,6 +60,18 @@ function App() {
         <Route
         path='/application/rpa'
         element={<RPA data={RPAData}/>}/>
+
+        <Route
+        path="/application/apps-development"
+        element={<AppsDevelopment data={AppsDevelopmentData}/>}/>
+     
+         <Route
+         path="/application/java-technology"
+         element={<JavaTechnology data={JavaTechonologyData}/>}/>
+    
+        <Route
+         path="/application/sap-support"
+         element={<SAPSupport data={SPASupportData}/>}/>
       </Routes>
 
     </div>

@@ -1,0 +1,224 @@
+
+
+  
+  /* Main Box Styling */
+  .box {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  
+    .image img {
+      width: 1263px;
+      height: 480px;
+    
+  }
+  
+  .Name {
+    position: absolute;
+    top: 15%; /* Position it near the top of the image */
+    left: 45%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure proper centering */
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+  }
+  
+  .sent {
+    position: absolute;
+    top: 26%; /* Adjust to place it below the .Name */
+    left: 45%; /* Align it to the right of .Name */
+    transform: translate(-50%, -50%); /* Proper centering */
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+  }
+  
+  
+  /* Section1 Layout */
+  .Section1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+  }
+  
+  .image1 img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    font-size: 16px;
+    color:black;
+    max-width: 60%;  
+    margin-left: 90px;
+  }
+  .Data{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Data1{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 100px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: justify;
+  }
+  /* Cloud Section Styling */
+  .cloud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  /* Grid Layout for Box Section */
+  .Section2 {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  .Box {
+    display: flex; /* Use grid instead of flex */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 1rem; /* Spacing between items */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    margin-top: 2rem;
+  }
+  
+  
+  /* .Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr, 1fr); 
+    gap: 1rem;
+    margin-top: 2rem;
+    
+  }
+   */
+  .Box1, .Box2, .Box3, .Box4, .Box5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 3rem;
+    background-color: white;
+    /* background-color:rgba(97, 199, 239, 0.804); */
+    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
+    height: 300px;
+    width: 70%;
+  
+  }
+  
+  .Title1, .Title2, .Title3, .Title4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .dis1, .dis2, .dis3, .dis4 {
+    display: flex;
+    text-align: justify;
+    /* justify-content: center;
+    align-items: center; */
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 20px;
+
+  }
+  @media (max-width: 768px) {
+    .image img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Adjust Name styling further for small mobile screens */
+  .Name {
+      top: 4.2%; 
+      margin-left: 40px;
+      font-size: 18px; /* Further reduce font size */
+  }
+
+  /* Adjust Sent styling for small mobile screens */
+  .sent {
+      top: 8%; 
+      font-size: 10px; 
+      margin-left: 35px;
+  }
+  .data {
+    max-width: 100%; /* Ensure it takes full width */
+    margin-left: 10px; /* Reduce margin further for very small screens */
+}
+
+/* Further reduce .Data title size for small screens */
+.Data {
+    font-size: 18px; /* Smaller font size */
+    margin-left: 10px; /* Adjust margin */
+}
+
+/* Further reduce .Data1 font size for small screens */
+.Data1 {
+    font-size: 12px; /* Keep the same font size */
+    margin-left: 10px; /* Adjust margin */
+    margin-top: 10px; /* Ensure proper text spacing */
+}
+    .Box {
+      display: grid; /* Use a grid layout for better responsiveness */
+      grid-template-columns: 1fr; /* Single-column layout for mobile */
+      gap: 1.5rem; /* Reduce the gap between the boxes */
+      margin-top: 1.5rem;
+    }
+  
+    .Box1, .Box2, .Box3, .Box4, .Box5 {
+      width: 100%; /* Allow boxes to take the full width */
+      /* max-width: 100%; */
+      height: auto; /* Let the height adjust based on content */
+      padding: 20px; /* Add padding for better spacing */
+    }
+  
+    .Title1, .Title2, .Title3, .Title4 {
+      font-size: 14px; 
+      text-align: center; /* Center-align text */
+      margin-bottom: 5px; /* Add spacing below the title */
+    }
+  
+    .dis1, .dis2, .dis3, .dis4 {
+      /* font-size: 12px; */
+      text-align: center; /* Center-align text */
+    }
+  }
+  
+  
+  

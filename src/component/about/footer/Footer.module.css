@@ -16,6 +16,7 @@
   
   /* Styling for Section2 */
   .Section2 {
+    color: #00d4ff;
     width: 100%; /* Ensures it takes the full width */
     text-align: center; /* Center text and content inside */
     margin-top: 30px;
@@ -24,6 +25,7 @@
     margin-top: 10px;
   }
   .Name3{
+    color: #00d4ff;
     font-weight: bold;
     font-size: 25px;
     margin-top: 20px;
@@ -46,6 +48,7 @@
   }
   
   .Name {
+    color: #00d4ff;
     font-weight: bold;
     font-size: 25px;
     margin-top: 20px;
@@ -73,7 +76,7 @@
   
   .Copy {
     margin-top: 50px;
-    color: white;
+    color: #00d4ff;
     text-align: center;
     font-size: 14px;
   }

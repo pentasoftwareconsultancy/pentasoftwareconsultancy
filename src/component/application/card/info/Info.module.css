@@ -1,0 +1,114 @@
+.Info {
+    margin-top: 50px; /* Adjust the margin as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Section{
+    margin-top: 350px;
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    gap: 20px; /* Space between sections */
+    justify-content: center;
+    width: 100%; /* Full width container */
+    max-width: 1200px; 
+  }
+  .Box1 {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    gap: 20px; /* Space between sections */
+    justify-content: center;
+    width: 100%; /* Full width container */
+    max-width: 1200px; /* Set a max width for better layout */
+  }
+  
+  .Section > div,
+  .Box1 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Background for each section */
+    border: 1px solid #000; /* Solid black border */
+    border-radius: 20px; /* Smooth rounded corners */
+    padding: 20px; /* Padding inside the sections */
+    width: 45%; /* Each section takes 45% of the parent container */
+    min-height: 250px; /* Minimum height for consistency */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+  }
+  
+  .Section > div:hover,
+  .Box1 > div:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .Name1,
+  .Name2,
+  .Name3,
+  .Name4,
+  .Name5,
+  .Name6,
+  .Name7,
+  .Name8 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px; 
+    text-align: center;
+    color: #333; 
+  }
+  
+  .Line1,
+  .Line2,
+  .Line3,
+  .Line4,
+  .Line5,
+  .Line6,
+  .Line7,
+  .Line8 {
+    font-size: 14px;
+    line-height: 1.5; /* Better readability */
+    text-align: justify;
+    color: #555; /* Slightly lighter gray for paragraph text */
+    max-height: 150px; /* Limit height for better layout */
+    overflow-y: auto; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .Section > div,
+    .Box1 > div {
+      width: 100%; 
+    
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Name1,
+    .Name2,
+    .Name3,
+    .Name4,
+    .Name5,
+    .Name6,
+    .Name7,
+    .Name8 {
+      font-size: 18px; /* Slightly smaller title on small screens */
+    }
+  
+    .Line1,
+    .Line2,
+    .Line3,
+    .Line4,
+    .Line5,
+    .Line6,
+    .Line7,
+    .Line8 {
+      font-size: 12px; /* Smaller paragraph text for small screens */
+    }
+  }
+  
