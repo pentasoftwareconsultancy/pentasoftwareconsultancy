@@ -1,6 +1,7 @@
 .Card{
     display: flex;
     margin-top: 150px;
+    padding: 20px;
     width: 100%;  /* Ensure the section spans the full width */
     justify-content: flex-start; /* Align children horizontally */
 }
@@ -35,40 +36,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-}
-
-@media (min-width: 768px) {
-  .Card {
-      flex-direction: row; /* Side by side on larger screens */
-      justify-content: flex-start;
-      padding: 0 5%;
-  }
-
-  .Box1 {
-      width: 100%;
-      margin-top: -165px;
-  }
-}
-
-@media (max-width: 768px) {
-  .Card {
-      flex-direction: column; 
-      align-items: center;
-  }
-
-  .Box1 {
-      width: 100%;
-      max-width: 400px;
-      margin-top: -80px;
-  }
-
-  .Line {
-      font-size: 1.3rem;
-  }
-
-  .sent {
-      font-size: 1rem;
-  }
 }
 
 @media (max-width: 480px) {

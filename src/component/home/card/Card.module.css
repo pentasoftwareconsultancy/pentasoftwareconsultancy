@@ -134,7 +134,7 @@
     .box {
         width: 90%; /* Make boxes take up more width on mobile */
         height: auto; /* Allow boxes to adjust height */
-        margin-top: 20px; /* Reduce margin between boxes */
+        margin-top: 10px; /* Reduce margin between boxes */
         padding: 20px; /* Add padding to avoid content being too cramped */
     }
 
@@ -149,7 +149,8 @@
     /* Top container adjustments */
     .topContainer {
         flex-direction: column; /* Stack items vertically on smaller screens */
-        gap: 20px; /* Reduce the gap between items */
+        gap: 20px; 
+        
     }
 
     /* Container2 and Container3 adjustments */

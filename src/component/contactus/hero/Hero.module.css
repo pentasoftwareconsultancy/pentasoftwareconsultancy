@@ -60,7 +60,7 @@
 
   
   .Name {
-    top: 20%;
+    top: 15%;
     margin-left: 50%;
     font-size: 28px; /* Reduce font size for mobile */
     text-align: center;
@@ -77,7 +77,7 @@
 
 
   .Line {
-    top: 35%;
+    top: 25%;
     margin-left: 50%;
     font-size: 16px; /* Reduce font size for mobile */
     text-align: center;

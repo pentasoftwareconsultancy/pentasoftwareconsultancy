@@ -142,7 +142,7 @@
     }
   
     .video video {
-      width: 90%; /* Make the video take up most of the screen width */
+      width: 100%; /* Make the video take up most of the screen width */
       margin-left: 0; /* Center align on smaller screens */
       margin-top: 30px; /* Reduce top margin */
       border-top-left-radius: 50px; /* Adjust for smaller screens */

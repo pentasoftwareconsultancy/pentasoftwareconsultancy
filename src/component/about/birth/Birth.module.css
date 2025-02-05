@@ -4,8 +4,9 @@ body{
 .Birth {
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     background-color: white;
+    padding: 20px;
 }
 .Box {
     display: flex;
@@ -118,43 +119,55 @@ body{
 
 
 @media (max-width: 768px) {
-    .Box, .Box1, .Box3, .Box4, .Box5 {
+    /* Make all sections stack vertically */
+    .Box, .Box1, .Box2, .Box3, .Box4, .Box5 {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         margin-left: 0;
         margin-top: 20px;
     }
-    
+
+    /* Ensure all images appear first in mobile view */
+    .Box1 .Sec4, 
+    .Box2 .Sec5, 
+    .Box3 .Sec8, 
+    .Box4 .Sec8, 
+    .Box5 .Sec9 {
+        order: -1;
+    }
+
+    /* Make images responsive */
     .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
         width: 100%;
         height: auto;
-       
         margin-left: 0;
+        margin-bottom: 15px;
     }
 
-    .Name, .Name1, .Name3, .Name4, .Name5 {
+    /* Center align headings */
+    .Name, .Name1, .Name2, .Name3, .Name4, .Name5 {
         font-size: 28px;
         margin-left: 0;
         text-align: center;
     }
 
-    .Line, .Line1, .Line3, .Line4, .Line5 {
+    /* Adjust text alignment for readability */
+    .Line, .Line1, .Line2, .Line3, .Line4, .Line5 {
+        font-size: 16px;
         margin-left: 0;
+        text-align: justify;
         margin-top: 10px;
+        padding: 0 15px; /* Added padding for better spacing */
     }
 
-    .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
-        margin-bottom: 15px;
+    /* Ensure proper spacing for text sections */
+    .Sec3, .Sec6, .Sec7, .Sec10 {
+        text-align: center;
+        padding: 0 15px;
     }
 }
 
-@media (max-width: 480px) {
-    .Name, .Name1, .Name3, .Name4, .Name5 {
-        font-size: 24px;
-    }
-    .Box, .Box1, .Box3, .Box4, .Box5 {
-        padding: 0 10px;
-    }
-}
 
 .Box6{
     
@@ -180,7 +193,7 @@ body{
     
 }
 .section{
-    margin-left:-35px;
+      
     gap:1%;
 }
 .section1 {
@@ -244,4 +257,17 @@ body{
 }
 .No1, .No2, .No3, .No4{
     gap:1%;
+}
+@media only screen and (max-width: 768px) { /* Mobile Devices */
+    .section1, .section2 {
+        flex-direction: column; /* Stack boxes vertically */
+        gap: 10px;
+    }
+
+    .box1, .box2, .box3, .box4,
+    .box5, .box6, .box7, .box8 {
+        width: 80%; /* Make boxes responsive */
+        height: 65px;
+        margin-top: 10px;
+    }
 }

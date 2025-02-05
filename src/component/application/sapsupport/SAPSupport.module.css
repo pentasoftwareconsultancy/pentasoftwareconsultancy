@@ -223,8 +223,10 @@
     }
 
     .Data1, .Data3 {
-        text-align: center;
+        text-align: justify;
         margin-left: 0;
+      
+        
     }
 
     .Box {

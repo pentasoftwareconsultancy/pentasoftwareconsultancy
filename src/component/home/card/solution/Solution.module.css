@@ -98,7 +98,7 @@
 }
 
 .Button {
-  background-color: #007bff;
+  background-color: rgb(169, 53, 192);
   color: white;
   padding: 15px 30px;
   font-size: 16px;
@@ -112,7 +112,7 @@
 }
 
 .Button:hover {
-  background-color: #0056b3;
+  background-color:rgb(241, 133, 234);
 }
 
 .Section2 {
@@ -165,19 +165,23 @@
   }
 
   .Counter {
-      font-size: 30px; /* Adjust counter size */
+      font-size: 30px; 
+      margin-left: 50px;
   }
 
   .CounterText {
-      font-size: 14px; /* Adjust counter text size */
+      font-size: 14px; 
+      
   }
 
   .Counter1 {
-      font-size: 30px; /* Adjust counter size */
+      font-size: 30px; 
+      margin-left:55px;
   }
 
   .CounterText1 {
-      font-size: 14px; /* Adjust counter text size */
+      font-size: 14px; 
+      /* margin-left: 2px; */
   }
 
   .image img {

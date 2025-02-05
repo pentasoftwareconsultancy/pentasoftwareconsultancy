@@ -1,8 +1,6 @@
 body{
     background-color: whitesmoke;
 }
-
-
 .image img{
     position: relative; 
     margin-top: 90px;
@@ -10,9 +8,7 @@ body{
     height: 500px;; 
     width: 1263px;
 }
-/* .box{
-    float: right;
-} */
+
 .line{
     font-size: 40px;
     font-weight: bold;
@@ -36,52 +32,22 @@ body{
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 1024px) {
-    .line {
-        font-size: 2.5rem;
-        top: 30%;
-    }
-
-    .sent {
-        font-size: 1.2rem;
-        top: 45%;
-    }
-}
-
-/* Tablet & Mobile Scaling */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) { /* Mobile Devices */
     .image img {
-        height: 600px; 
-        width: auto;
-        /* object-fit: contain;  */
+        width: 100%;
+        height: auto;
+        margin-top: 70px;
     }
-
     .line {
-        font-size: 2rem;
-        top: 28%;
-        width: 90%;
-    }
-
-    .sent {
-        font-size: 1rem;
-        top: -53%;
+        font-size: 28px;
+        top: 15%;
         width: 50%;
     }
-}
-
-/* Small Mobile Screens */
-@media (max-width: 480px) {
-    .image img {
-        height: 300px; /* Keeps image properly sized */
-    }
-
-    .line {
-        font-size: 1.5rem;
-        top: 25%;
-    }
-
+    
     .sent {
-        font-size: 0.9rem;
-        top: 25%;
+        font-size: 16px;
+        top: 35%;
+        /* width: 35%; */
+        margin-left: 50px;
     }
 }

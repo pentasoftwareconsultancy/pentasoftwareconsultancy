@@ -6,7 +6,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
-import { FaTwitterSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 
 

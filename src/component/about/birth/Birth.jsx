@@ -94,7 +94,7 @@ function Birth() {
                  <div className={styles.No1}>ASP.Net (MVC)& <br/>JAVA Technlogy</div></div>
 
                  <div className={styles.box2}><div className={styles.logo2}><DiCss3 size={30}/></div>
-                 <div className={styles.No2}>HTML + CSS + Bpootstrap + JQuerry + AngularJS</div></div>
+                 <div className={styles.No2}>HTML + CSS + Bpootstrap<br/> + JQuerry + AngularJS</div></div>
 
                  <div className={styles.box3}><div className={styles.logo3}><IoLogoAndroid size={30}/></div>
                  <div className={styles.No3}>Android SDK, Java Servlet</div></div>
@@ -113,7 +113,7 @@ function Birth() {
                   <div className={styles.No7}>Data Science & ML</div></div>
 
                   <div className={styles.box8}><div className={styles.logo8}><FaMobileAlt size={30}/></div>
-                  <div className={styles.No8}>Application Testing & Mobile Testing .</div></div>
+                  <div className={styles.No8}>Application Testing &<br/>Mobile Testing .</div></div>
                 </div>
 
 
