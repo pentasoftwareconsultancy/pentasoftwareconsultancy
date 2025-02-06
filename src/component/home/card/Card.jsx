@@ -23,7 +23,7 @@ function Card() {
             Automation testing is a process of changing <br /> any manual test case into the test scripts by using<br /> automation testing tools, and<br /> scripting or programming language is called automation
           </div>
           <div className={styles.Button}>Read More</div>
-        </div>
+          </div>
         
         <div className={styles.box}>
           <div className={styles.logo}><FaSalesforce size={50} />

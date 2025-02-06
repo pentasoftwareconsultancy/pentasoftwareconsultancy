@@ -1,26 +1,36 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import pentalogo1 from "../../assets/pentalogo1.png";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Track the current route
 
+  // Toggle dropdown visibility and hide navbar when dropdown opens
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Close dropdown and show navbar again
   const closeDropdown = () => {
     setIsDropdownOpen(false);
   };
 
+  // Toggle mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close Navbar when changing pages
+  React.useEffect(() => {
+    setMenuOpen(false); // Hide mobile menu
+    setIsDropdownOpen(false); // Hide dropdown
+  }, [location.pathname]); // Run when the route changes
+
   return (
-    <div className={styles.Navbar}>
+    <div className={`${styles.Navbar} ${isDropdownOpen ? styles.hidden : ""}`}>
       {/* Logo Section */}
       <div className={styles.logo}>
         <Link to="/">
@@ -41,17 +51,17 @@ function Navbar() {
       >
         <ul className={styles.navLinks}>
           <li>
-            <Link to="/" onClick={() => setMenuOpen(false)}>
+            <Link to="/" onClick={closeDropdown}>
               HOME
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => setMenuOpen(false)}>
+            <Link to="/about" onClick={closeDropdown}>
               ABOUTUS
             </Link>
           </li>
           <li>
-            <Link to="/services" onClick={() => setMenuOpen(false)}>
+            <Link to="/services" onClick={closeDropdown}>
               SERVICES
             </Link>
           </li>
@@ -60,9 +70,7 @@ function Navbar() {
             onMouseEnter={toggleDropdown}
             onMouseLeave={closeDropdown}
           >
-            <Link to="/application" aria-expanded={isDropdownOpen}>
-              APPLICATION
-            </Link>
+            <Link to="/application">APPLICATION</Link>
             {isDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li>
@@ -109,7 +117,7 @@ function Navbar() {
             )}
           </li>
           <li>
-            <Link to="/contactus" onClick={() => setMenuOpen(false)}>
+            <Link to="/contactus" onClick={closeDropdown}>
               CONTACTUS
             </Link>
           </li>

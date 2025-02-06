@@ -185,14 +185,16 @@
 /* Further reduce .Data title size for small screens */
 .Data {
     font-size: 18px; /* Smaller font size */
-    margin-left: 10px; /* Adjust margin */
+    margin-left: 10px; 
+    margin-top: 35px;
 }
 
 /* Further reduce .Data1 font size for small screens */
 .Data1 {
     font-size: 12px; /* Keep the same font size */
-    margin-left: 10px; /* Adjust margin */
-    margin-top: 10px; /* Ensure proper text spacing */
+    margin-left: -10px; /* Adjust margin */
+    margin-top: 20px;
+    padding: 5px;
 }
     .Box {
       display: grid; /* Use a grid layout for better responsiveness */

@@ -68,14 +68,20 @@
     }
 
     .Box, .box {
-        flex-direction: column; /* Stack boxes vertically */
+        flex-direction: column; 
         gap: 1rem;
     }
 
-    .Box1, .Box2, .Box3, .Box4, 
-    .box1, .box2, .box3, .box4 {
+ .box1, .box2, .box3, .box4 {
         max-width: 90%; /* Adjust width for smaller screens */
         height: 200px;
+        margin-top: 15px;
     }
+    .Box1, .Box2, .Box3, .Box4{
+        max-width: 90%; /* Adjust width for smaller screens */
+        height: 200px;
+        margin-top: 15px;
+    }
+   
 }
 

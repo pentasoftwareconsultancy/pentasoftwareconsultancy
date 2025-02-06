@@ -51,11 +51,15 @@
 
 
 .ContactAdress h3 {
-  margin: 20px;
+  margin: 10px;
   display: flex;
   font-size: 1.2rem;
   font-weight: 600;
+  margin-top: -10px;
 } 
+.ContactAdress ul{
+  
+}
 
 .locationicon {
   flex-shrink: 0; /* Prevent resizing */
@@ -95,6 +99,7 @@
 .ContactNo h3 {
   font-size: 1.2rem;
   font-weight: 600;
+  
 }
 
 .contacticon {
@@ -230,44 +235,75 @@ textarea:focus::placeholder {
   border: none;
 }
 
-@media only screen and (max-width: 480px) { /* Small Mobile Screens */
+@media (max-width: 1024px) {
   .container {
-    padding: 0 1rem;
+    flex-direction: column; /* Stack elements on smaller screens */
+     
   }
 
-  .left, .right {
+  .left{
     width: 100%;
-    padding: 10px;
+    padding: 0px;
+  }
+  .right {
+    width: 100%;
+    margin:0px;
+  }
+  .ContactAdress ul{
+    
+  }
+  .formGroup {
+    flex: 1 1 100%; 
+    
   }
 
-  .contactCard h2, .Righttitle {
-    font-size: 1.1rem;
-  }
-  .ContactAdress{
-    margin-left: 10px;
-  }
-  .MailIcon {
-    margin: 10px;
-    gap: 8px;
-    font-size: 0.9rem;
-  }
-
-  .MailIcon h3 {
-    font-size: 1rem;
-  }
-
-  .mailIcon {
-    min-width: 30px;
-    height: 30px;
-    padding: 3px;
-   
-  }
-  .ContactNo{
-    margin-left: 10px;
-  }
-  .formGroup input, .formGroup textarea {
-    font-size: 0.9rem;
+  .map {
+    width: 100%;
+    height: 250px; 
     padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2%;
+  }
+
+  .contactCard h2 {
+    font-size: 1.3rem;
+  }
+
+  .ContactAdress,
+  .MailIcon,
+  .ContactNo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Righttitle {
+    font-size: 1.3rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.9rem;
+  }
+
+  .map {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactCard h2 {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    
+  }
+
+  .contactCard p {
+    padding-left: 10px;
+    font-size: 0.9rem;
   }
 
   .submitButton {
@@ -276,8 +312,6 @@ textarea:focus::placeholder {
   }
 
   .map {
-    height: 290px;
-    width: 350px;
-    
+    height: 180px;
   }
 }

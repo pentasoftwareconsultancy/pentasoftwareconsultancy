@@ -83,8 +83,11 @@
   @media (max-width: 768px) {
     .Section > div,
     .Box1 > div {
-      width: 100%; 
-    
+      width: 90%; 
+      padding: 10px;
+    }
+    .Info{
+      margin-bottom: 20px;
     }
   }
   

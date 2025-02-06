@@ -169,18 +169,18 @@
 
   .image img {
     width: 100%;
-    height: auto;
+    height: 300px;
     margin-top: 10px;
    }
   .Line {
-    font-size: 14px; 
-    margin-top: -80px;
+    font-size: 18px; 
+    margin-top: -60px;
     text-align: center;
   }
   
   .sent {
     font-size: 12px; 
-    margin-top: -120px;
+    margin-top: -100px;
     text-align: center;
   }
   

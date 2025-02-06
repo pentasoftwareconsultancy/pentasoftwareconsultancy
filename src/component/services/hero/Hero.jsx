@@ -31,9 +31,9 @@ function Hero() {
             <div className={styles.box2}>
                  <div className={styles.logo2}><GrTechnology size={80} /></div>
                 <div className={styles.Name2}>Technology</div>
-               <div className={styles.No2}>MVC Architecture technology<br/>
-               which help to rapid Software<br/>Application Development.<br/>
-                AngularJS and Jquery to <br/>make design effective.</div>
+               <div className={styles.No2}>MVC Architecture technology which<br/>
+                help to rapid Software Application <br/>
+                Development.AngularJS and Jquery to <br/>make design effective.</div>
             </div>
 
             <div className={styles.box3}>

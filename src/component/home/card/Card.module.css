@@ -132,15 +132,17 @@
 
     /* Box adjustments */
     .box {
-        width: 90%; /* Make boxes take up more width on mobile */
+        width: 70%; /* Make boxes take up more width on mobile */
         height: auto; /* Allow boxes to adjust height */
         margin-top: 10px; /* Reduce margin between boxes */
-        padding: 20px; /* Add padding to avoid content being too cramped */
+        padding: 50px;
+        /* margin-left: 150px;
+        margin-right: 150px; */
     }
 
     /* Button adjustments */
     .Button {
-        width: 100%; /* Make button take full width */
+        width: 40%; /* Make button take full width */
         margin-left: 0; /* Center button on mobile */
         font-size: 14px; /* Adjust font size for mobile */
         margin-top: 15px; /* Reduce top margin */
@@ -190,10 +192,10 @@
     }
 
     .box {
-        width: 100%; /* Make boxes take full width */
+        width: 90%; /* Make boxes take full width */
         height: auto; /* Adjust height automatically */
         margin-top: 10px; /* Further reduce margin */
-        padding: 15px; /* Reduce padding */
+        padding: 20px; /* Reduce padding */
     }
 
     .Button {

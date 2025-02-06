@@ -55,7 +55,15 @@
   color: skyblue;
   font-weight: bold; 
 }
-
+.dropdownButton{
+color: #00d4ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
 /* Dropdown Menu Styling */
 .Navbar .dropdownMenu {
   display: none;
@@ -68,7 +76,7 @@
   gap: 0.1rem;
   transition: max-height 0.3s ease-out;
   max-height: 0;
-  
+
 
 }
 
@@ -172,23 +180,42 @@
   }
  
   .Navbar .dropdownMenu {
-    width: 100%;
-    max-height: 0;
+    position: absolute;
+    top: -10%;
+    right: 100%; /* Moves it to the right side of the dropdown */
+    width: 200px; /* Adjust width as needed */
+    max-height: 10;
     overflow: hidden;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: max-height 0.3s ease-out;
-  }
-  .Navbar .dropdownMenu li {
-    overflow: hidden;
-  }
-  
-  .Navbar .dropdown.active .dropdownMenu {
-    max-height: 300px;
-  }
+    
+}
 
-  .Navbar .dropdownButton {
-    width: 100%;
+
+.Navbar .dropdownMenu li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Navbar .dropdownMenu li:last-child {
+    border-bottom: none;
+}
+
+.Navbar .dropdown.active .dropdownMenu {
+    max-height: 300px; /* Adjust as needed */
+}
+
+.Navbar .dropdownButton {
+    width: auto;
     text-align: center;
-  }
+    background-color: #555;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
   .hamburger {
     display: block; 
     margin-right: 20px;

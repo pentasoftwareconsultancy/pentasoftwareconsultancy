@@ -238,25 +238,42 @@ body{
 }
 .logo1{
     color: rgb(203, 203, 23);
+    margin-right: 40px;
 }  
-.logo3, .logo4{
-    
+.logo3{
+    margin-right: 5px;
+    color: rgb(80, 189, 232);
+
+}
+.logo4{
+    margin-right: 30px;
     color: rgb(80, 189, 232);
 
 }
 .logo2{
     color:skyblue;
+    margin-right: 5px;
 }
 .logo5, .logo7, .logo8{
-    
+    margin-right: 30px;
     color: rgb(80, 189, 232);
 
 }
 .logo6{
+    margin-right: 55px;
     color: orange;
 }
-.No1, .No2, .No3, .No4{
+.No1,.No4{
     gap:1%;
+    margin-right: 20px;
+}
+.No3{
+    gap:1%;
+    margin-right: -5px;
+}
+.No2{
+    gap:1%;
+    margin-right: -20px;
 }
 @media only screen and (max-width: 768px) { /* Mobile Devices */
     .section1, .section2 {

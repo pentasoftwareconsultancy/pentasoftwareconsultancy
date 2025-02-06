@@ -3,13 +3,13 @@
     color: white;
     margin-top: 20px;
     height: auto; 
-    padding: 30px 0; /* Padding to add space inside the footer */
+    padding: 30px 0; 
   }
   
   .Section {
     display: flex;
     gap: 10%;
-    align-items: flex-start; /* Align content at the top */
+    align-items: flex-start; 
     justify-content: center;
     flex-wrap: wrap;
   }
