@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from "./javatechnology.module.css";
-import JavaTechnologyData from './javatechnology/JavaTechonologyData';
+import styles from "./Javatechnology.module.css";
+import JavaTechnologyData from './Javatechnology/JavaTechonologyData';
 
 // Data for Java features
 
