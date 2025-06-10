@@ -19,7 +19,7 @@ import AWSServiceData from './component/application/awsservice/awsservice/AWSSer
 import AppsDevelopment from './component/application/appsdevelopment/AppsDevelopment';
 import AppsDevelopmentData from './component/application/appsdevelopment/appsdevelopment/AppsDevelopmentData';
 import JavaTechnology from './component/application/javatechnology/JavaTechnolody';
-import JavaTechonologyData from './component/application/javatechnology/javatechnology/JavaTechonologyData';
+import JavaTechnologyData from './component/application/javatechnology/Javatechnology/JavaTechonologyData';
 import SAPSupport from './component/application/sapsupport/SAPSupport';
 import SPASupportData from './component/application/sapsupport/sapsupport/SAPSupportData';
 import ScrollTop from './component/scrolltop/Scrolltop';
@@ -67,7 +67,7 @@ function App() {
      
          <Route
          path="/application/java-technology"
-         element={<JavaTechnology data={JavaTechonologyData}/>}/>
+         element={<JavaTechnology data={JavaTechnologyData}/>}/>
     
         <Route
          path="/application/sap-support"
