@@ -12,7 +12,7 @@ function AboutUsPage() {
       <Hero/>
       <Card/>
       <Birth/>
-      <Footer/>
+      <Footer/>    
     </div>
   )
 }
