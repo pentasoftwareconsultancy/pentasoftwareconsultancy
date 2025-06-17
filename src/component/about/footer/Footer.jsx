@@ -29,12 +29,13 @@ function Footer() {
                <div className={styles.Name3}>Contacts</div>
                 <div className={styles.box1}>
                 <div className={styles.logo1}><IoLocation size={20}/></div>
-                <div className={styles.Address}>sr No 78/60, PI.No 1,Wing A, Office 26<br/>
-                 A, Sai Vision,, Near Govind Garden,<br/>PimPle saudagar, Pune - 411027
+                <div className={styles.Address}>Survey No. 21, Govind Garden, Office No. 102-C,<br/>
+                 First Floor Ganesham Commercial A, 18-21/24,<br/>
+                BRTS Road, Pimple Saudagar, Pimpri-Chinchwad, Maharashtra 411027
                 </div></div>
                 <div className={styles.box2}>
                 <div className={styles.logo2}><FaPhoneAlt size={20} /></div>
-                <div className={styles.No}>+91 7066541234|83298294</div>
+                <div className={styles.No}>+91 7066541234 / 8329498294</div>
                 </div>
                 <div className={styles.box3}>
                 <div className={styles.logo3}><GrMail size={20}/></div>
