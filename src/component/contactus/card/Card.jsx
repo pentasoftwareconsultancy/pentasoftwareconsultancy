@@ -50,6 +50,9 @@ const Card = () => {
         ))}
       </div>
 
+
+      
+
       <div className={styles.right}>
         <form className={styles.form}>
           <div className={styles.Righttitle}>Send Message</div>
