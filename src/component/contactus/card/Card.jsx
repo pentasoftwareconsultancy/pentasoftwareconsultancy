@@ -1,6 +1,6 @@
 import React from 'react';
-import CardData from './card/CardData';
-import styles from "./card.module.css"
+import CardData from './CardData';
+import styles from './card.module.css';
 import { MdLocationPin } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
