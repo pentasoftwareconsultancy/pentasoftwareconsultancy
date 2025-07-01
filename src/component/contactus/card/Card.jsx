@@ -1,5 +1,7 @@
 import React from 'react';
 import CardData from './CardData';
+// import styles from './card.module.css';
+// This must match the actual file name exactly (case-sensitive on Vercel)
 import styles from './card.module.css';
 import { MdLocationPin } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
