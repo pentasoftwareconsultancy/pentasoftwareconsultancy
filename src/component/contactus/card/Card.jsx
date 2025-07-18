@@ -127,6 +127,8 @@ const Card = () => {
         </div>
       </div>
 
+      
+
       <div className={styles.mapSection}>
         <div className={styles.mapContainer}>
           <iframe
