@@ -97,23 +97,7 @@
   font-weight: bold;
 }
 
-.Button {
-  background-color: rgb(169, 53, 192);
-  color: white;
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-top: 10px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  width: 180px;
-}
 
-.Button:hover {
-  background-color:rgb(241, 133, 234);
-}
 
 .Section2 {
   flex: 1;
@@ -124,6 +108,21 @@
 
 .image img {
   height: 350px;
+}
+.MoreButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.MoreButton:hover {
+  background-color: #0056b3;
 }
 
 /* Mobile Responsive Styles */

@@ -1,290 +1,233 @@
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
+
 .Birth {
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 30px; */
-    background-color: white;
-    padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
 }
+
+/* Scroll Animation Base (AOS) */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Light Background Boxes */
+.Box, .Box1, .Box3, .Box4, .Box5 {
+  display: flex;
+  background-color: #e5f9fe;
+  padding: 50px;
+  border-radius: 2rem;
+  margin: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .Box {
-    display: flex;
-    margin-top: 15px;
-    background-color: white;
-    margin-left: 50px;
+  margin-top: 15px;
 }
-.Sec img {
-    height: 300px;
-    width: 500px;
-    margin-left: 20px;
-    border-radius: 2rem;
-}
-.Name {
-    font-weight: bold;
-    font-size: 35px;
-    margin-left: 60px;
-}
-.Line {
-    margin-left: 60px;
-    margin-top: 20px;
-}
-.Box1 {
-    display: flex;
-    margin-left: 30px;
-    margin-top: 50px;
-}
-.Name1 {
-    font-weight: bold;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40px;
-}
-.Line1 {
-    margin-left: 40px;
-    margin-top: 20px;
-}
-.Sec4 img {
-    height: 300px;
-    width: 500px;
-    margin-left: 100px;
-    border-radius: 2rem;
-}
-.Box3 {
-    display: flex;
-    margin-top: 50px;
-    background-color: white;
-    margin-left: 50px;
-}
-.Sec5 img {
-    height: 300px;
-    width: 500px;
-    margin-left: 10px;
-    border-radius: 2rem;
-
-}
-.Name3 {
-    font-weight: bold;
-    font-size: 35px;
-    margin-left: 75px;
-}
-.Line3 {
-    margin-left: 75px;
-    margin-top: 20px;
-}
-.Box4 {
-    display: flex;
-    margin-left: 30px;
-    margin-top: 50px;
-}
-.Name4 {
-    font-weight: bold;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-}
-.Line4 {
-    margin-left: 30px;
-    margin-top: 20px;
-}
-.Sec8 img {
-    height: 300px;
-    width: 500px;
-    margin-left: 110px;
-    border-radius: 2rem;
-}
-.Box5 {
-    display: flex;
-    margin-top: 50px;
-    background-color: white;
-    margin-left: 50px;
-}
-.Sec9 img {
-    height: 300px;
-    width: 500px;
-    margin-left: 10px;
-    border-radius: 2rem;
-}
-.Name5 {
-    font-weight: bold;
-    font-size: 35px;
-    margin-left: 75px;
-}
-.Line5 {
-    margin-left: 75px;
-    margin-top: 20px;
+.Box1, .Box3, .Box4, .Box5 {
+  margin-top: 50px;
 }
 
+.Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
+  height: 300px;
+  width: 500px;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-left: 0;
+}
 
+.Name, .Name1, .Name3, .Name4, .Name5 {
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 40px;
+}
+
+.Line, .Line1, .Line3, .Line4, .Line5 {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.Sec3, .Sec6, .Sec7, .Sec10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Mobile Responsive Layout */
 @media (max-width: 768px) {
-    /* Make all sections stack vertically */
-    .Box, .Box1, .Box2, .Box3, .Box4, .Box5 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        margin-top: 20px;
-    }
+  .Box, .Box1, .Box3, .Box4, .Box5 {
+    flex-direction: column;
+    margin: 20px 15px;
+    padding: 15px;
+  }
 
-    /* Ensure all images appear first in mobile view */
-    .Box1 .Sec4, 
-    .Box2 .Sec5, 
-    .Box3 .Sec8, 
-    .Box4 .Sec8, 
-    .Box5 .Sec9 {
-        order: -1;
-    }
+  .Box1 .Sec4,
+  .Box3 .Sec5,
+  .Box4 .Sec8,
+  .Box5 .Sec9 {
+    order: -1;
+  }
 
-    /* Make images responsive */
-    .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        margin-bottom: 15px;
-    }
+  .Sec img, .Sec4 img, .Sec5 img, .Sec8 img, .Sec9 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
 
-    /* Center align headings */
-    .Name, .Name1, .Name2, .Name3, .Name4, .Name5 {
-        font-size: 28px;
-        margin-left: 0;
-        text-align: center;
-    }
+  .Name, .Name1, .Name3, .Name4, .Name5 {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
 
-    /* Adjust text alignment for readability */
-    .Line, .Line1, .Line2, .Line3, .Line4, .Line5 {
-        font-size: 16px;
-        margin-left: 0;
-        text-align: justify;
-        margin-top: 10px;
-        padding: 0 15px; /* Added padding for better spacing */
-    }
-
-    /* Ensure proper spacing for text sections */
-    .Sec3, .Sec6, .Sec7, .Sec10 {
-        text-align: center;
-        padding: 0 15px;
-    }
-}
-
-
-.Box6{
-    
-    margin-top: 20px;
-    background-color: white;
-    
-}
-.Name6{
-    font-weight: bold;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.Line6{
+  .Line, .Line1, .Line3, .Line4, .Line5 {
+    margin-left: 0;
+    text-align: justify;
     margin-top: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    padding: 0 10px;
+  }
+
+  .Sec3, .Sec6, .Sec7, .Sec10 {
+    text-align: center;
+    padding: 0 10px;
+  }
 }
-.section{
-      
-    gap:1%;
+
+/* Box6 section styles */
+.Box6 {
+  margin-top: 20px;
+  background-color: white;
 }
+
+.Name6 {
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Line6 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skills section grid */
+.section {
+  gap: 1%;
+}
+
 .section1 {
-    gap:2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-  
-}
-.box1, .box2, .box3, .box4{
-
-    border: 1px solid gray;
-    height: 80px;
-    border-radius: 2rem;
-    width: 250px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:4%;
+  gap: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.box5, .box6, .box7, .box8{
-    
-    border: 1px solid gray;
-    height: 80px;
-    border-radius: 2rem;
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:4%;
-    margin-top: 20px;
+.section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
 }
-.section2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2%;
-  
-}
-.logo1{
-    color: rgb(203, 203, 23);
-    margin-right: 40px;
-}  
-.logo3{
-    margin-right: 5px;
-    color: rgb(80, 189, 232);
 
+/* Skill Box Animations */
+@keyframes fadeScaleColor {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    background: white;
+  }
+  50% {
+    background: linear-gradient(135deg, #ffcccc, #ffe6cc);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    background: linear-gradient(135deg, #ffebcc, #d9f2fd, #fed3e4);
+  }
 }
-.logo4{
-    margin-right: 30px;
-    color: rgb(80, 189, 232);
 
+.box1, .box2, .box3, .box4,
+.box5, .box6, .box7, .box8 {
+  border: 1px solid gray;
+  height: 80px;
+  border-radius: 2rem;
+  font-size: 14px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  margin-top: 20px;
+  animation: fadeScaleColor 1s ease forwards;
 }
-.logo2{
-    color:skyblue;
-    margin-right: 5px;
-}
-.logo5, .logo7, .logo8{
-    margin-right: 30px;
-    color: rgb(80, 189, 232);
 
+/* Logos */
+.logo1 {
+  color: rgb(203, 203, 23);
+  margin-right: 40px;
 }
-.logo6{
-    margin-right: 55px;
-    color: orange;
+.logo2 {
+  color: skyblue;
+  margin-right: 5px;
 }
-.No1,.No4{
-    gap:1%;
-    margin-right: 20px;
+.logo3 {
+  color: rgb(80, 189, 232);
+  margin-right: 5px;
 }
-.No3{
-    gap:1%;
-    margin-right: -5px;
+.logo4 {
+  color: rgb(80, 189, 232);
+  margin-right: 30px;
 }
-.No2{
-    gap:1%;
-    margin-right: -20px;
+.logo5, .logo7, .logo8 {
+  color: rgb(80, 189, 232);
+  margin-right: 30px;
 }
-@media only screen and (max-width: 768px) { /* Mobile Devices */
-    .section1, .section2 {
-        flex-direction: column; /* Stack boxes vertically */
-        gap: 10px;
-    }
+.logo6 {
+  color: orange;
+  margin-right: 55px;
+}
 
-    .box1, .box2, .box3, .box4,
-    .box5, .box6, .box7, .box8 {
-        width: 80%; /* Make boxes responsive */
-        height: 65px;
-        margin-top: 10px;
-    }
+/* Skill box text spacing */
+.No1, .No4 {
+  gap: 1%;
+  margin-right: 20px;
+}
+.No2 {
+  gap: 1%;
+  margin-right: -20px;
+}
+.No3 {
+  gap: 1%;
+  margin-right: -5px;
+}
+
+/* Responsive skill boxes */
+@media only screen and (max-width: 768px) {
+  .section1, .section2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .box1, .box2, .box3, .box4,
+  .box5, .box6, .box7, .box8 {
+    width: 80%;
+    height: 65px;
+    margin-top: 10px;
+  }
 }

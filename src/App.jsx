@@ -68,6 +68,7 @@ function App() {
          <Route
          path="/application/java-technology"
          element={<JavaTechnology data={JavaTechnologyData}/>}/>
+         
     
         <Route
          path="/application/sap-support"

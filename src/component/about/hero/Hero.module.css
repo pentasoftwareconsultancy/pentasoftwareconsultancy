@@ -1,7 +1,8 @@
-body{
+body {
     background-color: whitesmoke;
 }
-.image img{
+
+.image img {
     position: relative; 
     margin-top: 90px;
     margin: 20px 0;
@@ -9,7 +10,7 @@ body{
     width: 1263px;
 }
 
-.line{
+.line {
     font-size: 40px;
     font-weight: bold;
     position: absolute;
@@ -18,21 +19,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform: translateX(-50%);  */
     color: white;      
+    animation: slideInLeft 1.5s ease-out forwards;
 }
 
-.sent{
-    position: absolute; /* Position this element relative to the .image container */
-    top: 50%;           /* Adjust the vertical positioning */
+.sent {
+    position: absolute;
+    top: 50%;
     margin-left: 35%;      
     font-size: 20px;
     color: white;    
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: slideInRight 1.5s ease-out forwards;
 }
-@media only screen and (max-width: 768px) { /* Mobile Devices */
+
+@media only screen and (max-width: 768px) {
     .image img {
         width: 100%;
         height: auto;
@@ -47,7 +50,29 @@ body{
     .sent {
         font-size: 16px;
         top: 35%;
-        /* width: 35%; */
         margin-left: 70px;
+    }
+}
+
+/* 👇 Add animation keyframes at the end */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }

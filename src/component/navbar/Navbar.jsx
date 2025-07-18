@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import pentalogo1 from "../../assets/pentalogo1.png";
@@ -6,120 +6,121 @@ import pentalogo1 from "../../assets/pentalogo1.png";
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation(); // Track the current route
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
-  // Toggle dropdown visibility and hide navbar when dropdown opens
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // Close dropdown and show navbar again
-  const closeDropdown = () => {
+  useEffect(() => {
+    setMenuOpen(false);
     setIsDropdownOpen(false);
+  }, [location.pathname]);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const handleDropdownEnter = () => setIsDropdownOpen(true);
+  const handleDropdownLeave = () => setIsDropdownOpen(false);
+
+  const handleDropdownItemClick = () => {
+    setIsDropdownOpen(false);
+    setMenuOpen(false);
   };
 
-  // Toggle mobile menu
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const toggleDropdownClick = (e) => {
+    e.preventDefault(); // prevent redirect
+    setIsDropdownOpen((prev) => !prev); // toggle dropdown
   };
-
-  // Close Navbar when changing pages
-  React.useEffect(() => {
-    setMenuOpen(false); // Hide mobile menu
-    setIsDropdownOpen(false); // Hide dropdown
-  }, [location.pathname]); // Run when the route changes
 
   return (
-    <div className={`${styles.Navbar} ${isDropdownOpen ? styles.hidden : ""}`}>
-      {/* Logo Section */}
+    <div className={`${styles.Navbar} ${scrolled ? styles.scrolled : ""}`}>
+      {/* Logo */}
       <div className={styles.logo}>
         <Link to="/">
           <img src={pentalogo1} alt="Logo" className={styles.logoImage} />
         </Link>
       </div>
 
-      {/* Hamburger Menu for Mobile */}
+      {/* Hamburger */}
       <button className={styles.hamburger} onClick={toggleMenu}>
         ☰
       </button>
 
-      {/* Navbar Links Section */}
-      <div
-        className={`${styles.container} ${
-          menuOpen ? styles.showMenu : styles.hideMenu
-        }`}
-      >
+      {/* Nav Links */}
+      <div className={`${styles.container} ${menuOpen ? styles.showMenu : styles.hideMenu}`}>
         <ul className={styles.navLinks}>
           <li>
-            <Link to="/" onClick={closeDropdown}>
-              HOME
-            </Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/about" onClick={closeDropdown}>
-              ABOUTUS
-            </Link>
+            <Link to="/about">ABOUTUS</Link>
           </li>
           <li>
-            <Link to="/services" onClick={closeDropdown}>
-              SERVICES
-            </Link>
+            <Link to="/services">SERVICES</Link>
           </li>
+
+          {/* Dropdown */}
           <li
             className={styles.dropdown}
-            onMouseEnter={toggleDropdown}
-            onMouseLeave={closeDropdown}
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleDropdownLeave}
           >
-            <Link to="/application">APPLICATION</Link>
+            <a href="/" onClick={toggleDropdownClick} className={styles.dropdownToggle}>
+              APPLICATION 
+            </a>
             {isDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li>
-                  <Link to="/application/software-testing" onClick={closeDropdown}>
+                  <Link to="/application/software-testing" onClick={handleDropdownItemClick}>
                     Software Testing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/salesforce-service" onClick={closeDropdown}>
-                    Sales Force Service
+                  <Link to="/application/salesforce-service" onClick={handleDropdownItemClick}>
+                    Salesforce Service
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/aws-service" onClick={closeDropdown}>
+                  <Link to="/application/aws-service" onClick={handleDropdownItemClick}>
                     AWS Service
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/data-science" onClick={closeDropdown}>
+                  <Link to="/application/data-science" onClick={handleDropdownItemClick}>
                     Data Science & ML
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/rpa" onClick={closeDropdown}>
+                  <Link to="/application/rpa" onClick={handleDropdownItemClick}>
                     RPA (Robotics Processing Automation)
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/apps-development" onClick={closeDropdown}>
+                  <Link to="/application/apps-development" onClick={handleDropdownItemClick}>
                     Apps Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/java-technology" onClick={closeDropdown}>
+                  <Link to="/application/java-technology" onClick={handleDropdownItemClick}>
                     Java Technology
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application/sap-support" onClick={closeDropdown}>
+                  <Link to="/application/sap-support" onClick={handleDropdownItemClick}>
                     SAP Application Support
                   </Link>
                 </li>
               </ul>
             )}
           </li>
+
           <li>
-            <Link to="/contactus" onClick={closeDropdown}>
-              CONTACTUS
-            </Link>
+            <Link to="/contactus">CONTACTUS</Link>
           </li>
         </ul>
       </div>

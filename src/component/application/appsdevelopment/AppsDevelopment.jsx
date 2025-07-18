@@ -8,7 +8,7 @@ function AppsDevelopment() {
     <div className={styles.AppsDevelopment}> 
       <div className={styles.box}>
         <div className={styles.image}>
-        <img src="https://i.pinimg.com/736x/df/81/ff/df81ff756d7b232bf5e54a82e9fb3243.jpg" />
+        <img src="https://i.pinimg.com/1200x/36/06/04/36060420232fb6efb66cc7c0589b9162.jpg" />
         </div>
         <div className={styles.Name}>Build your first app</div>
         <div className={styles.sent}>This part of Salesforce platform is focused This section

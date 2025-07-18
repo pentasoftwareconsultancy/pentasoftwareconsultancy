@@ -5,11 +5,21 @@
   object-fit: cover;
 }
 
-/* Name Styling */
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .Name {
   position: absolute;
   top: 30%;
-  
   margin-left: 640px;
   transform: translate(-50%, -50%);
   font-size: 36px;
@@ -17,11 +27,14 @@
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   z-index: 10;
+   opacity: 0;
+  animation: fadeSlideUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
-/* Sentence Styling */
 .sentence {
   position: absolute;
+  
   top: 40%;
   display: flex;
   align-items: center;
@@ -33,11 +46,15 @@
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   z-index: 10;
+    opacity: 0;
+  animation: fadeSlideUp 1.5s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 /* Line Styling */
 .Line {
   position: absolute;
+  margin-top: -20px;
   top: 50%;
   margin-left: 650px;
   transform: translate(-50%, -50%);
@@ -54,7 +71,7 @@
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {
   .image img {
-    width: 100%; /* Make image responsive */
+    width: 110%; /* Make image responsive */
     height: auto; /* Adjust image height proportionally */
   }
 
@@ -64,7 +81,7 @@
     margin-left: 50%;
     font-size: 28px; /* Reduce font size for mobile */
     text-align: center;
-    margin-top: 10px; /* Adjust position */
+    margin-top: -35px; /* Adjust position */
   }
 
   
@@ -77,9 +94,9 @@
 
 
   .Line {
-    top: 30%;
+    top: 22%;
     margin-left: 50%;
-    font-size: 16px; /* Reduce font size for mobile */
+    font-size: 12px; /* Reduce font size for mobile */
     text-align: center;
   }
 }

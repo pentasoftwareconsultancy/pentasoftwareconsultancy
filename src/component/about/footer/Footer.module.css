@@ -1,93 +1,136 @@
-.Footer {
-    background-color: black;
-    color: white;
-    margin-top: 20px;
-    height: auto; 
-    padding: 30px 0; 
-  }
-  
-  .Section {
-    display: flex;
-    gap: 10%;
-    align-items: flex-start; 
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.footer {
+  background-color: #060809;
+  color: #ffffff;
+  padding: 3rem 0 1rem;
+  font-size: 0.9rem;
+}
 
-  .Section1{
-    /* text-align: center; */
-    padding: 20px;
-    margin-left: 10px;
-  }
-  
-  /* Styling for Section2 */
-  .Section2 {
-    color: #00d4ff;
-    width: 100%; /* Ensures it takes the full width */
-    text-align: center; /* Center text and content inside */
-    margin-top: 30px;
-  }
-  .Name{
-    margin-left: 10px;
-  }
-  .Line{
-    margin-top: 30px;
-    padding: 10px;
-  }
-  .Name3{
-    color: #00d4ff;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 20px;
-  }
-  .box1{
-    margin-top: 30px;
-    display: flex;
-    gap:4%;
-  }
-  .box2, .box3{
-    display: flex;
-    gap:4%;
-    margin-top: 10px;
-  }
-  .line {
-    width: 100%; /* Full width of Section2 */
-    height: 1px; /* Line thickness */
-    background-color:white;
-    margin: 30px 0; /* Adds space above and below the line */
-  }
-  
-  .Name {
-    color: #00d4ff;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 20px;
-  }
-  .No{
-    display: flex;
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerLogo h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footerLogo p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.footerLinks h4,
+.footerContact h4 {
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footerLinks h4::after,
+.footerContact h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #3498db;
+}
+
+.footerLinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.8rem;
+}
+
+.footerLinks a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #3498db;
+}
+
+.footerContact address {
+  font-style: normal;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.footerContact p {
+  margin: 0.5rem 0;
+  opacity: 0.8;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.socialIcon {
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #3498db;
+  transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap:20%;
   }
-  
-  .Logo {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    color: rgb(103, 212, 234);
-    transition: color 0.3s ease;
 
+  .copyright {
+    margin-bottom: 0;
+    text-align: left;
   }
-  
-  .Logo:hover {
-    color: #58aef4; 
+}
+
+@media (max-width: 600px) {
+  .footerContent {
+    grid-template-columns: 1fr;
   }
-  
-  
-  .Copy {
-    margin-top: 50px;
-    color: #00d4ff;
-    text-align: center;
-    font-size: 14px;
+
+  .footerLinks,
+  .footerContact {
+    margin-top: 1.5rem;
   }
- 
+}

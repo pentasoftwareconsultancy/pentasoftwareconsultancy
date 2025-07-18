@@ -29,8 +29,8 @@ function Card() {
               <div className={styles.Box2}>
                 <div className={styles.Logo2}><SiJsonwebtokens size={50}/></div>
                 <div className={styles.Name2}>Web Designing</div>
-                <div className={styles.Line2}>We make web designing responsive so <br/>
-                you can use your website on<br/>
+                <div className={styles.Line2}>We make web designing responsive<br/>
+                so you can use your website on<br/>
                 all modern devices like <br/>
                 smartphone, tablet, or desktop.</div>
              </div>

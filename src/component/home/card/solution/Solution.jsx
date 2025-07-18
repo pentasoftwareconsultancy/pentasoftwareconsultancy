@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Solution.module.css';
+import { Link } from 'react-router-dom';
+
 
 function Solution() {
   const [count, setCount] = useState(0);  // First counter (730)
@@ -59,9 +61,10 @@ function Solution() {
             <div className={styles.CounterText1}>Happy Clients</div>
           </div>
         </div> 
-           <div className={styles.Button}>
-             More About
-           </div>
+          <Link to="/about" className={styles.MoreButton}>
+  More About
+</Link>
+
            </div>
           <div className={styles.Section1}>
              <div className={styles.image}>

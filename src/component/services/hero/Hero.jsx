@@ -10,7 +10,7 @@ function Hero() {
   return (
     <div className={styles.Hero}>
       <div className={styles.image}>
-        <img src="https://i.pinimg.com/736x/62/84/30/6284302eb52c521fb58822bda42ce599.jpg"/>
+        <img src="https://i.pinimg.com/1200x/bb/09/98/bb099852293ed3552e71dd57b1931cae.jpg"/>
         <div className={styles.Line}></div>
         <div className={styles.Line1}>
         Penta is a global leader in IT services..!!
@@ -33,7 +33,7 @@ function Hero() {
                 <div className={styles.Name2}>Technology</div>
                <div className={styles.No2}>MVC Architecture technology which<br/>
                 help to rapid Software Application <br/>
-                Development.AngularJS and Jquery to <br/>make design effective.</div>
+                Development.AngularJS and Jquery<br/>to make design effective.</div>
             </div>
 
             <div className={styles.box3}>

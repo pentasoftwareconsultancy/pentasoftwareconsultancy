@@ -1,223 +1,165 @@
-* {
-  font-family: 'Poppins', sans-serif;
-}
-
 .Navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: black;
   z-index: 1000;
-  padding: -1px 0;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
-}
- .Navbar .logo {
-    padding-left: 10px;
-   
-  }
-  
-.Navbar .logoImage {
-  height: 70px;
-  width: 80px;
+  backdrop-filter: blur(8px);
+  background: white;
 }
 
-.Navbar .container {
+/* Logo */
+.logo img,
+.logoImage {
+  height: 70px;
+  width: 80px;
+  margin-top: -20px;
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black; 
+  display: none;
+  cursor: pointer;
+}
+
+/* Nav Container */
+.container {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.Navbar ul {
-  display: flex;
+/* Nav Links */
+.navLinks {
   list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
-.Navbar li {
-  margin: 0 15px;
+.navLinks li {
   position: relative;
 }
 
-.Navbar a {
-  color: #00d4ff;
+.navLinks a,
+.dropdownToggle {
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: color 0.3s ease;
-}
-
-.Navbar a.active {
-  color: skyblue;
-  font-weight: bold; 
-}
-.dropdownButton{
-color: #00d4ff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: color 0.3s ease;
-}
-/* Dropdown Menu Styling */
-.Navbar .dropdownMenu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  background-color:black; 
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  top: 20px;
-  z-index: 1001;
-  gap: 0.1rem;
-  transition: max-height 0.3s ease-out;
-  max-height: 0;
-
-
-}
-
-.Navbar .dropdown:hover .dropdownMenu {
-  display: flex;
-  max-height: 500px;
-}
-
-.Navbar .dropdownMenu li {
-  padding: 10px 20px;
-}
-
-.Navbar .dropdownMenu li a {
-  color: white; /* Dropdown text color */
-  font-size: 12px;
-  text-decoration: none; 
-  padding: 5px 0;
-  background-color: white(163, 28, 28);
-  display: block;
-  
-}
-
-/* .Navbar .dropdownMenu li a:hover {
-  background-color:white(198, 43, 43); 
   color: black;
-}  */
-
-/* Hamburger Menu for Mobile */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
   cursor: pointer;
- 
+  padding: 10px;
+  display: inline-block;
 }
 
-.hamburger:focus {
-  outline: none;
-  
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;   
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+  display: block;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Responsive Styles */
+.dropdownMenu li {
+  margin: 5px 0;
+}
+
+.dropdownMenu a {
+  color: black;
+  text-decoration: none;
+}
+
+/* SCROLLED STYLE */
+.scrolled {
+  background-color: black !important;
+  animation: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Text turns white when scrolled */
+.scrolled .navLinks a,
+.scrolled .dropdownToggle,
+.scrolled .dropdownMenu a,
+.scrolled .hamburger {
+  color: white !important;
+}
+
+.scrolled .dropdownMenu {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ANIMATION BACKGROUND */
+@keyframes glowingBackground {
+  0%, 25%, 50%, 75%, 100% {
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .Navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 1000;
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    /* overflow: hidden; */
-  }
-  .Navbar .container {
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 215px;
-    width: 40%;
-    background-color:black;
-    padding: 10px 0;
-    display: none; 
-   
+  .hamburger {
+    display: block;
   }
 
-  .showMenu {
-    display: flex !important; 
-    
+  .container {
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
   }
 
   .hideMenu {
     display: none;
   }
-  .navLinks{
-    /* overflow: hidden; */
-  }
-  .Navbar ul {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-   
+
+  .showMenu {
+    display: flex;
   }
 
-  .Navbar li {
-    margin: 10px 0;
-    
-    }
-
-  .Navbar a {
-    font-size: 14px;
-    padding: 10px 20px;
-    text-align: center;
-    width: 100%;
-    
-  }
- 
-  .Navbar .dropdownMenu {
-    position: absolute;
-    top: -10%;
-    right: 100%; /* Moves it to the right side of the dropdown */
-    width: 200px; /* Adjust width as needed */
-    max-height: 10;
-    overflow: hidden;
-    background-color: black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.3s ease-out;
-    
-}
-
-
-.Navbar .dropdownMenu li {
-    list-style: none;
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-.Navbar .dropdownMenu li:last-child {
-    border-bottom: none;
-}
-
-.Navbar .dropdown.active .dropdownMenu {
-    max-height: 300px; /* Adjust as needed */
-}
-
-.Navbar .dropdownButton {
-    width: auto;
-    text-align: center;
-    background-color: #555;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
+  .navLinks a,
+  .dropdownToggle,
+  .dropdownMenu a,
   .hamburger {
-    display: block; 
-    margin-right: 20px;
+    color: black;
+  }
+
+  .scrolled .container {
+    background-color: black;
+  }
+
+  .scrolled .navLinks a,
+  .scrolled .dropdownToggle,
+  .scrolled .dropdownMenu a,
+  .scrolled .hamburger {
+    color: white;
+  }
+
+  .dropdownMenu {
+    position: static;
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 5px 0;
+  }
+
+  .scrolled .dropdownMenu {
+    background-color: transparent;
   }
 }

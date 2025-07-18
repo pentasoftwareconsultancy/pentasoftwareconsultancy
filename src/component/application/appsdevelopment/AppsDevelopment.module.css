@@ -1,42 +1,155 @@
-
-
-  
-  /* Main Box Styling */
   .box {
-    width: 100%;
-    text-align: center;
-    position: relative;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* For any overflow from animations */
+}
+
+.image img {
+  width: 1263px;
+  height: 600px;
+  object-fit: cover;
+  animation: imageFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes imageFadeIn {
+  from {
+    opacity: 0;
+    filter: brightness(0.8) blur(2px);
   }
-  
-    .image img {
-      width: 1263px;
-      height: 480px;
-    
+  to {
+    opacity: 1;
+    filter: brightness(1) blur(0);
   }
-  
-  .Name {
-    position: absolute;
-    top: 15%; /* Position it near the top of the image */
-    left: 45%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Ensure proper centering */
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+}
+
+.Name {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  z-index: 10;
+  opacity: 0;
+  animation: 
+    titleSlideIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s forwards,
+    titleGlow 4s infinite alternate 1.4s;
+}
+
+@keyframes titleSlideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% - 30px));
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0);
   }
-  
-  .sent {
-    position: absolute;
-    top: 26%; /* Adjust to place it below the .Name */
-    left: 45%; /* Align it to the right of .Name */
-    transform: translate(-50%, -50%); /* Proper centering */
-    font-size: 18px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+  80% {
+    transform: translate(-50%, calc(-50% + 5px));
   }
-  
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.6),
+      0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.6),
+      0 0 25px rgba(255, 255, 255, 0.6),
+      0 0 40px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.sent {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: white;
+  text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  opacity: 0;
+  width: 80%;
+  max-width: 800px;
+  animation: 
+    textReveal 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s forwards,
+    textPulse 5s infinite ease-in-out 2s;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 20px));
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    filter: blur(0);
+  }
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    text-shadow: 
+      1px 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 
+      1px 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 15px rgba(255, 255, 255, 0.4),
+      0 0 25px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Optional: Add light particles effect */
+.Name::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: 
+    radial-gradient(circle at 30% 30%, 
+      rgba(255,255,255,0.2) 0%, 
+      transparent 30%),
+    radial-gradient(circle at 70% 70%, 
+      rgba(255,255,255,0.2) 0%, 
+      transparent 30%);
+  opacity: 0;
+  pointer-events: none;
+  animation: 
+    particlesFade 4s infinite linear 1.6s;
+}
+
+@keyframes particlesFade {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
   
   /* Section1 Layout */
   .Section1 {

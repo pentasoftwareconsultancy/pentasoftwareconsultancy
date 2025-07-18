@@ -7,7 +7,7 @@ function SoftwareTesting() {
         
                <div className={styles.Box}>
                   <div className={styles.image}>
-                    <img src="https://i.pinimg.com/736x/f8/29/fc/f829fcf1b453ba0905af3131281043c4.jpg"/></div>
+                    <img src="https://i.pinimg.com/736x/f6/79/69/f67969ef6d620453c939b29f733c71d0.jpg"/></div>
                     <div className={styles.Line}>Automation Testing Vs. Manual Testing: What’s the Difference</div>
                     <div className={styles.sent}>Automation testing is a process of changing any manual test case into the test scripts
                     by using automation testing tools, and scripting or programming language is called automation</div>

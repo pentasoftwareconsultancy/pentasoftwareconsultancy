@@ -1,55 +1,116 @@
+/* Animation Keyframe */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Wrapper */
+.Team {
+  background-color: #f7f9fc;
+  padding: 50px 0;
+}
+
+/* Section layout */
 .section {
-    display: flex;
-    /* flex-wrap: wrap;  */
-    justify-content: center;
-    align-items: center;
-    gap: 3%; /* Maintain spacing between items */
-    margin-top: 50px;
-    padding: 0 5%; /* Add padding for consistent spacing on smaller devices */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3%;
+  margin-top: 50px;
+  padding: 0 5%;
+  flex-wrap: wrap;
 }
 
-.Word1, .Word2, .Word3 {
-    margin-top: 25px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem; /* Responsive font size */
-    text-align: center; /* Center align text for smaller screens */
+/* Animate each section */
+.Section1,
+.Section2,
+.Section3 {
+  width: 30%;
+  min-width: 280px;
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0;
 }
 
-.line1, .line2, .line3 {
-    font-size: 1rem; /* Responsive font size */
-    margin-top: 20px;
-    display: flex;
-    margin-left: 2px;
-    /* /* justify-content: center; */
-   
+/* Add staggered delays */
+.Section1 {
+  animation-delay: 0.2s;
+}
+.Section2 {
+  animation-delay: 0.4s;
+}
+.Section3 {
+  animation-delay: 0.6s;
 }
 
-.image1 img, .image2 img, .image3 img {
-    width: 100%; /* Images take full container width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 32.5vh; /* Limit max height */
-    border-radius: 10px;
+.image1 img,
+.image2 img,
+.image3 img {
+  width: 100%;
+  height: auto;
+  max-height: 32.5vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.Word1,
+.Word2,
+.Word3 {
+  margin-top: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.line1,
+.line2,
+.line3 {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-left: 2px;
+  color: #555;
+  align-items: center;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .section {
-        flex-direction: column; /* Stack elements vertically */
-        gap: 1.5rem;
-        padding: 0 3%;
-    }
+  .section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 3%;
+  }
 
-    .Word1, .Word2, .Word3 {
-        font-size: 1.2rem;
-    }
+  .Section1,
+  .Section2,
+  .Section3 {
+    width: 100%;
+  }
 
-    .line1, .line2, .line3 {
-        font-size: 0.85rem;
-    }
+  .Word1,
+  .Word2,
+  .Word3 {
+    font-size: 1.2rem;
+  }
 
-    .image1 img, .image2 img, .image3 img {
-        max-height: 28vh; /* Slightly reduce image height */
-    }
+  .line1,
+  .line2,
+  .line3 {
+    font-size: 0.95rem;
+  }
+
+  .image1 img,
+  .image2 img,
+  .image3 img {
+    max-height: 28vh;
+  }
 }
-

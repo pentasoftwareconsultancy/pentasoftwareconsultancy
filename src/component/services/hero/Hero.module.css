@@ -26,19 +26,32 @@
     color: white;
     margin-left: 35px;
 }
-
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(1.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 .Line1 {
     font-size: 35px;  
     font-weight: bold;     
     margin-top: 40px;
     color: white;
     margin-left: 30px;
+    animation: fadeSlideIn 1s ease-out forwards;
 }
 
 .Line3 {
     margin-left: 30px;
     margin-top: 50px;
     color: white;
+     animation-delay: 0.3s;
+     animation: fadeSlideIn 1s ease-out forwards;
+
 }
 
 .box {
@@ -69,7 +82,7 @@
     align-items: center;
 }
 
-.No1, .No2, .No3, .No4 {
+.No1,.No3, .No4 {
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -77,6 +90,14 @@
     margin-top: 20px;
 }
 
+.No2{
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
 .logo1, .logo2, .logo3, .logo4 {
     display: flex;
     align-items: center;
@@ -92,8 +113,8 @@
     }
 
     .Line {
-        font-size: 18px;
-        margin: -200px 20px 0 20px;
+        font-size: 14px;
+               margin: -200px 20px 0 20px;
         text-align: center;
     }
     .Name1, .Name2, .Name3, .Name4 {
@@ -113,7 +134,7 @@
     .Line1 {
         font-size: 20px;
         text-align: center;
-        margin-top: 70px;
+        margin-top: -20px;
     }
 
     .Line3 {

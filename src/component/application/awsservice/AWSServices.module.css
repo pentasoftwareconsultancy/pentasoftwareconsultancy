@@ -127,6 +127,8 @@
   gap :2%;
   margin-top: 50px;
 }
+
+
 /* Styling for Boxes */
 .Box1, .Box2, .Box3, .Box4, .Box5 {
   display: flex;
