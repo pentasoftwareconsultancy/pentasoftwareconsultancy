@@ -1,15 +1,10 @@
 import React from 'react';
 import CardData from './CardData';
-// import styles from './card.module.css';
-// This must match the actual file name exactly (case-sensitive on Vercel)
-import styles from './card.module.css';
-import { MdLocationPin } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa6";
-import { FaFacebook, FaInstagram, FaYoutubeSquare } from "react-icons/fa";
+import styles from './card.module.css'; // Correct import (case-sensitive on Vercel)
+
+import { MdLocationPin, MdEmail } from "react-icons/md";
+import { FaPhone, FaFacebook, FaInstagram, FaYoutubeSquare } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
-
-
 
 const Card = () => {
   return (
@@ -31,7 +26,11 @@ const Card = () => {
                   <MdLocationPin className={styles.infoIcon} />
                   <div>
                     <h3>Address:</h3>
-                    <p>Sr No 78/60, PI.No 1, Wing A, Office 26A, Sai Vision,<br />Near Govind Garden,<br />PimPle saudagar, Pune - 411027</p>
+                    <p>
+                      Sr No 78/60, PI.No 1, Wing A, Office 26A, Sai Vision,<br />
+                      Near Govind Garden,<br />
+                      Pimple Saudagar, Pune - 411027
+                    </p>
                   </div>
                 </div>
 
@@ -58,7 +57,7 @@ const Card = () => {
         <div className={styles.right}>
           <form className={styles.form}>
             <h2 className={styles.formTitle}>Send Message</h2>
-            
+
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="name">Name:</label>
@@ -68,7 +67,6 @@ const Card = () => {
                   name="name"
                   placeholder="Enter your name"
                   required
-                  aria-required="true"
                 />
               </div>
 
@@ -81,7 +79,6 @@ const Card = () => {
                   placeholder="Enter your mobile number"
                   pattern="[0-9]{10}"
                   required
-                  aria-required="true"
                 />
               </div>
             </div>
@@ -95,7 +92,6 @@ const Card = () => {
                   name="email"
                   placeholder="Enter your email"
                   required
-                  aria-required="true"
                 />
               </div>
 
@@ -107,7 +103,6 @@ const Card = () => {
                   name="course"
                   placeholder="Enter the course name"
                   required
-                  aria-required="true"
                 />
               </div>
             </div>
@@ -120,7 +115,6 @@ const Card = () => {
                 placeholder="Enter your message"
                 rows="4"
                 required
-                aria-required="true"
               ></textarea>
             </div>
 
