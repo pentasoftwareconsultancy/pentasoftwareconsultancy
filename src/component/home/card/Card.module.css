@@ -1,227 +1,208 @@
-/* Hero section */
-.Hero {
-    background-color: black; /* Black background for the hero section */
-    height: 75vh; /* Height of the Hero section */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-}
-
-/* Card container */
 .Card {
-    margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 2rem auto 0; /* Added margin-top: 20px equivalent */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafe; /* Soft background color */
 }
 
-/* Video container */
-.video {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 90%;
-    margin-left: 260px;
-    border-radius: 2rem;
-    z-index: -5;
+.topContainer, .Container2, .Container3 {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Top container with flex */
-.topContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    gap: 1%;
-}
-
-/* Box */
 .box {
-    background-color: white; /* Optional: add a background color to make the border stand out */
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-top: 50px;
-    font-size: 10px;
-    border-radius: 1rem;
-    align-items: center;
-    justify-content: center;
-    width: 380px; /* Box width */
-    height: 240px; /* Box height */
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-}
-.box:hover{
-    transform: scale(1.02); 
-}
-/* Word */
-.Word {
-    font-size: 20px;
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    font-weight: bold;
+  background: white;
+  border-radius: 18px; /* Slightly larger radius */
+  padding: 2.2rem; /* More padding */
+  width: 350px;
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12); /* Softer shadow */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
 }
 
-/* Line */
-.Line {
-    margin-top: 25px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 12px;
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px; /* Slightly thicker */
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 70%); /* Adjusted gradient */
+  transition: all 0.4s ease;
 }
 
-/* Button styling */
-.Button {
-    margin-top: 20px;
-    background-color: black;
-    color: white;
-    width: 70px;
-    height: 35px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 140px;
-    border-radius: 2rem;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    cursor: pointer;
+.box:hover {
+  transform: translateY(-12px); /* More lift on hover */
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
 }
 
-/* Hover effect for button */
-.Button:hover {
-    background-color: black; /* Changes to a vibrant color on hover */
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+.box:hover::before {
+  height: 12px; /* More noticeable on hover */
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
 }
 
-/* Container2: Three columns */
-.Container2 {
-    display: flex;
-    justify-content: center;
-    gap: 1%;
-}
-
-/* Container3 */
-.Container3 {
-    display: flex;
-    justify-content: center;
-    gap: 1%;
-}
-
-/* Logo styling */
 .logo {
-    /* margin-top: -30px; */
-    color: rgb(173, 61, 243);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: #2575fc;
+  margin-bottom: 1.8rem; /* More space */
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 4px 8px rgba(37, 117, 252, 0.2)); /* Soft glow */
 }
 
-/* Mobile Responsive Styles */
+.box:hover .logo {
+  transform: scale(1.15) rotate(8deg); /* More pronounced effect */
+  color: #6a11cb; /* Color change on hover */
+}
+
+.Word {
+  font-size: 1.6rem; /* Slightly larger */
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #2d3748; /* Darker for better contrast */
+  transition: all 0.4s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.Word::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #2575fc;
+  transition: width 0.4s ease;
+}
+
+.box:hover .Word::after {
+  width: 50px; /* Animated underline */
+}
+
+.box:hover .Word {
+  color: #2575fc;
+  text-shadow: 0 2px 8px rgba(37, 117, 252, 0.1); /* Subtle glow */
+}
+
+.Line {
+  color: #4a5568; /* Better readability */
+  line-height: 1.7; /* More breathing room */
+  margin-bottom: 2.2rem; /* More space */
+  font-size: 1rem; /* Slightly larger */
+  font-weight: 400;
+}
+
+.Button {
+  display: inline-block;
+  padding: 0.9rem 1.8rem; /* Larger button */
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(37, 117, 252, 0.25); /* More pronounced shadow */
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+.Button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.Button:hover {
+  transform: translateY(-4px); /* More lift */
+  box-shadow: 0 10px 25px rgba(37, 117, 252, 0.4);
+}
+
+.Button:hover::before {
+  left: 100%; /* Shine effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .box {
+    width: 320px; /* Slightly larger than before */
+  }
+}
+
 @media (max-width: 768px) {
-    /* Hero section adjustments */
-    .Hero {
-        height: 50vh; /* Reduce the height for mobile */
-        flex-direction: column; /* Stack content vertically */
-        padding: 20px;
-    }
-
-    /* Video container adjustments */
-    .video {
-        width: 90%; /* Make the video container take up more width */
-        margin-left: 0; /* Remove left margin */
-        height: auto; /* Adjust height automatically */
-    }
-
-    /* Box adjustments */
-    .box {
-        width: 70%; /* Make boxes take up more width on mobile */
-        height: auto; /* Allow boxes to adjust height */
-        margin-top: 10px; /* Reduce margin between boxes */
-        padding: 50px;
-        /* margin-left: 150px;
-        margin-right: 150px; */
-    }
-
-    /* Button adjustments */
-    .Button {
-        width: 40%; /* Make button take full width */
-        margin-left: 0; /* Center button on mobile */
-        font-size: 14px; /* Adjust font size for mobile */
-        margin-top: 15px; /* Reduce top margin */
-    }
-
-    /* Top container adjustments */
-    .topContainer {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        gap: 20px; 
-        
-    }
-
-    /* Container2 and Container3 adjustments */
-    .Container2, .Container3 {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center content */
-        gap: 15px; /* Reduce the gap */
-    }
-
-    /* Word adjustments */
-    .Word {
-        font-size: 18px; /* Adjust font size for mobile */
-    }
-
-    /* Line adjustments */
-    .Line {
-        font-size: 20px; /* Adjust font size for mobile */
-        margin-top: 15px; /* Adjust margin */
-    }
-
-    /* Logo adjustments */
-    .logo {
-        font-size: 18px; /* Adjust font size for mobile */
-    }
+  .topContainer, .Container2, .Container3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .box {
+    width: 100%;
+    max-width: 420px; /* More width on mobile */
+    padding: 1.8rem;
+  }
+  
+  .Card {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
 }
 
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-    .Hero {
-        height: 40vh; /* Reduce hero section height further */
-        padding: 15px; /* Reduce padding */
-    }
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px) rotateX(10deg);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) rotateX(0);
+  }
+}
 
-    .video {
-        width: 100%; /* Ensure video container takes full width */
-        height: auto; /* Allow height to adjust automatically */
-    }
+.box {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
 
-    .box {
-        width: 90%; /* Make boxes take full width */
-        height: auto; /* Adjust height automatically */
-        margin-top: 10px; /* Further reduce margin */
-        padding: 20px; /* Reduce padding */
-    }
+.box:nth-child(1) { animation-delay: 0.1s; }
+.box:nth-child(2) { animation-delay: 0.2s; }
+.box:nth-child(3) { animation-delay: 0.3s; }
+.box:nth-child(4) { animation-delay: 0.4s; }
+.box:nth-child(5) { animation-delay: 0.5s; }
+.box:nth-child(6) { animation-delay: 0.6s; }
+.box:nth-child(7) { animation-delay: 0.7s; }
+.box:nth-child(8) { animation-delay: 0.8s; }
 
-    .Button {
-        width: 100%; /* Button takes full width */
-        font-size: 14px; /* Adjust font size */
-    }
+/* New section separator */
+.Container2 {
+  position: relative;
+  margin-top: 1rem;
+}
 
-    .topContainer {
-        flex-direction: column;
-        gap: 10px; /* Reduce gap */
-    }
-
-    .Container2, .Container3 {
-        flex-direction: column;
-        gap: 10px; /* Reduce gap between items */
-    }
-
-    .Word {
-        font-size: 16px; /* Adjust font size */
-    }
-
-    .Line {
-        font-size: 18px; /* Adjust font size */
-    }
-
-    .logo {
-        font-size: 16px; /* Adjust font size */
-    }
+.Container2::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(106, 17, 203, 0.2), transparent);
 }

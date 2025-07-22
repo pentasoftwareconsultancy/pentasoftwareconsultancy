@@ -9,7 +9,7 @@ function DataScience() {
         
       <div className={styles.box}>
         <div className={styles.image}>
-          <img src="https://i.pinimg.com/736x/10/a2/e6/10a2e66007a8792c2e4ad2f1d139034e.jpg" />
+          <img src="https://i.pinimg.com/736x/c3/f2/d1/c3f2d1bc42b1a65bfc44bf533df88d03.jpg" />
         </div>
         <div className={styles.Name}>Data Science vs. Machine Learning: What’s the Difference?</div>
         <div className={styles.sent}>What is the difference between data science and machine learning? Which potential career path is right for you? Find out more here.</div>

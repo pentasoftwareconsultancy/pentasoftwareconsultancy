@@ -1,225 +1,390 @@
 /* Base Styles */
 .Solution {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  background-color: #f8f9fa;
-  font-family: 'Arial', sans-serif;
-  margin-top: 20px;
+  position: relative;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
 }
 
 .Container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  width: 100%;
+  gap: 60px;
   max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .Section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   flex: 1;
-  text-align: left;
+  max-width: 600px;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .Web {
-  font-size: 15px;
-  margin-top: 8px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6a11cb;
+  background: rgba(106, 17, 203, 0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeIn 0.8s ease both 0.2s;
 }
 
 .Line {
-  font-size: 28px;
-  color: black;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a202c;
+  margin-bottom: 25px;
+  position: relative;
+  animation: fadeInUp 0.8s ease both 0.3s;
+}
+
+.Highlight {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
 }
 
 .Sentence {
-  font-size: 15px;
-  color: black;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease both 0.4s;
 }
 
-.No {
+.StatsContainer {
   display: flex;
-  gap: 20px; /* Optional: Add space between Count elements if needed */
+  gap: 50px;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease both 0.5s;
 }
 
-.Count {
-  display: flex; /* Flex container for horizontal alignment */
-  flex-direction: row; /* Ensure Counter and CounterText are in a single row */
-  align-items: center; /* Center align content vertically */
-  justify-content: center; /* Center align content horizontally (optional) */
-  gap: 10px; /* Add spacing between Counter and CounterText */
+.StatItem {
+  position: relative;
+}
+
+.CounterWrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8px;
 }
 
 .Counter {
-  font-size: 40px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+.Plus {
+  font-size: 32px;
+  font-weight: 800;
+  color: #6a11cb;
+  margin-left: 4px;
+  line-height: 1;
 }
 
 .CounterText {
-  margin-top: 250px;
-  font-weight: bold;
   font-size: 16px;
-  color: black;
-  margin-top: 65px;
-  margin-left: -130px; 
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 10px;
 }
 
-.Counter1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: black;
-  margin-top:-1px;
-  transition: transform 0.3s ease;
+.StatBar {
+  height: 4px;
+  width: 40px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
-.CounterText1 {
-  font-size: 16px;
-  color: rgb(10, 10, 10);
-  margin-top:65px;
-  margin-left:-100px;
-  font-weight: bold;
+.StatBar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: statBarAnimation 2s infinite ease-in-out;
 }
 
-
-
-.Section2 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image img {
-  height: 350px;
-}
-.MoreButton {
+.ButtonContainer {
+  position: relative;
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
+  animation: fadeInUp 0.8s ease both 0.6s;
+}
+
+.MoreButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  border-radius: 10px;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  z-index: 1;
+  border: none;
+  box-shadow: 0 4px 20px rgba(37, 117, 252, 0.3);
+  overflow: hidden;
 }
 
 .MoreButton:hover {
-  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(37, 117, 252, 0.4);
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
+.MoreButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.MoreButton:hover::before {
+  left: 100%;
+}
+
+.ButtonArrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.MoreButton:hover .ButtonArrow {
+  transform: translateX(4px);
+}
+
+.ButtonShadow {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 117, 252, 0.2);
+  border-radius: 10px;
+  filter: blur(10px);
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.ButtonContainer:hover .ButtonShadow {
+  bottom: -6px;
+  filter: blur(12px);
+}
+
+.ImageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: fadeIn 0.8s ease both 0.4s;
+}
+
+.ImageContainer {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(37, 117, 252, 0.25);
+  transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ImageContainer:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.ImageSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1.1);
+}
+
+.ImageSlide.Active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.1) 100%);
+  z-index: 1;
+}
+
+.ImageDecoration {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  transform: rotate(45deg);
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0.3;
+}
+
+/* Floating elements */
+.FloatingCircle1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.1) 100%);
+  top: -100px;
+  left: -100px;
+  z-index: 1;
+  animation: float 15s infinite ease-in-out;
+}
+
+.FloatingCircle2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.1) 100%);
+  bottom: -50px;
+  right: -50px;
+  z-index: 1;
+  animation: float 12s infinite ease-in-out reverse;
+}
+
+.FloatingTriangle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.1) 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 50%;
+  right: 10%;
+  z-index: 1;
+  animation: float 10s infinite ease-in-out 2s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes statBarAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
   .Container {
-      flex-direction: column; /* Stack the container vertically */
-      align-items: center;
-      gap: 20px; /* Reduce the gap between sections */
+    flex-direction: column;
+    gap: 40px;
   }
-
+  
   .Section {
-      text-align: center;
-      margin-bottom: 30px; /* Add some space below each section */
+    text-align: center;
+    align-items: center;
   }
-
-  .Section2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%; /* Ensure the section takes full width */
+  
+  .StatsContainer {
+    justify-content: center;
   }
-
-  .Button {
-      width: 100%; /* Button takes up full width on mobile */
-      margin-top: 15px; /* Add space above the button */
+  
+  .ImageContainer {
+    height: 350px;
   }
+}
 
-  .Web {
-      font-size: 14px; /* Slightly smaller text size */
+@media (max-width: 768px) {
+  .Solution {
+    padding: 60px 20px;
   }
-
+  
   .Line {
-      font-size: 24px; /* Adjust heading size for mobile */
+    font-size: 32px;
   }
-
-  .Sentence {
-      font-size: 14px; /* Adjust text size for mobile */
-      margin-bottom: 20px; /* Reduce space below sentences */
-  }
-
+  
   .Counter {
-      font-size: 30px; 
-      margin-left: 50px;
+    font-size: 36px;
   }
-
-  .CounterText {
-      font-size: 14px; 
-      
-  }
-
-  .Counter1 {
-      font-size: 30px; 
-      margin-left:55px;
-  }
-
-  .CounterText1 {
-      font-size: 14px; 
-      /* margin-left: 2px; */
-  }
-
-  .image img {
-      height: auto; /* Ensure image is responsive */
-      max-width: 100%; /* Limit image width */
+  
+  .ImageContainer {
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .Web {
-      font-size: 12px; /* Smaller font size for very small screens */
-  }
-
   .Line {
-      font-size: 20px; /* Smaller heading for very small screens */
+    font-size: 28px;
   }
-
-  .Sentence {
-      font-size: 12px; /* Smaller sentence text */
+  
+  .StatsContainer {
+    flex-direction: column;
+    gap: 20px;
   }
-
-  .Counter {
-      font-size: 28px; /* Adjust counter size */
-  }
-
-  .CounterText {
-      font-size: 12px; /* Adjust counter text size */
-  }
-
-  .Counter1 {
-      font-size: 28px; /* Adjust counter size */
-  }
-
-  .CounterText1 {
-      font-size: 12px; /* Adjust counter text size */
-  }
-
-  .Button {
-      padding: 12px 20px; /* Adjust padding to fit smaller screens */
-      font-size: 14px; /* Adjust font size of button */
+  
+  .ImageContainer {
+    height: 250px;
   }
 }

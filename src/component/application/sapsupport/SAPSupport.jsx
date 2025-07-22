@@ -73,7 +73,7 @@ function SAPSupport() {
           </div>
         </div>
         <div className={styles.value}>
-          <div className={styles.value1}> Value addition through Automatic’s SAP Managed Services:</div>
+          <div className={styles.value1}> Value addition through Automatic's SAP Managed Services:</div>
           <div className={styles.value2}>
             <ul>
          <li>Flexible and tailored Services delivery model</li>

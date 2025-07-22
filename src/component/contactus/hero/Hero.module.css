@@ -32,16 +32,16 @@
   animation-delay: 0.3s;
 }
 
-.sentence {
+.Line {
   position: absolute;
-  
+  margin-top: 20px;
   top: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 680px;
   transform: translate(-50%, -50%);
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -52,7 +52,7 @@
 }
 
 /* Line Styling */
-.Line {
+/* .Line {
   position: absolute;
   margin-top: -20px;
   top: 50%;
@@ -66,7 +66,7 @@
   justify-content: center;
   display: flex;
   z-index: 10;
-}
+} */
 
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {

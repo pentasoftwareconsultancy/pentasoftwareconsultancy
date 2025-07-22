@@ -10,7 +10,7 @@ function Hero() {
   return (
     <div className={styles.Hero}>
       <div className={styles.image}>
-        <img src="https://i.pinimg.com/1200x/bb/09/98/bb099852293ed3552e71dd57b1931cae.jpg"/>
+        <img src="https://i.pinimg.com/736x/2d/a1/01/2da1016a3fca7c352c878f3bbbcc26c9.jpg"/>
         <div className={styles.Line}></div>
         <div className={styles.Line1}>
         Penta is a global leader in IT services..!!

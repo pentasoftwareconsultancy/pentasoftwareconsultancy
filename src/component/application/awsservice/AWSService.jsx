@@ -8,7 +8,7 @@ function AWSService() {
     <div className={styles.AWSService}> 
       <div className={styles.box}>
         <div className={styles.image}>
-          <img src="https://i.pinimg.com/736x/5b/99/19/5b99195b845d6a95cad4df34c0e6132c.jpg" />
+          <img src="https://i.pinimg.com/736x/0b/d5/af/0bd5afc494028f7eafbe45f967fa2fe4.jpg" />
         </div>
         <div className={styles.Name}>Cloud computing with AWS</div>
         <div className={styles.sent}>Amazon Web Services (AWS) is the world’s most comprehensive<br/>
