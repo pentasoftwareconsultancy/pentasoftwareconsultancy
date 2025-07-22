@@ -36,7 +36,7 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
 }
-
+/* 
 .socialIcons {
   display: flex;
   gap: 15px;
@@ -52,7 +52,7 @@
 .socialIcon:hover {
   color: #0077ff;
   transform: translateY(-3px);
-}
+} */
 
 .contactInfo {
   display: flex;
