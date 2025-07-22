@@ -189,16 +189,16 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .contactCard, .right {
     width: 100%;
   }
-  
+
   .formRow {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .mapContainer {
     height: 300px;
   }
@@ -208,20 +208,20 @@
   .container {
     padding: 0 15px;
   }
-  
+
   .contactCard h2, .formTitle {
     font-size: 1.5rem;
   }
-  
+
   .socialIcons {
     justify-content: center;
   }
-  
+
   .infoItem {
     flex-direction: column;
     gap: 5px;
   }
-  
+
   .mapContainer {
     height: 250px;
   }

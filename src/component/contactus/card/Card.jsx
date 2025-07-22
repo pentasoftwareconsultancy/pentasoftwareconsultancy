@@ -1,14 +1,12 @@
 import React from 'react';
 import CardData from './CardData';
-// import styles from './card.module.css';
 import styles from './card.module.css';
 
 import { MdLocationPin, MdEmail } from "react-icons/md";
 import { FaPhone, FaFacebook, FaInstagram, FaYoutubeSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 
-
-const Card = () => {   
+const Card = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
@@ -63,13 +61,7 @@ const Card = () => {
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                />
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
               </div>
 
               <div className={styles.formGroup}>
@@ -88,36 +80,18 @@ const Card = () => {
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
               </div>
 
               <div className={styles.formGroup}>
                 <label htmlFor="course">Course:</label>
-                <input
-                  type="text"
-                  id="course"
-                  name="course"
-                  placeholder="Enter the course name"
-                  required
-                />
+                <input type="text" id="course" name="course" placeholder="Enter the course name" required />
               </div>
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Enter your message"
-                rows="4"
-                required
-              ></textarea>
+              <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
             </div>
 
             <button type="submit" className={styles.submitButton}>
@@ -126,8 +100,6 @@ const Card = () => {
           </form>
         </div>
       </div>
-
-      
 
       <div className={styles.mapSection}>
         <div className={styles.mapContainer}>
