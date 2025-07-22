@@ -10,7 +10,7 @@ import { FaPhone, FaFacebook, FaInstagram, } from "react-icons/fa6";
 import { FaYoutubeSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 
-const Card = () => {
+const Card = () => {   
   return (
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
