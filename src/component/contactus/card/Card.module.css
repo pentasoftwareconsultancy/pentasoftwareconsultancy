@@ -166,7 +166,7 @@
 
 .submitButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);    
 }
 
 /* Map Section */
