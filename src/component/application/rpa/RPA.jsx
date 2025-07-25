@@ -8,7 +8,7 @@ function RPA() {
     <div className={styles.RPA}> 
       <div className={styles.box}>
         <div className={styles.image}>
-          <img src="https://i.pinimg.com/1200x/18/4e/1c/184e1c21132513a91cc4782b769a9d80.jpg" />
+          <img src="https://i.pinimg.com/736x/2a/3d/61/2a3d6133afd4ef557a6bf04042f90953.jpg" />
         </div>
         <div className={styles.Name}>With RPA, software users create software robots, or “bots”, that can learn, mimic, and then execute rules-based business processes.</div>
         <div className={styles.sent}>Robotic Process Automation (RPA) is software technology <br/>that’s easy for anyone to use to automate digital tasks.</div>

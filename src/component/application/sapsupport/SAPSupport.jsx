@@ -7,7 +7,7 @@ function SAPSupport() {
     <div className={styles.SAPSupport}>
       <div className={styles.box}>
         <div className={styles.image}>
-          <img src="https://i.pinimg.com/474x/84/ef/d3/84efd3b576a09c479ecbd50315fa9039.jpg" alt="SAP Application Support" />
+          <img src="https://i.pinimg.com/736x/15/f5/da/15f5da1013f5f5e3f4f12448685dfbf7.jpg" alt="SAP Application Support" />
         </div>
         <div className={styles.Name}>SAP Application Support</div>
         <div className={styles.sent}>

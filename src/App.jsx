@@ -23,6 +23,7 @@ import JavaTechnologyData from './component/application/javatechnology/javatechn
 import SAPSupport from './component/application/sapsupport/SAPSupport';
 import SPASupportData from './component/application/sapsupport/sapsupport/SAPSupportData';
 import ScrollTop from './component/scrolltop/Scrolltop';
+import Footer from './component/footer/Footer';
 
 function App() {
   return (
@@ -74,7 +75,8 @@ function App() {
          path="/application/sap-support"
          element={<SAPSupport data={SPASupportData}/>}/>
       </Routes>
-
+         
+      <Footer/>
     </div>
   );
 }

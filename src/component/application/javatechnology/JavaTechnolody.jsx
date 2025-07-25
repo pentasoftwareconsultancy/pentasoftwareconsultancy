@@ -11,7 +11,7 @@ const JavaTechnology = () => {
         {/* Main content sections */}
         <div className={styles.Box}>
           <div className={styles.image}>
-            <img src="https://i.pinimg.com/736x/03/11/8d/03118dc0fb3049e18f97b6ac2b36cd8f.jpg" alt="Java Primary" />
+            <img src="https://i.pinimg.com/736x/76/4a/33/764a33f17c92b99ab92ee9743e9886d3.jpg" alt="Java Primary" />
           </div>
           <div className={styles.Name}>The primary objective of Java programming</div>
           <div className={styles.Line}>

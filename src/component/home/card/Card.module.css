@@ -1,12 +1,13 @@
+/* Card.module.css */
 .Card {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
   padding: 2rem;
   max-width: 1400px;
-  margin: 2rem auto 0; /* Added margin-top: 20px equivalent */
+  margin: 2rem auto 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9fafe; /* Soft background color */
+  background: linear-gradient(135deg, #f9fafe 0%, #eef2ff 100%);
 }
 
 .topContainer, .Container2, .Container3 {
@@ -14,171 +15,35 @@
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch; /* Ensures equal height boxes in each row */
 }
 
 .box {
   background: white;
-  border-radius: 18px; /* Slightly larger radius */
-  padding: 2.2rem; /* More padding */
-  width: 350px;
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12); /* Softer shadow */
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 360px;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
-}
-
-.box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px; /* Slightly thicker */
-  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 70%); /* Adjusted gradient */
-  transition: all 0.4s ease;
-}
-
-.box:hover {
-  transform: translateY(-12px); /* More lift on hover */
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
-}
-
-.box:hover::before {
-  height: 12px; /* More noticeable on hover */
-  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-}
-
-.logo {
-  color: #2575fc;
-  margin-bottom: 1.8rem; /* More space */
-  transition: all 0.4s ease;
-  filter: drop-shadow(0 4px 8px rgba(37, 117, 252, 0.2)); /* Soft glow */
-}
-
-.box:hover .logo {
-  transform: scale(1.15) rotate(8deg); /* More pronounced effect */
-  color: #6a11cb; /* Color change on hover */
-}
-
-.Word {
-  font-size: 1.6rem; /* Slightly larger */
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-  color: #2d3748; /* Darker for better contrast */
-  transition: all 0.4s ease;
-  position: relative;
-  display: inline-block;
-}
-
-.Word::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #2575fc;
-  transition: width 0.4s ease;
-}
-
-.box:hover .Word::after {
-  width: 50px; /* Animated underline */
-}
-
-.box:hover .Word {
-  color: #2575fc;
-  text-shadow: 0 2px 8px rgba(37, 117, 252, 0.1); /* Subtle glow */
-}
-
-.Line {
-  color: #4a5568; /* Better readability */
-  line-height: 1.7; /* More breathing room */
-  margin-bottom: 2.2rem; /* More space */
-  font-size: 1rem; /* Slightly larger */
-  font-weight: 400;
-}
-
-.Button {
-  display: inline-block;
-  padding: 0.9rem 1.8rem; /* Larger button */
-  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(37, 117, 252, 0.25); /* More pronounced shadow */
-  position: relative;
-  overflow: hidden;
   border: none;
-  outline: none;
-}
-
-.Button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: all 0.6s ease;
-}
-
-.Button:hover {
-  transform: translateY(-4px); /* More lift */
-  box-shadow: 0 10px 25px rgba(37, 117, 252, 0.4);
-}
-
-.Button:hover::before {
-  left: 100%; /* Shine effect */
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .box {
-    width: 320px; /* Slightly larger than before */
-  }
-}
-
-@media (max-width: 768px) {
-  .topContainer, .Container2, .Container3 {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .box {
-    width: 100%;
-    max-width: 420px; /* More width on mobile */
-    padding: 1.8rem;
-  }
-  
-  .Card {
-    padding: 1.5rem;
-    margin-top: 1rem;
-  }
-}
-
-/* Enhanced animations */
-@keyframes fadeInUp {
-  from { 
-    opacity: 0; 
-    transform: translateY(30px) rotateX(10deg);
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0) rotateX(0);
-  }
-}
-
-.box {
   animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
   transform-style: preserve-3d;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* Allows boxes to grow equally */
+  min-height: 100%; /* Takes full height of container */
+}
+
+.boxContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures content fills the box */
 }
 
 .box:nth-child(1) { animation-delay: 0.1s; }
@@ -189,20 +54,405 @@
 .box:nth-child(6) { animation-delay: 0.6s; }
 .box:nth-child(7) { animation-delay: 0.7s; }
 .box:nth-child(8) { animation-delay: 0.8s; }
+.box:nth-child(9) { animation-delay: 0.9s; }
 
-/* New section separator */
-.Container2 {
-  position: relative;
-  margin-top: 1rem;
-}
-
-.Container2::before {
+.box::before {
   content: '';
   position: absolute;
-  top: -1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(106, 17, 203, 0.2), transparent);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 70%);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 8px);
+  background: white;
+  z-index: -1;
+  border-radius: 0 0 24px 24px;
+}
+
+.box:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover::before {
+  height: 15px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.logo {
+  color: #2575fc;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 4px 8px rgba(37, 117, 252, 0.2));
+  margin-bottom: 1.5rem;
+}
+
+.box:hover .logo {
+  transform: scale(1.2) rotate(10deg);
+  color: #6a11cb;
+}
+
+.Word {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #1a202c;
+  transition: all 0.4s ease;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.Line {
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.3);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.Button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.8s ease;
+}
+
+.Button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(37, 117, 252, 0.4);
+}
+
+.Button:hover::before {
+  left: 100%;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 24px;
+  width: 85%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: modalEntrance 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform-origin: center bottom;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modalLogo {
+  color: #2575fc;
+  margin-right: 20px;
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  flex-grow: 1;
+}
+
+.closeButton {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #7f8c8d;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  background: #f5f7fa;
+  color: #e74c3c;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.modalBody {
+  margin-bottom: 30px;
+}
+
+.modalBody h3 {
+  color: #2575fc;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+  padding-left: 15px;
+}
+
+.modalBody h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 20px;
+  width: 5px;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  border-radius: 5px;
+}
+
+.modalBody p {
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.featureItem {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #2575fc;
+  transition: all 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-5px);
+  background: #f0f5ff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.featureItem h4 {
+  color: #2575fc;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.techItem {
+  background: #f0f5ff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #2575fc;
+  font-weight: 500;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contactButton {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(37, 117, 252, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(40px) rotateX(15deg);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+@keyframes modalEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9) perspective(1000px) rotateX(15deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-15px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .box {
+    width: 340px;
+    flex: 1 0 340px;
+  }
+}
+
+@media (max-width: 992px) {
+  .modalContent {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topContainer, .Container2, .Container3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .box {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    flex: 1 0 auto;
+  }
+  
+  .Card {
+    padding: 1.5rem;
+  }
+  
+  .modalContent {
+    width: 95%;
+    padding: 25px;
+  }
+  
+  .modalHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .modalLogo {
+    margin-right: 0;
+  }
+  
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalFooter {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contactButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .modalHeader h2 {
+    font-size: 24px;
+  }
+  
+  .modalBody h3 {
+    font-size: 20px;
+  }
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import Hero from '../component/services/hero/Hero'
 import Card from '../component/services/card/Card'
 import Team from '../component/services/team/Team'
-import Footer from '../component/about/footer/Footer'
-import Core from '../component/services/core/Core'
+// import Footer from '../component/about/footer/Footer'
+// import Core from '../component/services/core/Core'
 
 
 
@@ -13,8 +13,8 @@ function ServicePage() {
       <Hero/>
       <Card/>
       <Team/>
-      <Core/>
-      <Footer/>
+      {/* <Core/> */}
+      {/* <Footer/> */}
       </div>
   )
 }

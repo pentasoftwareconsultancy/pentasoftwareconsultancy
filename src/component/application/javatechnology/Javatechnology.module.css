@@ -3,30 +3,56 @@
 } */
 
 .image img{
-  width: 1263px;
-  height: 400px;
+  width: 1404px;
+  height: 500px;
 }
-.Name{
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeSlideInLine {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.Name {
   position: absolute;
-  top: 25%; /* Position it near the top of the image */
-  left: 30%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Ensure proper centering */
+  top: 25%;
+  left: 30%;
+  transform: translate(-50%, -50%);
   font-size: 28px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   z-index: 10;
+  animation: fadeSlideIn 1s ease-out forwards;
 }
-.Line{
+
+.Line {
   position: absolute;
-  top: 50%; /* Adjust to place it below the .Name */
-  left: 38%; /* Align it to the right of .Name */
-  transform: translate(-50%, -50%); /* Proper centering */
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
   font-size: 18px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   z-index: 10;
+  animation: fadeSlideInLine 1.2s ease-out forwards;
 }
+
 .Box1{
   display: flex; 
   /* flex-wrap: wrap;  */
@@ -64,52 +90,109 @@
     justify-content: center;
     align-items: center;
 }
-.Section1{
-  /* margin-top: 350px;  */
+.Section1 {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; 
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
   width: 100%;
   max-width: 1200px;
-  padding: 20px;
-
+  padding: 40px 20px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-.No{
+.No {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: white; /* Background for each section */
-  border: 1px solid #000; /* Solid black border */
-  border-radius: 20px; /* Smooth rounded corners */
-  padding: 20px; /* Padding inside the sections */
-  width: 45%; /* Each section takes 45% of the parent container */
-  min-height: 250px; /* Minimum height for consistency */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+  justify-content: flex-start;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  min-height: 280px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.Title{
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 30px; 
+.No::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 128, 255, 0.15), transparent 70%);
+  top: -50%;
+  left: -50%;
+  transform: scale(0);
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.No:hover::before {
+  transform: scale(1.5);
+}
+
+.No:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.Title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
   text-align: center;
-  color: #333; 
+  color: #222;
+  z-index: 1;
 }
-.des{
-  font-size: 14px;
-  line-height: 1.5; 
+
+.des {
+  font-size: 15px;
+  line-height: 1.6;
   text-align: justify;
-  color: #555; /* Slightly lighter gray for paragraph text */
-  max-height: 150px; /* Limit height for better layout */
+  color: #444;
+  max-height: 160px;
   overflow-y: auto;
+  z-index: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb transparent;
 }
+
+/* Custom scrollbar for Webkit */
+.des::-webkit-scrollbar {
+  width: 6px;
+}
+.des::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.No {
+  animation: fadeInUp 0.6s ease-in-out forwards;
+  opacity: 0;
+}
+
+
 @media (max-width: 768px) {
   .Name {
-    font-size: 18px; /* Adjust for smaller screens */
+    font-size: 18px    ; /* Adjust for smaller screens */
     top: 18%;
     margin-left: 80px; 
 }
@@ -121,9 +204,9 @@
 }
 
  .image img {
-      width: 100%; /* Make the image full-width on smaller screens */
-      height: 345px; /* Maintain aspect ratio */
-      max-width: 100%; /* Ensure it doesn't overflow */
+    width: 1404px;
+  height: 500px;
+   
   }
   
   .image1 img {

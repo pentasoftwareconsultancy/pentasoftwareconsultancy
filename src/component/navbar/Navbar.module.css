@@ -1,3 +1,4 @@
+/* Navbar Base */
 .Navbar {
   position: fixed;
   top: 0;
@@ -7,39 +8,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(8px);
   background: white;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease;
 }
 
 /* Logo */
 .logo img,
 .logoImage {
-  height: 70px;
-  width: 80px;
-  margin-top: -20px;
+  height: 60px;
+  width: auto;
 }
 
-/* Hamburger (mobile only) */
+/* Hamburger Icon */
 .hamburger {
-  font-size: 24px;
+  display: none;
+  font-size: 26px;
   background: none;
   border: none;
-  color: black; 
-  display: none;
+  color: black;
   cursor: pointer;
 }
 
-/* Nav Container */
+/* Container for Nav Links */
 .container {
   display: flex;
   align-items: center;
 }
 
-/* Nav Links */
+/* Navigation Links */
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .navLinks li {
@@ -48,27 +51,31 @@
 
 .navLinks a,
 .dropdownToggle {
-  text-decoration: none;
   color: black;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
   padding: 10px;
-  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 /* Dropdown Menu */
 .dropdownMenu {
   position: absolute;
-  top: 40px;
+  top: 100%;
   left: 0;
-  background-color: white;   
-  padding: 10px;
-  border-radius: 5px;
+  background-color: white;
   list-style: none;
-  display: block;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  display: none;
   z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navLinks li:hover .dropdownMenu,
+.navLinks li .dropdownMenu.open {
+  display: block;
 }
 
 .dropdownMenu li {
@@ -78,16 +85,29 @@
 .dropdownMenu a {
   color: black;
   text-decoration: none;
+  padding: 6px 8px;
+  display: block;
 }
 
-/* SCROLLED STYLE */
+/* Dropdown Toggle Arrow */
+.dropdownToggle::after {
+  content: "▼";
+  font-size: 0.6em;
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdownToggle.open::after {
+  transform: rotate(180deg);
+}
+
+/* Scroll Styling */
 .scrolled {
   background-color: black !important;
-  animation: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Text turns white when scrolled */
 .scrolled .navLinks a,
 .scrolled .dropdownToggle,
 .scrolled .dropdownMenu a,
@@ -99,14 +119,7 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* ANIMATION BACKGROUND */
-@keyframes glowingBackground {
-  0%, 25%, 50%, 75%, 100% {
-    background: rgba(255, 255, 255, 0.6);
-  }
-}
-
-/* Responsive Styles */
+/* Media Query for Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -114,49 +127,44 @@
 
   .container {
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(5px);
+    background-color: white;
+    backdrop-filter: blur(6px);
+    padding: 10px 0;
+    display: none;
+  }
+
+  .container.showMenu {
+    display: flex;
   }
 
   .navLinks {
     flex-direction: column;
-    gap: 15px;
-    padding: 10px 0;
+    gap: 10px;
+    width: 100%;
   }
 
-  .hideMenu {
-    display: none;
-  }
-
-  .showMenu {
-    display: flex;
+  .navLinks li {
+    width: 100%;
   }
 
   .navLinks a,
-  .dropdownToggle,
-  .dropdownMenu a,
-  .hamburger {
-    color: black;
-  }
-
-  .scrolled .container {
-    background-color: black;
-  }
-
-  .scrolled .navLinks a,
-  .scrolled .dropdownToggle,
-  .scrolled .dropdownMenu a,
-  .scrolled .hamburger {
-    color: white;
+  .dropdownToggle {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
   }
 
   .dropdownMenu {
     position: static;
-    background-color: white;
+    background: white;
     box-shadow: none;
-    border-radius: 0;
-    padding: 5px 0;
+    padding-left: 20px;
+  }
+
+  .scrolled .container {
+    background-color: black;
   }
 
   .scrolled .dropdownMenu {

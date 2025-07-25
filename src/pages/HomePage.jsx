@@ -3,7 +3,7 @@ import Hero from '../component/home/hero/Hero'
 import Card from '../component/home/card/Card'
 import Solution from '../component/home/card/solution/Solution'
 // import Gallery from '../component/home/card/gallery/Gallery'
-import Footer from '../component/about/footer/Footer'
+// import Footer from '../component/about/footer/Footer'
 
 function HomePage() {
   return (
@@ -12,7 +12,7 @@ function HomePage() {
     <Card/>
     <Solution/>
     {/* <Gallery/> */}
-    <Footer/>
+    {/* <Footer/> */}
     </div>
   )
 }
