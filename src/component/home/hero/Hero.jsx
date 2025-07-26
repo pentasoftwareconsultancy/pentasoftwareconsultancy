@@ -4,51 +4,22 @@ import styles from "./Hero.module.css";
 function Hero() {
   const [showWorkModal, setShowWorkModal] = useState(false);
   const [showCareerModal, setShowCareerModal] = useState(false);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   
+  const videos = [
+    "https://videos.pexels.com/video-files/6774633/6774633-uhd_2560_1440_30fps.mp4",
+    "https://devconsoftware.com/assets/img/team/3255275-hd_1920_1080_25fps.mp4",
+    // "https://videos.pexels.com/video-files/6774633/6774633-uhd_2560_1440_30fps.mp4"
+  ];
+
   useEffect(() => {
-    let bubbleTimeout;
-    let scrollFactor = 1;
+    // Video rotation effect
+    const videoInterval = setInterval(() => {
+      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    }, 8000); // Change video every 8 seconds
 
-    const handleMouseMove = (e) => {
-      const heroElement = document.querySelector(`.${styles.background}`);
-      const bubble = document.createElement("span");
-      const x = e.clientX - heroElement.getBoundingClientRect().left;
-      const y = e.clientY - heroElement.getBoundingClientRect().top;
-      const size = Math.random() * 150 + 150;
-      const scaledSize = size * scrollFactor;
-
-      bubble.style.left = `${x}px`;
-      bubble.style.top = `${y}px`;
-      bubble.style.width = `${scaledSize}px`;
-      bubble.style.height = `${scaledSize}px`;
-      bubble.style.position = "absolute";
-      bubble.style.backgroundColor = "rgba(188, 34, 202, 0.6)";
-      bubble.style.borderRadius = "50%";
-      bubble.style.pointerEvents = "none";
-      bubble.style.animation = `${styles.bubbleAnimation} 3s ease-out`;
-
-      heroElement.appendChild(bubble);
-
-      setTimeout(() => {
-        bubble.remove();
-      }, 300);
-    };
-
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      scrollFactor = 1 + scrollTop / 500;
-    };
-
-    const heroElement = document.querySelector(`.${styles.Hero}`);
-    heroElement.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      heroElement.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(bubbleTimeout);
-    };
-  }, []);
+    return () => clearInterval(videoInterval);
+  }, [videos.length]);
 
   const openWorkModal = () => {
     setShowWorkModal(true);
@@ -68,26 +39,39 @@ function Hero() {
 
   return (
     <div className={styles.Hero}>
-      <div className={styles.background}></div>
-      <div className={styles.Line}>
-        Penta is a global leader in IT services
+      {/* Full-screen video background */}
+      <div className={styles.videoBackground}>
+        {videos.map((video, index) => (
+          <video 
+            key={index}
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className={`${styles.bgVideo} ${index === currentVideoIndex ? styles.active : ''}`}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ))}
+        <div className={styles.videoOverlay}></div>
       </div>
-      <div className={styles.sentence}>
-        Digital and business solutions that partner with its clients to simplify, strengthen, and transform their businesses.<br />
-        We ensure the highest levels of certainty and satisfaction through a deep-set commitment to our clients.
-      </div>
-      <div className={styles.React}>
-        <div className={styles.Button} onClick={openWorkModal}>
-          Start a Project
+      
+      <div className={styles.content}>
+        <div className={styles.Line}>
+          Penta is a global leader in IT services
         </div>
-        <div className={styles.Button1} onClick={openCareerModal}>
-          Our Work
+        <div className={styles.sentence}>
+          Digital and business solutions that partner with its clients to simplify, strengthen, and transform their businesses.<br />
+          We ensure the highest levels of certainty and satisfaction through a deep-set commitment to our clients.
         </div>
-      </div>
-      <div className={styles.video}>
-        <video autoPlay muted width="100%">
-          <source src="https://videos.pexels.com/video-files/6774633/6774633-uhd_2560_1440_30fps.mp4" />
-        </video>
+        <div className={styles.React}>
+          <div className={styles.Button} onClick={openWorkModal}>
+            Start a Project
+          </div>
+          <div className={styles.Button1} onClick={openCareerModal}>
+            Our Work
+          </div>
+        </div>
       </div>
 
       {/* Work With Us Modal */}
@@ -141,11 +125,6 @@ function Hero() {
               Join our team and unlock endless possibilities for professional development and career advancement. 
               We believe in fostering talent and providing opportunities for growth within our dynamic organization.
             </p>
-            
-            {/* <p className={styles.modalIntro}>
-              Every day, we refine, iterate and explore how to make work better for everyone. Join us in
-              creating a better future of work that's more connected, inclusive and flexible.
-            </p> */}
             
             <div className={styles.featureGrid}>
               <div className={styles.featureItem}>

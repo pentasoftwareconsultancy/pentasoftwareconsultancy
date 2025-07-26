@@ -1,79 +1,90 @@
-body {
-    background-color: whitesmoke;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.image img {
-    position: relative; 
-    margin-top: 90px;
-    margin: 20px 0;
-    width: 1404px;
-  height: 500px;
-   
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.line {
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 35%;
-    margin-left: 25%;          
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;      
-    animation: slideInLeft 1.5s ease-out forwards;
+.slideImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: 
+    opacity 1000ms cubic-bezier(0.33, 1, 0.68, 1),
+    transform 1200ms cubic-bezier(0.33, 1, 0.68, 1);
+  filter: brightness(0.7);
+  will-change: opacity, transform;
+  z-index: 1;
 }
 
-.sent {
-    position: absolute;
-    top: 50%;
-    margin-left: 35%;      
-    font-size: 20px;
-    color: white;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slideInRight 1.5s ease-out forwards;
+.slideImage.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
 }
 
-@media only screen and (max-width: 768px) {
-    .image img {
-        width: 100%;
-        height: auto;
-        margin-top: 70px;
-    }
-    .line {
-        font-size: 28px;
-        top: 15%;
-        width: 50%;
-    }
-    
-    .sent {
-        font-size: 16px;
-        top: 35%;
-        margin-left: 70px;
-    }
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 80%;
+  max-width: 800px;
+  transition: opacity 500ms ease;
 }
 
-/* 👇 Add animation keyframes at the end */
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.content.fadeOut {
+  opacity: 0;
 }
 
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.headline {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 800ms 300ms forwards;
+}
+
+.subtext {
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 800ms 500ms forwards;
+}
+
+/* Animations */
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    width: 90%;
+    padding: 0 1rem;
+  }
+  
+  .headline {
+    margin-bottom: 1rem;
+  }
 }

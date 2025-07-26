@@ -120,7 +120,7 @@ function Birth() {
 
             <div className={styles.box2}>
               <div className={styles.logo2}><DiCss3 size={30} /></div>
-              <div className={styles.No2}>HTML + CSS + Bootstrap<br /> + JQuerry + AngularJS</div>
+              <div className={styles.No2}>HTML + CSS + Bootstrap</div>
             </div>
 
             <div className={styles.box3}>
