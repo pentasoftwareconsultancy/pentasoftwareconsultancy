@@ -10,10 +10,8 @@ function SAPSupport() {
           <img src="https://i.pinimg.com/736x/15/f5/da/15f5da1013f5f5e3f4f12448685dfbf7.jpg" alt="SAP Application Support" />
         </div>
         <div className={styles.Name}>SAP Application Support</div>
-        <div className={styles.sent}>
-          Most SAP user companies are facing the challenge of managing their investments<br />
-          in SAP system successfully and professionally.
-        </div>
+        <div className={styles.Sent}>Most SAP user companies are facing the challenge of managing their investments<br />
+          in SAP system successfully and professionally. </div>
 
         <div className={styles.Section}>
           <div className={styles.Section1}>
@@ -63,10 +61,8 @@ function SAPSupport() {
                                         Trouble shooting
                                         EDI monitoring and support
                                         Deployment of new SAP functionalities
-                                        Functional updates / functional enhancements
                                         Testing of new / enhanced functionalities
                                         Deployment of new regulations as per statutory requirements
-                                        Application Enhancement – Change management
                                         SAP end user training / documentation</div>
               </div>
             </div>

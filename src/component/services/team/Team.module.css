@@ -56,8 +56,16 @@
   max-height: 32.5vh;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
+.image1 img:hover,
+.image2 img:hover,
+.image3 img:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  opacity: 0.9; /* Slight transparency change */
+}
 .Word1,
 .Word2,
 .Word3 {

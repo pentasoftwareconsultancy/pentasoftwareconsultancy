@@ -385,6 +385,11 @@
 }
 
 @media (max-width: 768px) {
+     
+    .image img{
+      width: 100%;
+      height: auto;
+    }
     .Section2 {
         padding: 40px 15px;
         border-radius: 12px;
@@ -421,10 +426,9 @@
       height: auto;
   }
 
-  /* Adjust Name styling further for small mobile screens */
   .Name {
-      top: 4.2%; 
-      margin-left: 40px;
+      top: 4.8%; 
+      margin-left: 20px;
       font-size: 18px; /* Further reduce font size */
   }
 
@@ -478,3 +482,4 @@
       text-align: center; /* Center-align text */
     }
   }
+  

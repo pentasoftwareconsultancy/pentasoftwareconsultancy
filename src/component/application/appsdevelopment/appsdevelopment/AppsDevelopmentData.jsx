@@ -15,10 +15,7 @@ const AppsDevelopmentData = [
       title: "Compatibility with different devices",
       description: " There is virtually no limit to the versatility of Android application development. You can create a tablet, phone, desktop application, and the application in question can easily work with Ubuntu, Symbian, Blackberry. The technical capabilities of Android application development are virtually unlimited, because today there is almost no software that cannot be integrated with or to a mobile application for Android. "
     },
-    // {
-    //  title: "Affordable investment.",
-    //  description:"Another positive feature of Android application development is the low one-time entry fee for Google Marketplace. You will only need to pay for the Android application development process itself, while your place in the vast Android market is free and almost seamless, as long as the mobile application meets several publishing standards."
-    // },
+   
     
   ];
   

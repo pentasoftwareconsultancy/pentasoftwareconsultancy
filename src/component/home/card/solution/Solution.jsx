@@ -43,7 +43,7 @@ function Solution() {
     <div className={styles.Solution}>
       <div className={styles.Container}>
         <div className={styles.Section}>
-          <div className={styles.Web}>www.Devcon.com</div>
+          {/* <div className={styles.Web}>www.Devcon.com</div> */}
           
           <h1 className={styles.Line}>
             <span className={styles.Highlight}>We Provide IT Solution</span> & Services for any Startup

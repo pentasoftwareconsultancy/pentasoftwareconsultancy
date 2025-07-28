@@ -1,4 +1,4 @@
-/* Navbar Base */
+/* Navbar Base - Keep original styles */
 .Navbar {
   position: fixed;
   top: 0;
@@ -13,14 +13,14 @@
   transition: background-color 0.3s ease;
 }
 
-/* Logo */
+/* Logo - Keep original styles */
 .logo img,
 .logoImage {
   height: 60px;
   width: auto;
 }
 
-/* Hamburger Icon */
+/* Hamburger Icon - Keep original styles */
 .hamburger {
   display: none;
   font-size: 26px;
@@ -30,13 +30,13 @@
   cursor: pointer;
 }
 
-/* Container for Nav Links */
+/* Container for Nav Links - Keep original styles */
 .container {
   display: flex;
   align-items: center;
 }
 
-/* Navigation Links */
+/* Navigation Links - Keep original styles */
 .navLinks {
   list-style: none;
   display: flex;
@@ -59,7 +59,7 @@
   transition: color 0.3s ease;
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu - Keep original styles */
 .dropdownMenu {
   position: absolute;
   top: 100%;
@@ -89,7 +89,7 @@
   display: block;
 }
 
-/* Dropdown Toggle Arrow */
+/* Dropdown Toggle Arrow - Keep original styles */
 .dropdownToggle::after {
   content: "▼";
   font-size: 0.6em;
@@ -102,7 +102,7 @@
   transform: rotate(180deg);
 }
 
-/* Scroll Styling */
+/* Scroll Styling - Keep original styles */
 .scrolled {
   background-color: black !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -119,20 +119,24 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Media Query for Mobile */
+/* Enhanced Media Query for Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    z-index: 1001; /* Ensure it's above other elements */
   }
 
   .container {
+    position: absolute;
+    top: 80px; /* Adjust based on your navbar height */
+    left: 0;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    background-color: white;
-    backdrop-filter: blur(6px);
+    background-color: whitesmoke;
     padding: 10px 0;
     display: none;
+    transition: all 0.3s ease;
   }
 
   .container.showMenu {
@@ -141,33 +145,62 @@
 
   .navLinks {
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
     width: 100%;
   }
 
   .navLinks li {
     width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navLinks li:last-child {
+    border-bottom: none;
   }
 
   .navLinks a,
   .dropdownToggle {
     width: 100%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .dropdownMenu {
     position: static;
-    background: white;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
     box-shadow: none;
-    padding-left: 20px;
+    border-radius: 0;
+    padding: 0;
+    display: none;
   }
 
+  .dropdownMenu.open {
+    display: block;
+  }
+
+  .dropdownMenu li {
+    border-bottom: none;
+  
+  }
+
+  .dropdownMenu a {
+    padding-left: 30px;
+  }
+
+  /* Scrolled state for mobile */
   .scrolled .container {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .scrolled .navLinks li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .scrolled .dropdownMenu {
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.05);
   }
 }

@@ -190,62 +190,89 @@
 }
 
 
-@media (max-width: 768px) {
-  .Name {
-    font-size: 18px    ; /* Adjust for smaller screens */
-    top: 18%;
-    margin-left: 80px; 
-}
 
-.Line {
-    font-size: 12px; /* Smaller font size for mobile */
-    top: 36%; 
-    margin-left: 45px; 
-}
 
- .image img {
-    width: 1404px;
-  height: 500px;
-   
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .Box1 {
+    flex-direction: column;
+    align-items: center;
   }
   
   .image1 img {
-    max-width: 90%;
-    
+    max-width: 100%;
+  }
+  
+  .image img{
+    width: 100%;
+    height: 400px;
+  }
+  .Name1, .Line1 {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
-.Box1 {
-  flex-direction: column;
-  padding: 10px;
-}
-.Name1 {
-  font-size: 20px;
-  margin-left: 20px;
-}
-.Line1 {
-  font-size: 12px;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.Section1 {
-  margin-left: 10px; /* Reduce left margin for mobile view */
+@media (max-width: 768px) {
+  .Name {
+    font-size: 24px;
+    left: 50%;
+    top: 30%;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .Line {
+    font-size: 16px;
+    left: 50%;
+    top: 45%;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .Name1 {
+    font-size: 24px;
+  }
+  
+  .Line1 {
+    font-size: 14px;
+  }
+  
+  .No {
+    padding: 20px;
+    min-height: auto;
+  }
+  
+  .Title {
+    font-size: 20px;
+  }
+  
+  .des {
+    font-size: 14px;
+  }
 }
 
-.No {
-  width: 100%; /* Full width for each item on mobile */
-  margin-bottom: 20px;
-  margin-left: -20px; 
-  padding: 20px;
-}
-
-.Title {
-  font-size: 16px; /* Smaller font size for mobile */
-  margin-bottom: 15px; /* Adjust bottom margin */
-}
-
-.des {
-  font-size: 12px; /* Further reduced font size for mobile */
-  max-height: 120px; /* Adjust max height for mobile */
-}
- 
+@media (max-width: 480px) {
+  .Name {
+    font-size: 20px;
+    top: 25%;
+  }
+  
+  .Line {
+    font-size: 14px;
+    top: 40%;
+  }
+  
+  .Name1 {
+    font-size: 20px;
+  }
+  
+  .Section1 {
+    padding: 20px 10px;
+  }
+  
+  .No {
+    padding: 15px;
+    border-radius: 15px;
+  }
 }

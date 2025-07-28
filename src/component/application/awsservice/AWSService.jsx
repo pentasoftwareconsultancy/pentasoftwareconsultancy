@@ -3,16 +3,16 @@ import styles from "./AWSServices.module.css"
 import AWSServiceData from './awsservice/AWSServiceData';
 
 function AWSService() {
-  
+
   return (
-    <div className={styles.AWSService}> 
+    <div className={styles.AWSService}>
       <div className={styles.box}>
         <div className={styles.image}>
           <img src="https://i.pinimg.com/736x/0b/d5/af/0bd5afc494028f7eafbe45f967fa2fe4.jpg" />
         </div>
         <div className={styles.Name}>Cloud computing with AWS</div>
-        <div className={styles.sent}>Amazon Web Services (AWS) is the world’s most comprehensive<br/>
-         and broadly adopted cloud platform, offering over 200<br/> fully featured services from data centers globally. </div>
+        <div className={styles.sent}>Amazon Web Services (AWS) is the world’s most comprehensive<br />
+          and broadly adopted cloud platform, offering over 200<br /> fully featured services from data centers globally. </div>
 
         <div className={styles.Section}>
           <div className={styles.Section1}>
@@ -21,13 +21,13 @@ function AWSService() {
             </div>
             <div className={styles.data}>
               <div className={styles.Data}>Cloud computing with AWS</div>
-              <div className={styles.Data1}>Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted<br/>
-               cloud platform, offering over 200 fullyfeatured services from data centers globally.Millions<br/>
-               of customers—including the fastest-growing startups,largest enterprises, and leading governmentagencies—are using AWS to lower costs, become more agile, and innovate faster.</div>
+              <div className={styles.Data1}>Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted<br />
+                cloud platform, offering over 200 fullyfeatured services from data centers globally.Millions<br />
+                of customers—including the fastest-growing startups,largest enterprises, and leading governmentagencies—are using AWS to lower costs, become more agile, and innovate faster.</div>
               <div className={styles.Data2}>Most functionality</div>
-              <div className={styles.Data3}>AWS has significantly more services, and more features within those<br/>
-               services, than any other cloud provider–from infrastructure technologies<br/>
-                like compute, storage, and databases–to emerging technologies, such as machine <br/>
+              <div className={styles.Data3}>AWS has significantly more services, and more features within those<br />
+                services, than any other cloud provider–from infrastructure technologies<br />
+                like compute, storage, and databases–to emerging technologies, such as machine <br />
                 learning and artificial intelligence, data lakes and analytics, and Internet of Things.</div>
             </div>
           </div>

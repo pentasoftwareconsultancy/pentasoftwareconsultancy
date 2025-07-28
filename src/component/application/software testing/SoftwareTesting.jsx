@@ -23,7 +23,7 @@ function SoftwareTesting() {
               In Manual testing, the tester checks all the essential features of the given application or software. In this process, the software testers execute the test cases and generate the test reports without the help of any automation software testing tools.</div>
           </div></div>
         <div className={styles.Box2}>
-          <div className={styles.Name}>What is Automation Testing?</div>
+          <div className={styles.Name}>What is Automation Testing.?</div>
           <div className={styles.Lines}>
             In Automated Software Testing, testers write code/test scripts to automate test execution. Testers use appropriate automation tools to develop the test scripts and validate the software. The goal is to complete test execution in a less amount of time.<br /><br />
             Automated testing entirely relies on the pre-scripted test which runs automatically to compare actual result with the expected results. This helps the tester to determine whether or not an application performs as expected.<br /><br />

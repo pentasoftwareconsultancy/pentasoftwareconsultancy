@@ -326,16 +326,18 @@
 
   /* Name styling for mobile */
   .Name {
-      top: 8%; /* Slightly adjust top position on mobile */
+      top: 6%; /* Slightly adjust top position on mobile */
       font-size: 12px; 
-      margin-left: -28px;
+      margin-left: -8px;
+      text-align: center;
   }
 
   /* Sent styling for mobile */
   .sent {
-      top: 12%; /* Adjust top position for mobile */
+      top: 11%; /* Adjust top position for mobile */
       font-size: 10px;
-      margin-left: -25px;
+      margin-left: -8px;
+      text-align: center;
   }
     
 

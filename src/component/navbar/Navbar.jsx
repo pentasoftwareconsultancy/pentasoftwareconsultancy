@@ -64,7 +64,6 @@ function Navbar() {
             <Link to="/services">SERVICES</Link>
           </li>
 
-          {/* Dropdown - Note: This uses both hover and click handlers */}
           <li
             className={styles.dropdown}
             onMouseEnter={handleDropdownEnter}

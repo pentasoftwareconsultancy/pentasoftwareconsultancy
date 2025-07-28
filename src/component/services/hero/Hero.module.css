@@ -1,31 +1,44 @@
-/* Default Styles for Desktop and Larger Screens */
+
+/* New background image styles - add these without modifying anything else */
+.backgroundImageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  /* filter: blur(8px) brightness(0.7) saturate(1.5); */
+  /* transform: scale(1.1); */
+  /* opacity: 0.8; */
+}
 .Hero {
-    margin-top: -20px;
+  margin-top: 50px;
+  perspective: 1000px;
 }
 
 .image {
-    position: relative; 
-    margin-top: 100px;
-    margin: 20px 0;
-    height: auto; 
-}
-
-.image img {
-    width: 100%;          
-    height: 540px;        
-    border-radius: 8px;   
-    display: block;       
-    margin: 0 auto;  
-    margin-top: 50px;   
+  position: relative; 
+  margin-top: 100px;
+  margin: 20px 0;
+  height: auto; 
+  padding: 40px 0;
 }
 
 .Line {
-    font-weight: bold;
-    font-size: 20px;        
-    margin-top: -490px;
-    color: white;
-    margin-left: 35px;
+  font-weight: bold;
+  font-size: 20px;        
+  margin-top: 0;
+  /* color: white; */
+  margin-left: 35px;
 }
+
 @keyframes fadeSlideIn {
   0% {
     opacity: 0;
@@ -36,123 +49,174 @@
     transform: translateY(0) scale(1);
   }
 }
+
 .Line1 {
-    font-size: 35px;  
-    font-weight: bold;     
-    margin-top: 40px;
-    color: white;
-    margin-left: 30px;
-    animation: fadeSlideIn 1s ease-out forwards;
+  font-size: 35px;  
+  font-weight: bold;     
+  margin-top: 40px;
+  color: white;
+  margin-left: 30px;
+  animation: fadeSlideIn 1s ease-out forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .Line3 {
-    margin-left: 30px;
-    margin-top: 50px;
-    color: white;
-     animation-delay: 0.3s;
-     animation: fadeSlideIn 1s ease-out forwards;
-
+  margin-left: 30px;
+  margin-top: 50px;
+  color: white;
+  animation-delay: 0.3s;
+  animation: fadeSlideIn 1s ease-out forwards;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    margin-top: 180px;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 180px;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.box1, .box2, .box3, .box4 {
-    height: 250px;
-    width: 250px;
-    background-color: white; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
-    border-radius: 5px; 
-    border-top-left-radius: 50px;    
-    border-bottom-right-radius: 50px;
+/* 3D Card Styles */
+.card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.card:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 20px;
+}
+
+.cardFront {
+  background-color: white;
+  color: black;
+}
+
+.cardBack {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* Individual Card Styles */
+.card1 .cardFront {
+  background: linear-gradient(135deg, #ebf2fd 0%, #c5dafa 100%);
+}
+
+.card1 .cardBack {
+  background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
+}
+
+.card2 .cardFront {
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.card2 .cardBack {
+  background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+
+.card3 .cardFront {
+  background: linear-gradient(135deg, #eab4f0 0%, #f5c7cd 100%);
+}
+
+.card3 .cardBack {
+  background: linear-gradient(135deg, #feadb8 0%, #e6baeb 100%);
+}
+
+.card4 .cardFront {
+  background: linear-gradient(135deg, #bbf7f3 0%, #d7b8ea 100%);
+}
+
+.card4 .cardBack {
+  background: linear-gradient(135deg, #b490ca 0%, #bef9f5 100%);
 }
 
 .Name1, .Name2, .Name3, .Name4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.No1,.No3, .No4 {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+.No1, .No2, .No3, .No4 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.No2{
-    font-size: 14px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
 .logo1, .logo2, .logo3, .logo4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    color: navy;
+  color: navy;
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .image img {
-        width: 100%;
-        height: auto;
-        margin-top: 10px;
-    }
+  .Line {
+    font-size: 14px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .Name1, .Name2, .Name3, .Name4 {
+    font-size: 20px; 
+    margin-top: 10px;
+  }
 
-    .Line {
-        font-size: 14px;
-               margin: -200px 20px 0 20px;
-        text-align: center;
-    }
-    .Name1, .Name2, .Name3, .Name4 {
-        font-size: 20px; 
-        margin-top: 10px;
-    }
+  .No1, .No2, .No3, .No4 {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .Line1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
 
-    
-    .No1, .No2, .No3, .No4 {
-        font-size: 12px;
-        margin-top: 10px;
-    }
-    .No2{
-        font-size: 12px;
-        margin-top: 10px;
-    }
-    .Line1 {
-        font-size: 20px;
-        text-align: center;
-        margin-top: -20px;
-    }
+  .Line3 {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 20px;
+  }
 
-    .Line3 {
-        text-align: center;
-        font-size: 10px;
-        margin-top: 20px;
-    }
+  .box {
+    flex-direction: column;
+    margin-top: 50px;
+  }
 
-    .box {
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .box1, .box2, .box3, .box4 {
-        width: 90%;
-        height: 200px;
-    }
-    .logo1, .logo2, .logo3, .logo4{
-        margin-top: 5px;
-    }
+  .card {
+    width: 90%;
+    height: 250px;
+    margin-bottom: 20px;
+  }
 }

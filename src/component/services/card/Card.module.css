@@ -1,95 +1,243 @@
+/* Services.module.css */
+/* Services.module.css */
 .Card {
-    background-color: whitesmoke;
-    margin-top: 5%; /* Changed to a percentage for responsiveness */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 2rem auto 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+  border-radius: 24px;
 }
 
 .word {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 2rem; /* Responsive font size */
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .Box, .box {
-    display: flex;
-    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
-    justify-content: center;
-    align-items: center;
-    color: black;
-    margin-top: 2rem;
-    gap: 2rem;
-    margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  color: black;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+/* Updated box colors with subtle gradients */
+.Box1, .box1 {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+.Box2, .box2 {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
+}
+.Box3, .box3 {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f6ff 100%);
+}
+.Box4, .box4 {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
 }
 
 .Box1, .Box2, .Box3, .Box4, 
 .box1, .box2, .box3, .box4 {
-    height: 220px;
-    width: 100%; /* Defaults to 100% width */
-    max-width: 250px; /* Restricts max width */
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
-    border-top-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+  height: 350px;
+  width: calc(50% - 1rem);
+  max-width: 450px; 
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  /* border-radius: 24px; */
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 120px;
+  border-bottom-right-radius: 120px;
 }
 
+/* Updated gradient for the top border */
+.Box1::before, .Box2::before, .Box3::before, .Box4::before,
+.box1::before, .box2::before, .box3::before, .box4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 70%);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/* Hover effects with updated background */
+.Box1:hover, .Box2:hover, .Box3:hover, .Box4:hover, 
+.box1:hover, .box2:hover, .box3:hover, .box4:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #e6f0ff 0%, #d9e7ff 100%);
+  animation: floatBox 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Rest of your CSS remains the same */
 .Logo1, .Logo2, .Logo3, .Logo4,
 .logo1, .logo2, .logo3, .logo4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -20px;
-    color: navy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  color: #2575fc;
+  transition: all 0.5s ease;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.Box1:hover .Logo1, .Box2:hover .Logo2, .Box3:hover .Logo3, .Box4:hover .Logo4,
+.box1:hover .logo1, .box2:hover .logo2, .box3:hover .logo3, .box4:hover .logo4 {
+  transform: scale(1.2) rotate(10deg);
+  color: #6a11cb;
 }
 
 .Name1, .Name2, .Name3, .Name4, 
 .name1, .name2, .name3, .name4 {
-    font-size: 1.5rem; /* Responsive font size */
-    font-weight: bold;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.2rem;
 }
 
 .Line1, .Line2, .Line3, .Line4, 
 .line1, .line2, .line3, .line4 {
-    font-size: 0.875rem; /* Responsive font size */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-}
- .Line2 {
-    font-size: 0.875rem; /* Responsive font size */
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+  padding: 0 1rem;
+  text-align: center;
 }
 
+.Line2 {
+  padding: 10px;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.3);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.Button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(37, 117, 252, 0.4);
+}
+
+@keyframes slideInFromLeft {
+  from { 
+    transform: translateX(-20px);
+  }
+  to { 
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from { 
+    transform: translateX(20px);
+  }
+  to { 
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatBox {
+  from { 
+    transform: translateY(0);
+  }
+  to { 
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .word {
-        font-size: 1.5rem;
-    }
+  .word {
+    font-size: 1.8rem;
+  }
 
-    .Box, .box {
-        flex-direction: column; 
-        gap: 1rem;
-    }
+  .Box, .box {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
- .box1, .box2, .box3, .box4 {
-        max-width: 90%; /* Adjust width for smaller screens */
-        height: 200px;
-        margin-top: 15px;
-    }
-    .Box1, .Box2, .Box3, .Box4{
-        max-width: 90%; /* Adjust width for smaller screens */
-        height: 200px;
-        margin-top: 15px;
-    }
-   
+  .Box1, .Box2, .Box3, .Box4,
+  .box1, .box2, .box3, .box4 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 250px;
+    padding: 2rem;
+  }
+
+  .Name1, .Name2, .Name3, .Name4,
+  .name1, .name2, .name3, .name4 {
+    font-size: 1.5rem;
+  }
+
+  .Line1, .Line2, .Line3, .Line4,
+  .line1, .line2, .line3, .line4 {
+    font-size: 1rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .word {
+    font-size: 1.5rem;
+  }
+
+  .Card {
+    padding: 1.5rem;
+  }
+
+  .Box1, .Box2, .Box3, .Box4,
+  .box1, .box2, .box3, .box4 {
+    padding: 1.5rem;
+  }
+}

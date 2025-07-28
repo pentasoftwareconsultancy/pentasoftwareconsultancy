@@ -1,257 +1,409 @@
+/* Base styles */
+.box {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
 
+.image img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
 
-  .box {
-    width: 100%;
-    text-align: center;
-    position: relative;
+.Name {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.Sent {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.125rem;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Section1 Layout */
+.Section1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  align-items: flex-start;
+}
+
+.image1 img {
+  width: 100%;
+  max-width: 380px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.data {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Data {
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+.Data1 {
+  margin: 15px 0;
+  font-size: 0.9375rem;
+  text-align: justify;
+  width: 100%;
+}
+
+.Data3 {
+  margin: 15px 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: justify;
+  width: 100%;
+}
+
+/* Cloud Section Styling */
+.cloud {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Grid Layout for Box Section */
+.Section2 {
+  padding: 30px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6e6fa 100%);
+  border-radius: 12px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.Box1, .Box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 10px 25px rgba(169, 169, 169, 0.3);
+  border-radius: 16px;
+  height: auto;
+  min-height: 320px;
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.Box1::before, .Box2::before,
+.Box1::after, .Box2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #bb7bf0 0%, #ca6bf6 100%);
+}
+
+.Box1::before, .Box2::before {
+  top: 0;
+}
+
+.Box1::after, .Box2::after {
+  bottom: 0;
+}
+
+.Title1, .Title2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 15px 0;
+  color: #333;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.Title1::after, .Title2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #bb7bf0 0%, #ca6bf6 100%);
+  border-radius: 3px;
+}
+
+.dis1, .dis2, .dis3, .dis4 {
+  padding: 12px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+
+/* Main Value Container */
+.value {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f5ff 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(161, 22, 22, 0.08), 0 5px 15px rgba(187, 123, 240, 0.1);
+  height: auto;
+  min-height: auto;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(187, 123, 240, 0.15);
+}
+
+.value::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #bb7bf0 0%, #d56ef3 50%, #ca6bf6 100%);
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(187, 123, 240, 0.3);
+}
+
+.value1 {
+  padding: 35px 40px 15px;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #2a2a2a;
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(90deg, #bb7bf0, #ca6bf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.value1::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 40px;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #bb7bf0 0%, #ca6bf6 100%);
+  border-radius: 4px;
+}
+
+.value2 {
+  font-size: 1.0625rem;
+  padding: 0 40px 40px;
+  line-height: 1.8;
+  color: #444;
+  position: relative;
+  z-index: 3;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  .image img {
-   width: 1404px;
-  height: 500px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.Section2 {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.Box1 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.Box2 {
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .Name {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+    font-size: 2rem;
+    top: 8%;
+  }
+
+  .image img{
+    width: 100%;
+    height: 350px;
   }
   
   .sent {
-    position: absolute; /* Ensure it's positioned relative to the parent container */
-    top: 15%; /* Position it at the vertical center */
-    left: 50%; /* Position it at the horizontal center */
-    transform: translate(-50%, -50%); /* Adjust the positioning to be truly centered */
-    font-size: 18px;
-    color: white;
-    /* text-align: justify; */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    z-index: 10; /* Ensure it stays on top of other content */
+    top: 2%;
+    font-size: 12px;
   }
   
+  .value1 {
+    font-size: 1.75rem;
+    padding: 30px 35px 10px;
+  }
   
-  /* Section1 Layout */
+  .value2 {
+    font-size: 1rem;
+    padding: 0 35px 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Name {
+    font-size: 1.75rem;
+    top: 7%;
+  }
+  
+  /* .Sent {
+    top:20px;
+    font-size: 0.9375rem;
+  } */
+  
   .Section1 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 40px 0;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 1200px;
-    align-items: flex-start;
-  }
-  
-  .image1 img {
-    width: 380px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
   }
   
   .data {
-    margin-top: 0;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #555;
-    max-width: 60%;
+    max-width: 100%;
   }
-  .Data{
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 28px;
-    margin-left: -100px;
-    }
+  
+  .Data {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .value1 {
+    font-size: 1.5rem;
+    padding: 25px 30px 10px;
+  }
+  
+  .value1::after {
+    left: 30px;
+  }
+  
+  .value2 {
+    font-size: 0.9375rem;
+    padding: 0 30px 30px;
+  }
+}
 
-  .Data1{
-    margin-top: 15px;
-    margin-left: 80px;
-    font-size: 15px;
-    text-align: justify;
-  }
-  .Data3{
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: justify;
-  }
-  /* Cloud Section Styling */
-  .cloud {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 20px;
+@media (max-width: 480px) {
+  .Name {
+    font-size: 1.5rem;
+    top: 5%;
   }
   
-  /* Grid Layout for Box Section */
+  .Sent {
+    top: 8%;
+    font-size: 0.875rem;
+  }
+  
+  .Data {
+    font-size: 1.25rem;
+  }
+  
+  .Data1, .Data3 {
+    font-size: 0.875rem;
+  }
+  
+  .value1 {
+    font-size: 1.25rem;
+    padding: 20px 25px 10px;
+  }
+  
+  .value1::after {
+    left: 25px;
+    width: 50px;
+  }
+  
+  .value2 {
+    font-size: 0.875rem;
+    padding: 0 25px 25px;
+    line-height: 1.6;
+  }
+  
   .Section2 {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-top: 20px;
-  }
-  
-  .Box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem;
-    margin-top: 2rem;
+    padding: 20px 15px;
   }
   
   .Box1, .Box2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
-    border-top-left-radius: 60px;
-    border-top: 6px solid rgb(187, 123, 240);
-    border-bottom: 6px solid rgb(202, 107, 246);
-    border-bottom-right-radius: 60px;
-    height: 280px;
-    width: 110%;
-    max-width: 250px;
+    max-width: 100%;
+    min-height: 280px;
   }
-  .Box2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(169, 169, 169, 0.5);
-    border-top-left-radius: 60px;
-    border-top: 6px solid rgb(187, 123, 240);
-    border-bottom: 6px solid rgb(202, 107, 246);
-    border-bottom-right-radius: 60px;
-    height: 280px;
-    width: 110%;
-    max-width: 250px;
-  }
-  .Title1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 15px;
-    margin-top: -43px;
-  }
-  .Title2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 15px;
+  
+  .Title1, .Title2 {
+    font-size: 1rem;
   }
   
   .dis1, .dis2, .dis3, .dis4 {
-    display: flex;
-    padding: 10px;
-    /* justify-content: center;
-    align-items: center; */
-    font-size: 13px;
-    margin-top: 20px;
-    text-align: justify; 
+    font-size: 0.8125rem;
   }
-    .value{
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    flex-direction:column;
-    background-color: white;
-    border-top-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    box-shadow: 0 8px 12px rgba(161, 22, 22, 0.5);
-    height: 590px;
-    width: 60%;
-    margin-left: 250PX;
-  }
-  .value1{
-    padding: 25px;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 20px;
-  }
-  
-  .value2{
-     font-size: 15px;
-     padding: 30px;
-     text-align: justify; 
-         
-  }
- @media (max-width: 768px) {
-       
-   .image img{
-    max-width: 100%;
-   }
-  .Name {
-    font-size: 1.5rem;
-    top: 6%;
-    
-  }
-
-  .sent {
-    font-size: 0.9rem;
-    top: 10%;
-  }
-  .image1 img {
-        max-width: 100%;
- }
-
-    .data {
-        max-width: 100%;
-    }
-
-    .Data {
-        font-size: 24px;
-        margin-left: 0;
-    }
-
-    .Data1, .Data3 {
-        text-align: justify;
-        margin-left: 0;
-      
-        
-    }
-
-    .Box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .Box1, .Box2 {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .value {
-      width: 90%;
-      height: 900px;
-      padding: 20px;
-      margin-left: 20px;
-  }
-  .value1 {
-      font-size: 20px;
-  }
-  .value2 {
-      font-size: 14px;
-      padding: 15px;
-  }
-
- }
- 
+}

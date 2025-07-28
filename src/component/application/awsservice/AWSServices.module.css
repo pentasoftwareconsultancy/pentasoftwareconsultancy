@@ -60,11 +60,12 @@
 }
 
 .image1 img {
-  width: 530px;
-  max-width: 380px;
-  height: 290px;
+  width: 400px;
+  /* max-width: 380px; */
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  margin-left: 30px;
 }
 
 .data {
@@ -75,14 +76,14 @@
   justify-content: center;
   align-items: flex-start;
   font-size: 1rem;
-  color: #555;
+  color: black;
   max-width: 100%;
 }
 
 .Data,
 .Data2 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   margin-left: 110px;
 }
 
@@ -106,35 +107,39 @@
 
 /* Grid Layout for Box Section */
 /* Section 2 Container */
+/* Section2 Container */
 .Section2 {
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-  border-radius: 12px;
-  margin: 40px auto;
-  max-width: 1200px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #f6f8fc 0%, #e9edf2 100%);
+  border-radius: 16px;
+  margin: 50px auto;
+  max-width: 1400px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
+  isolation: isolate; /* Ensures z-index stacking for pseudo-elements */
 }
 
+/* Decorative Top Border */
 .Section2::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #51c8f7, #55bfe8, #51c8f7);
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  animation: gradientShift 4s ease-in-out infinite;
 }
 
 /* Box Container */
 .Box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 40px;
-  padding: 20px 0;
+  margin-top: 50px;
+  padding: 20px;
+  justify-items: center;
 }
 
 /* Box Common Styles */
@@ -143,31 +148,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
-  border-top: 5px solid #51c8f7;
-  border-bottom: 6px solid #55bfe8;
-  box-shadow: 0 10px 20px rgba(169, 169, 169, 0.2);
-  border-radius: 15px;
-  width: 280px;
-  height: 320px;
-  padding: 25px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #ffffff;
+  border-top: 6px solid #3b82f6;
+  border-bottom: 6px solid #60a5fa;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.3); /* Neumorphism effect */
+  border-radius: 20px;
+  width: 100%;
+  max-width: 320px;
+  min-height: 340px;
+  padding: 30px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease, background 0.3s ease;
   position: relative;
   overflow: hidden;
-  transform: translateY(100px);
+  transform: translateY(80px);
   opacity: 0;
 }
 
 /* Box Hover Effects */
 .Box1:hover, .Box2:hover, .Box3:hover, .Box4:hover, .Box5:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 15px 30px rgba(169, 169, 169, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(145deg, #ffffff, #a0c9f3);
 }
 
 /* Box Animations */
-@keyframes slide-up {
+@keyframes slideUp {
   0% {
-    transform: translateY(100px);
+    transform: translateY(80px);
     opacity: 0;
   }
   100% {
@@ -177,41 +184,49 @@
 }
 
 .Box1 {
-  animation: slide-up 0.8s ease-out forwards;
-  animation-delay: 0.2s;
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.1s;
 }
 
 .Box2 {
-  animation: slide-up 0.8s ease-out forwards;
-  animation-delay: 0.4s;
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.2s;
 }
 
 .Box3 {
-  animation: slide-up 0.8s ease-out forwards;
-  animation-delay: 0.6s;
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.3s;
 }
 
 .Box4 {
-  animation: slide-up 0.8s ease-out forwards;
-  animation-delay: 0.8s;
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.4s;
 }
 
 .Box5 {
-  animation: slide-up 0.8s ease-out forwards;
-  animation-delay: 1s;
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.5s;
 }
 
-/* Box Icons (example - you can add your own) */
+/* Box Icons (Customizable Background Icon) */
 .Box1::before, .Box2::before, .Box3::before, .Box4::before, .Box5::before {
   content: '';
   position: absolute;
   top: 20px;
-  width: 60px;
-  height: 60px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.1;
+  opacity: 0.15;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Icons */
+.Box1:hover::before, .Box2:hover::before, .Box3:hover::before, .Box4:hover::before, .Box5:hover::before {
+  opacity: 0.25;
+  transform: scale(1.1);
 }
 
 /* Box Content */
@@ -221,16 +236,22 @@
   align-items: center;
   text-align: center;
   z-index: 2;
+  padding: 10px;
 }
 
 /* Titles */
 .Title1, .Title2, .Title3, .Title4 {
   font-weight: 700;
-  font-size: 1.25rem;
-  color: #2c3e50;
+  font-size: 1.4rem;
+  color: #1e293b;
   margin-bottom: 15px;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.Title1:hover, .Title2:hover, .Title3:hover, .Title4:hover {
+  color: #3b82f6; /* Blue highlight on hover */
 }
 
 .Title1::after, .Title2::after, .Title3::after, .Title4::after {
@@ -239,37 +260,101 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #51c8f7, #55bfe8);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.Title1:hover::after, .Title2:hover::after, .Title3:hover::after, .Title4:hover::after {
+  width: 80px; /* Expands on hover */
 }
 
 /* Descriptions */
 .dis1, .dis2, .dis3, .dis4 {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
   margin-top: 15px;
-  padding: 0 10px;
+  padding: 0 15px;
+}
+
+/* Gradient Animation for Top Border */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+  .Section2 {
+    max-width: 1000px;
+    padding: 40px 20px;
+  }
+
   .Box {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .Box1, .Box2, .Box3, .Box4, .Box5 {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    min-height: 280px;
-  }
-  
   .Section2 {
     padding: 30px 15px;
+    margin: 30px auto;
+  }
+
+  .Box1, .Box2, .Box3, .Box4, .Box5 {
+    max-width: 400px;
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .Title1, .Title2, .Title3, .Title4 {
+    font-size: 1.25rem;
+  }
+
+  .dis1, .dis2, .dis3, .dis4 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Section2 {
+    padding: 20px 10px;
+    margin: 20px auto;
+  }
+
+  .Box1, .Box2, .Box3, .Box4, .Box5 {
+    max-width: 100%;
+    min-height: 280px;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .Title1, .Title2, .Title3, .Title4 {
+    font-size: 1.15rem;
+    padding-bottom: 8px;
+  }
+
+  .dis1, .dis2, .dis3, .dis4 {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .Box1::before, .Box2::before, .Box3::before, .Box4::before, .Box5::before {
+    width: 60px;
+    height: 60px;
+    top: 15px;
+    left: 15px;
   }
 }
 
@@ -290,6 +375,7 @@
 @media (max-width: 768px) {
   .image img {
     height: 350px;
+    width: 100%;
   }
 
   .Name {
@@ -310,8 +396,8 @@
 
   .image1 img {
     width: 100%;
-    max-width: 400px;
     height: auto;
+    margin-left: 0;
   }
 
   .data {

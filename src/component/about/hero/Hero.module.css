@@ -2,12 +2,16 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 600px;
+  max-height: 1200px;
   overflow: hidden;
   isolation: isolate;
 }
 
 .imageContainer {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -17,6 +21,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0;
   transform: scale(1.1);
   transition: 
@@ -33,58 +38,39 @@
   z-index: 2;
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-  width: 80%;
-  max-width: 800px;
-  transition: opacity 500ms ease;
-}
-
-.content.fadeOut {
-  opacity: 0;
-}
-
-.headline {
-  color: white;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: textReveal 800ms 300ms forwards;
-}
-
-.subtext {
-  color: white;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: textReveal 800ms 500ms forwards;
-}
-
-/* Animations */
-@keyframes textReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive adjustments */
+/* Key improvements for responsiveness: */
 @media (max-width: 768px) {
-  .content {
-    width: 90%;
-    padding: 0 1rem;
+  .hero {
+    height: 80vh;
+    min-height: 400px; /* Lower minimum height for smaller devices */
   }
   
-  .headline {
-    margin-bottom: 1rem;
+  .slideImage {
+    /* Optionally adjust object-position for mobile if needed */
+    /* object-position: 60% center; */
   }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+    min-height: 300px;
+  }
+}
+
+/* For landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: 150vh; /* More height for landscape */
+    min-height: 300px;
+  }
+}
+
+/* Ensure images maintain aspect ratio on all screens */
+.slideImage {
+  /* These properties ensure proper scaling */
+  min-width: 100%;
+  min-height: 100%;
+  /* Fallback for older browsers */
+  font-family: 'object-fit: cover; object-position: center;';
 }

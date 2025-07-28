@@ -7,7 +7,8 @@ function Team() {
       <div className={styles.section}>
         <div className={styles.Section1}>
           <div className={styles.image1}>
-            <img src="https://smallbizclub.com/wp-content/uploads/2022/06/bigstock-Diversity-Multiethnic-Team-Gro-446118545.jpg" />
+                        <img src="https://i.pinimg.com/1200x/65/51/58/655158c585c59f63cb2ce4f8fb492a68.jpg" />
+
           </div>
           <div className={styles.Word1}>Top Skilled Team</div>
           <div className={styles.line1}>
@@ -19,7 +20,7 @@ function Team() {
 
         <div className={styles.Section2}>
           <div className={styles.image2}>
-            <img src="https://media.licdn.com/dms/image/v2/D4D12AQEliMGQklwSaA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1710880132022?e=2147483647&v=beta&t=7wg85gzDBdcV3TqP1gH6o3l8WEQKEMu3qKHbNiWzhgA" />
+            <img src="https://smallbizclub.com/wp-content/uploads/2022/06/bigstock-Diversity-Multiethnic-Team-Gro-446118545.jpg" />
           </div>
           <div className={styles.Word2}>Better Customer Support</div>
           <div className={styles.line2}>
@@ -31,7 +32,7 @@ function Team() {
 
         <div className={styles.Section3}>
           <div className={styles.image3}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh-NbuiagjyCb78PEiJwxgl4yrwRGPINRDSWGTIVXQziCv7jGEKijBarLuD9x_vV4M5pQ&usqp=CAU" />
+            <img src="https://devconsoftware.com/assets/img/user-experiance1.webp" />
           </div>
           <div className={styles.Word3}>Beautiful Office Space</div>
           <div className={styles.line3}>
