@@ -276,12 +276,16 @@ body {
 @media (max-width: 768px) {
   .section1, .section2 {
     gap: 15px;
+    margin-left: 20px;
   }
+   .section{
+    margin-left: 30px;
+   }
   
   .box1, .box2, .box3, .box4,
   .box5, .box6, .box7, .box8 {
     width: calc(50% - 20px);
-    height: 90px;
+    height: 100px;
   }
 }
 

@@ -115,7 +115,7 @@ function Birth() {
           <div className={styles.section1}>
             <div className={styles.box1}>
               <div className={styles.logo1}><SiJavascript size={30} /></div>
-              <div className={styles.No1}>ASP.Net (MVC)& <br />JAVA Technology</div>
+              <div className={styles.No1}>ASP.Net<br />JAVA Technology</div>
             </div>
 
             <div className={styles.box2}>

@@ -51,7 +51,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Content Styles */
@@ -140,6 +139,24 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.modalClose {
+  z-index: 2; /* Make sure it's above all */
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: none;
+  color: var(--teal);
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Modal Overlay */
 .modalOverlay {
   position: fixed;
@@ -225,60 +242,67 @@
 }
 
 /* Modal Sections */
+/* Modal Section Box */
 .modalSection {
   margin-bottom: 2rem;
-  background: rgba(100, 255, 218, 0.05);
-  padding: 1.8rem;
-  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
   border-left: 4px solid var(--teal);
-  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
 }
 
 .modalSection:hover {
-  background: rgba(100, 255, 218, 0.08);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-5px);
   border-left-color: var(--skyblue);
 }
 
 .modalSection h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.375rem;
-  color: var(--teal);
+  font-size: 1.5rem;
+  color: var(--skyblue);
 }
 
 .modalSection p {
   margin: 0;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* Feature Grid for Career Modal */
+/* Feature Grid Section */
 .featureGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
+/* Individual Feature Box */
 .featureItem {
-  background: rgba(100, 255, 218, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   padding: 2rem;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(135, 206, 235, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .featureItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
   border-color: rgba(135, 206, 235, 0.3);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* Icon Style */
 .featureIcon {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   background: linear-gradient(135deg, var(--teal), var(--skyblue));
   color: white;
   border-radius: 50%;
@@ -288,27 +312,42 @@
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Text Style */
 .featureItem h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   color: var(--teal);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 .featureItem p {
   margin: 0;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* Skyblue Glow Effect */
+/* Glow Effect for Icon */
 .skyblue-glow {
   animation: skybluePulse 2s infinite;
+  box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 /* Animations */
+@keyframes skybluePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(135, 206, 235, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(135, 206, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(135, 206, 235, 0);
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -336,17 +375,6 @@
   }
 }
 
-@keyframes skybluePulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(135, 206, 235, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(135, 206, 235, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(135, 206, 235, 0);
-  }
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {

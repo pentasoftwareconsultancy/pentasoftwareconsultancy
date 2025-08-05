@@ -85,7 +85,7 @@
 .box1:hover, .box2:hover, .box3:hover, .box4:hover {
   transform: translateY(-15px);
   box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #e6f0ff 0%, #d9e7ff 100%);
+  /* background: linear-gradient(135deg, #e6f0ff 0%, #d9e7ff 100%); */
   animation: floatBox 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -229,7 +229,7 @@
 
 @media (max-width: 480px) {
   .word {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .Card {

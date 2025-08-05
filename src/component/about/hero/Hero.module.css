@@ -2,16 +2,14 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 600px;
-  max-height: 1200px;
+  min-height: 600px; /* Prevent too short on mobile */
+  max-height: 1200px; /* Prevent too tall on large screens */
   overflow: hidden;
   isolation: isolate;
 }
 
 .imageContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -21,7 +19,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center; /* Ensure focus stays centered */
   opacity: 0;
   transform: scale(1.1);
   transition: 
@@ -38,39 +36,116 @@
   z-index: 2;
 }
 
-/* Key improvements for responsiveness: */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 90%; /* More space on mobile */
+  max-width: 1200px; /* Larger max width for big screens */
+  padding: 0 20px; /* Padding for safety */
+  transition: opacity 500ms ease;
+}
+
+.content.fadeOut {
+  opacity: 0;
+}
+
+.headline {
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem); /* Slightly larger max size */
+  font-weight: 700;
+  margin-bottom: clamp(1rem, 3vw, 2rem); /* Responsive margin */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 800ms 300ms forwards;
+  line-height: 1.2; /* Better for multiline text */
+}
+
+.subtext {
+  color: white;
+  font-size: clamp(1rem, 2.5vw, 1.75rem); /* Slightly larger */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 800ms 500ms forwards;
+  line-height: 1.5; /* Better readability */
+  max-width: 80%; /* Prevent too wide on desktop */
+  margin: 0 auto; /* Center the subtext */
+}
+
+/* Animations */
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero {
-    height: 80vh;
-    min-height: 400px; /* Lower minimum height for smaller devices */
+    height: 80vh; /* Slightly shorter on tablet */
+    min-height: 500px; /* Adjusted for mobile */
   }
   
-  .slideImage {
-    /* Optionally adjust object-position for mobile if needed */
-    /* object-position: 60% center; */
+  .content {
+    width: 95%;
+  }
+  
+  .subtext {
+    max-width: 90%; /* More width on mobile */
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    height: 70vh;
-    min-height: 300px;
+    height: 75vh; /* Shorter on mobile */
+    min-height: 400px; /* Minimum for small devices */
+  }
+  
+  .headline {
+    margin-bottom: 0.75rem;
+  }
+  
+  .subtext {
+    max-width: 100%; /* Full width on very small screens */
+    font-size: clamp(0.9rem, 4vw, 1.2rem); /* More aggressive scaling */
+  }
+  
+  .slideImage {
+    filter: brightness(0.6); /* Darker on mobile for better text contrast */
   }
 }
 
-/* For landscape orientation */
+/* Landscape orientation handling */
 @media (max-height: 500px) and (orientation: landscape) {
   .hero {
-    height: 150vh; /* More height for landscape */
-    min-height: 300px;
+    height: 120vh; /* Taller in landscape */
+    min-height: 400px;
+  }
+  
+  .content {
+    top: 45%; /* Adjust vertical position */
+    transform: translate(-50%, -45%);
+  }
+  
+  .headline {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Smaller in landscape */
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtext {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
   }
 }
 
-/* Ensure images maintain aspect ratio on all screens */
-.slideImage {
-  /* These properties ensure proper scaling */
-  min-width: 100%;
-  min-height: 100%;
-  /* Fallback for older browsers */
-  font-family: 'object-fit: cover; object-position: center;';
+/* Very large screens */
+@media (min-width: 1600px) {
+  .content {
+    max-width: 1400px;
+  }
 }
